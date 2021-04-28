@@ -1,10 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: AdSuper
-! Last Modified: %timestamp%
-! Expires: 4 days (update frequency)
 ! Homepage: https://gitee.com/chaniug/ad-super
-! 有问题滴滴我
-!
+!-----------------------General advert blocking filters-----------------------!
 
 ! 笔趣阁阅读 
 m.vbiquge.com###appss > div
