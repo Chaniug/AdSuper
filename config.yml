@@ -1,4 +1,5 @@
-
+jobs:
+  build:
       - name: Checkout the "master" branch
         uses: actions/checkout@v2
         with:
