@@ -1,7 +1,10 @@
+[Adblock Plus 2.0]
 ! Title: AdSuper
-！个人爱好，兴趣所致。
-！发现网站有广告请私信我，或者有规则也可以让我加上去。
-！------------------------------
+! Last Modified: %timestamp%
+! Expires: 4 days (update frequency)
+! Homepage: https://gitee.com/chaniug/ad-super
+! 有问题滴滴我
+!
 
 ! 笔趣阁阅读 
 m.vbiquge.com###appss > div
