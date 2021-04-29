@@ -102,7 +102,6 @@ translate.google.cn##.zJmlgc.rQKk7
 ! b站
 m.bilibili.com##.m-home-float-openapp
 
-
 ! 知乎 
 www.zhihu.com##.is-shown.OpenInApp.OpenInAppButton
 www.zhihu.com##.DownloadGuide.Card
