@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Version: 20210428
-! Title: AdSuper (Github)
+! Title: AdSuper (GitHub)
 ! Homepage: https://github.com/Chaniug/AdSuper
 !-----------------------General advert blocking filters-----------------------!
 
