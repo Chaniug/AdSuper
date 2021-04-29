@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Version: 20210428
 ! Title: AdSuper
-! Homepage: https://gitee.com/chaniug/ad-super
+! Homepage: https://github.com/Chaniug/AdSuper
 !-----------------------General advert blocking filters-----------------------!
 
 ! 笔趣阁阅读 
