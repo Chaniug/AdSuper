@@ -1,4 +1,5 @@
 [Adblock Plus 2.0]
+! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! Version: 20210428
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
