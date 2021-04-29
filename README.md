@@ -2,7 +2,7 @@
 这是一个公共的AD仓库
 致力于广告拦截
 # 订阅地址
-https://raw.githubusercontent.com/Chaniug/AdSuper/main/AdSuper.txt
+https://gitee.com/chaniug/ad-super
 
 #### 介绍
 {**以下是 Github 许可证**}
