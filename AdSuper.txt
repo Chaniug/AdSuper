@@ -1,5 +1,6 @@
 [Adblock Plus 2.0]
 ! Version: 20210428
+! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
