@@ -163,7 +163,7 @@ duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-
 fanyi.baidu.com###sideAdContainer > div.app-side-ad
 fanyi.baidu.com##div.container:first-child > div.header:first-child > div.inner > div.download-guide:nth-child(5) > ul.download-guide-ul > li.guide-list.download-app:last-child
 
-! 2021-04-29 https://m.120ask.com
+! 2021-04-29 120asky
 m.120ask.com###body_main > .tiao_pop
 m.120ask.com##.test_b.foot-fix.ba_1_106
 m.120ask.com##.lee.tiao_pop > .YWBDAD
