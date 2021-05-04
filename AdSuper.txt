@@ -172,3 +172,5 @@ m.120ask.com##.fixed-right
 m.120ask.com###ad-right-piao > .close_b
 m.120ask.com##div.ba_1_106 > .YWBDAD
 m.120ask.com###zhuanjiahuifuxia
+! APkpure
+m.apkpure.com##.aegon-warp
