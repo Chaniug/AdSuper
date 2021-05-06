@@ -43,19 +43,6 @@ https://raw.githubusercontent.com/Chaniug/AdSuper/main/AdSuper.txt
 
    6. 语言
       “本许可证”以中英文双语表述，中英文版本具有同等法律效力。如果中英文版本存在任何冲突不一致，以中文版为准。
-#### 软件架构
-软件架构说明
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
