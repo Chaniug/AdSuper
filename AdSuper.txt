@@ -184,3 +184,19 @@ baijiahao.baidu.com##.related-news > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyK
 baijiahao.baidu.com###page_wrapper > div > div > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyKUDLU3h5K > ._2zI_1HDV_e-G25lK7muW14
 baijiahao.baidu.com##._1-nFvWd71g07irMlxzeVz_
 
+! 新浪新闻 https://news.sina.cn
+news.sina.cn##.qweasd.sw_c0
+news.sina.cn##.btn_follow.j_article_wbreco
+news.sina.cn##.an.j_callST.callApp_fl_btn
+news.sina.cn##.ld_com_bar_btn
+news.sina.cn###j_relevent_reading > a.j_callST.m_f_a_r.template_v6_picTxt.template_v6 > .m_f_con > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
+news.sina.cn###j_relevent_reading > a.j_callST.show.m_f_a.template_v6_threePic.template_v6 > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
+news.sina.cn###j_relevent_news > a.j_callST.m_f_a_r.template_v6_picTxt.template_v6 > .m_f_con > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
+news.sina.cn###j_relevent_news > .j_callST.show.m_f_a.template_v6_threePic.template_v6 > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
+news.sina.cn##.z_c2.j_article_relevent_news.s_card > .ldy_cm_h2 > .j_call_native.ldy_cm_h2_more
+
+! 腾讯新闻 https://xw.qq.com
+xw.qq.com##.pictureBottomBtn.jsx-303514326
+xw.qq.com##.channel-entry.jsx-2375966888
+xw.qq.com##span.jsx-2135715324:nth-of-type(1)
+xw.qq.com##.btn-app.jsx-2577878351
