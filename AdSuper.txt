@@ -172,5 +172,15 @@ m.120ask.com##.fixed-right
 m.120ask.com###ad-right-piao > .close_b
 m.120ask.com##div.ba_1_106 > .YWBDAD
 m.120ask.com###zhuanjiahuifuxia
+
 ! APkpure
 m.apkpure.com##.aegon-warp
+! 百家号 https://baijiahao.baidu.com
+baijiahao.baidu.com##.headDeflectorContainer
+baijiahao.baidu.com##._3RmxTKlPzuCkzYl1ZqE2yE.uukjsi6a_zpZccrqYiI3k
+baijiahao.baidu.com##div.contentMedia:nth-of-type(21)
+baijiahao.baidu.com##.contentPadding.bottomTTSStruct
+baijiahao.baidu.com##.related-news > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyKUDLU3h5K > ._2zI_1HDV_e-G25lK7muW14
+baijiahao.baidu.com###page_wrapper > div > div > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyKUDLU3h5K > ._2zI_1HDV_e-G25lK7muW14
+baijiahao.baidu.com##._1-nFvWd71g07irMlxzeVz_
+
