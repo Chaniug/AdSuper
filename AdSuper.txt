@@ -63,6 +63,16 @@ www.zhenbuka2.com##.marquee_outer
 www.zhenbuka2.com##u
 www.zhenbuka2.com##.pull-right.text-muted.more > font
 www.zhenbuka2.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
+www.zhenbuka3.com###ad01
+www.zhenbuka3.com###yb112
+www.zhenbuka3.com###md112
+www.zhenbuka3.com##.jq-toast-wrap
+www.zhenbuka3.com##marquee > a > font
+www.zhenbuka3.com##.marquee_txt
+www.zhenbuka3.com##.marquee_outer
+www.zhenbuka3.com##u
+www.zhenbuka3.com##.pull-right.text-muted.more > font
+www.zhenbuka3.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
 
 
 
