@@ -213,3 +213,8 @@ xw.qq.com##.btn-app.jsx-2577878351
 ! 蓝奏云 https://lrho.lanzoui.com
 lrho.lanzoui.com##div:nth-of-type(8)
 
+! 澎湃新闻 https://m.thepaper.cn
+m.thepaper.cn##.header_moblink
+m.thepaper.cn###hotCommentsDiv
+m.thepaper.cn##.listen_btn
+
