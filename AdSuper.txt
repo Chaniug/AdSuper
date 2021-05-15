@@ -217,6 +217,13 @@ lrho.lanzoui.com##div:nth-of-type(8)
 m.thepaper.cn##.header_moblink
 m.thepaper.cn###hotCommentsDiv
 m.thepaper.cn##.listen_btn
+m.thepaper.cn###moblink_moreread
+m.thepaper.cn##li.icon_openapp:nth-of-type(10)
+m.thepaper.cn##li.icon_openapp:nth-of-type(11)
+m.thepaper.cn##li.icon_openapp:nth-of-type(12)
+m.thepaper.cn##li.icon_openapp:nth-of-type(13)
+app.cctv.com###download
+
 
 66law.cn##.consult-top-fixed, .consult-bottom-fixed
 66law.cn##div.w1200.ma.mt15:nth-child(3) > div.clearfix.mt30.pb40:last-child > div.fl.w820:first-child > div.detail-page.mb:first-child > div.det-add-consult:nth-child(4)
