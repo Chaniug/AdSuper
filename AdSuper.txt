@@ -87,7 +87,7 @@ www.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.voi
 www.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.qrcode
 www.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 www.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
-
+www.baidu.com##.banner-wrap__3jXPE
 m.baidu.com###header > div > div > div > div
 m.baidu.com##div:nth-of-type(6)
 m.baidu.com##.news-list-wrapper
