@@ -209,3 +209,7 @@ xw.qq.com##span.jsx-2135715324:nth-of-type(1)
 xw.qq.com##.btn-app.jsx-2577878351
 ! 红星新闻
 ##span.inlineimage.fullwidth.storyimage > .image > .loaded
+
+! 蓝奏云 https://lrho.lanzoui.com
+lrho.lanzoui.com##div:nth-of-type(8)
+
