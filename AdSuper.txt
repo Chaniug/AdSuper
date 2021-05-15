@@ -220,3 +220,6 @@ m.thepaper.cn##.listen_btn
 
 66law.cn##.consult-top-fixed, .consult-bottom-fixed
 66law.cn##div.w1200.ma.mt15:nth-child(3) > div.clearfix.mt30.pb40:last-child > div.fl.w820:first-child > div.detail-page.mb:first-child > div.det-add-consult:nth-child(4)
+findlaw.cn###recommend-lawyer
+findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child > div.act-zan > button.zan-btn:first-child
+findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child
