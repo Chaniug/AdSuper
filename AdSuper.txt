@@ -99,6 +99,7 @@ m.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.voice
 m.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.qrcode
 m.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 m.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
+m.baidu.com##.banner-wrap__3jXPE
 
 ! 360Doc
 www.360doc.com##.b
