@@ -78,6 +78,8 @@ www.zhenbuka3.com##.pull-right.text-muted.more > font
 www.zhenbuka3.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
 zhenbuka2.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
 zhenbuka3.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
+www.zhenbuka2.com##.row > .clearfix.stui-pannel-box
+www.zhenbuka3.com##.row > .clearfix.stui-pannel-box
 
 ! 百度 
 www.baidu.com##canvas
