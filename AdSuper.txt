@@ -37,13 +37,16 @@ m.kk-xs.com##[href^="http://nh8010.com"] > object
 
 ! 真不卡影视
 ||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
-www.zhenbuka.com##.jq-icon-warning.jq-has-icon.jq-toast-single
+www.zhenbuka2.com##.jq-icon-warning.jq-has-icon.jq-toast-single
+www.zhenbuka3.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-www.zhenbuka.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
-www.zhenbuka.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
+www.zhenbuka2.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
+www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
 www.zhenbuka.com##div.clearfix.stui-player__item:nth-of-type(2)
 www.zhenbuka.com###yb112
+www.zhenbuka2.com##div.clearfix.stui-player__item:nth-of-type(2)
+www.zhenbuka3.com###yb112
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
 www.zhenbuka.com###ad01
 www.zhenbuka.com###md112
@@ -73,6 +76,8 @@ www.zhenbuka3.com##.marquee_outer
 www.zhenbuka3.com##u
 www.zhenbuka3.com##.pull-right.text-muted.more > font
 www.zhenbuka3.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
+zhenbuka2.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
+zhenbuka3.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
 
 ! 百度 
 www.baidu.com##canvas
