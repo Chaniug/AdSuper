@@ -93,6 +93,7 @@ www.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.qrc
 www.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 www.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 www.baidu.com##.banner-wrap__3jXPE
+www.baidu.com###bottom
 m.baidu.com###header > div > div > div > div
 m.baidu.com##div:nth-of-type(6)
 m.baidu.com##.news-list-wrapper
@@ -105,6 +106,8 @@ m.baidu.com##.con-inner-left > .callicon-wrap > .baiduappcall-wrap > .call.qrcod
 m.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 m.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 m.baidu.com##.banner-wrap__3jXPE
+m.baidu.com###bottom
+
 
 ! 360Doc
 www.360doc.com##.b
