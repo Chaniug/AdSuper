@@ -251,4 +251,6 @@ www.nfmovies.com##div.container.myui-ra-container:nth-of-type(4)
 www.nfmovies.com##div.container.myui-ra-container:nth-of-type(3)
 www.nfmovies.com###afQNwnhLkBDU > [href^="https://nf.brushshopy.com/"]
 www.nfmovies.com###afySKCKToZRD > [href^="https://nf.brushshopy.com/"]
+www.nfmovies.com##.close-box.tips
+www.nfmovies.com##div.clearfix.myui-panel-bg.myui-panel:nth-of-type(2)
 www.nfmovies.com##[src="https://pic.imgdb.cn/item/6097f4edd1a9ae528fb500ec.jpg"]
