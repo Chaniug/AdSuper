@@ -241,3 +241,14 @@ app.cctv.com###download
 findlaw.cn###recommend-lawyer
 findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child > div.act-zan > button.zan-btn:first-child
 findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child
+! 2021-05-19 https://baijiahao.baidu.com
+baijiahao.baidu.com##.openImg
+baijiahao.baidu.com##._1dZbwpATPO52gYzG5MIML
+! 2021-05-20 https://www.nfmovies.com
+www.nfmovies.com##.android
+www.nfmovies.com###afJNKRZfrpav > [href^="https://nf.brushshopy.com/"]
+www.nfmovies.com##div.container.myui-ra-container:nth-of-type(4)
+www.nfmovies.com##div.container.myui-ra-container:nth-of-type(3)
+www.nfmovies.com###afQNwnhLkBDU > [href^="https://nf.brushshopy.com/"]
+www.nfmovies.com###afySKCKToZRD > [href^="https://nf.brushshopy.com/"]
+www.nfmovies.com##[src="https://pic.imgdb.cn/item/6097f4edd1a9ae528fb500ec.jpg"]
