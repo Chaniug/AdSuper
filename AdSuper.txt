@@ -49,13 +49,15 @@ www.zhenbuka2.com##div.clearfix.stui-player__item:nth-of-type(2)
 www.zhenbuka3.com###yb112
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
 www.zhenbuka.com###ad01
+www.zhenbuka2.com###ad_img
+www.zhenbuka.com###ad_img
+www.zhenbuka3.com###ad_img
 www.zhenbuka.com###md112
 www.zhenbuka.com##font
 www.zhenbuka.com##.marquee_outer
 www.zhenbuka.com##.stui-pannel-box > .clearfix.stui-vodlist__bd
 www.zhenbuka.com##.stui-pannel-box > .title
 ||feigedaojia.com/close_1.png$image
-! 真不卡影视2 
 www.zhenbuka2.com###ad01
 www.zhenbuka2.com###yb112
 www.zhenbuka2.com###md112
