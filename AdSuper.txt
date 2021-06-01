@@ -111,7 +111,9 @@ m.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .call
 m.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 m.baidu.com##.banner-wrap__3jXPE
 m.baidu.com###bottom
-
+! 2021-06-01 https://m.baidu.com
+m.baidu.com##.ball-spread__1o_Kc.c-blocka.ball-wrapper__cJuFe
+m.baidu.com##.c-blocka.ball-wrapper__cJuFe
 
 ! 360Doc
 www.360doc.com##.b
