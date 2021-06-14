@@ -84,6 +84,8 @@ www.zhenbuka2.com##.row > .clearfix.stui-pannel-box
 www.zhenbuka3.com##.row > .clearfix.stui-pannel-box
 zhenbuka2.com###hth608
 zhenbuka3.com###hth608
+zhenbuka2.com###dw118
+zhenbuka3.com###dw118
 
 ! 百度 
 www.baidu.com##canvas
