@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 202106156
+! Version: 20210625
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -266,3 +266,16 @@ www.nfmovies.com##div.padding-0.col-xs-1.col-md-wide-7:nth-of-type(3)
 www.nfmovies.com##div.clearfix.myui-panel-bg.myui-panel:nth-of-type(2)
 www.nfmovies.com##[src="https://pic.imgdb.cn/item/6097f4edd1a9ae528fb500ec.jpg"]
 www.nfmovies.com###alcjdCYoJYRP
+! 2021-06-15 https://bukaivip.com
+
+||bukaivip.com/loading/loading2.php$subdocument
+
+bukaivip.com###changeFromTip
+
+bukaivip.com##.pull-right.text-muted.more > span
+
+bukaivip.com##.carousel_center.carousel
+
+bukaivip.com##.is-selected.col-xs-1
+
+bukaivip.com##.is-draggable.flickity-enabled.carousel_center.carousel
