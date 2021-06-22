@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 20210622
+! Version: 202106222322
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -35,7 +35,7 @@ m.biquge.com.cn###huzi > div
 m.biquge.com.cn##div:nth-of-type(8)
 m.kk-xs.com##[href^="http://nh8010.com"] > object
 ! 2021-06-22 https://m.xxbiquge.net
-
+m.xxbiquge.net##.see-ppa1-button
 
 m.xxbiquge.net##.W1oMwlgani
 
