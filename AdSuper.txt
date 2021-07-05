@@ -139,6 +139,7 @@ m.baidu.com###bottom
 ! 2021-06-01 https://m.baidu.com
 m.baidu.com##.ball-spread__1o_Kc.c-blocka.ball-wrapper__cJuFe
 m.baidu.com##.c-blocka.ball-wrapper__cJuFe
+m.baidu.com##.ball-wrapper__3Wj_S
 
 ! 360Doc
 www.360doc.com##.b
