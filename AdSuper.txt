@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2021070501
+! Version: 2021070601
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -301,3 +301,19 @@ bukaivip.com##.carousel_center.carousel
 bukaivip.com##.is-selected.col-xs-1
 
 bukaivip.com##.is-draggable.flickity-enabled.carousel_center.carousel
+
+! as
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(2) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:first-child > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(3) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(4) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(5) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(6) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(7) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(8) > img
+asianpretty.com###simple-banner > div.simple-banner-text > span > a:last-child > img
+asianpretty.com###post-12054 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child > div.zone-2:nth-child(2) > a > img.loading
+asianpretty.com###post-12054 > header.entry-header:first-child > div.happy-under-player:nth-child(2) > a > img.loading
+asianpretty.com###post-12054 > header.entry-header:first-child > div.happy-under-player:nth-child(2)
+asianpretty.com###post-4149 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child
+asianpretty.com###post-4149 > header.entry-header:first-child > div.happy-under-player:nth-child(2) > a > img.loading
