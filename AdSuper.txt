@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2021071101
+! Version: 2021071301
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -257,7 +257,7 @@ xw.qq.com##.btn-app.jsx-2577878351
 lrho.lanzoui.com##div:nth-of-type(8)
 ! 2021-07-05 https://yxssp.lanzoui.com
 yxssp.lanzoui.com##div.appad:nth-of-type(4)
-
+wwa.lanzoui.com##div:nth-of-type(8)
 ! 澎湃新闻 https://m.thepaper.cn
 m.thepaper.cn##.header_moblink
 m.thepaper.cn###hotCommentsDiv
