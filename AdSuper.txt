@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2021071301
+! Version: 202107130121
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -209,6 +209,30 @@ duckduckgo.com##.app-store-badge--google.app-store-badge
 duckduckgo.com##.js-open-in-app-link.open-in-app__deep-link
 duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-js__hide.js-tag-home:nth-child(4) > div.tag-home__wrapper > div.tag-home__item
 
+! 2021-07-11 https://m.thepaper.cn
+m.thepaper.cn###newDetailHotRecommend > .moblink_btn-650-white
+
+! 2021-07-12 https://www.ak1080.com
+
+www.ak1080.com###sjdb_img_65323
+
+www.ak1080.com###sjdb_img_43733
+
+www.ak1080.com###sjdb_img_8094
+
+www.ak1080.com##.__cf_infinite.__cf_animated.__cf_rubberBand
+
+www.ak1080.com##.__cf_infinite.__cf_animated.__cf_tada
+
+www.ak1080.com###sjdb_div_53944
+
+www.ak1080.com##.mo-part-zero.mo-foot-advs
+
+www.ak1080.com##.mo-cols-lg6.mo-cols-xs12.mo-cols-info.mo-pamd-10px.mo-paxs-5px.mo-bord-muted.mo-cols-topo > .mo-paxs-5px.mo-cols-topo
+
+||p.qlogo.cn/qqmail_head/l1MIyibPct4QCBFFwglzgayvpOsxxia6tMaC49Hc6Q52b9UBbufG9NOhfcx5HdIJj9/0$image
+
+||p.qlogo.cn/qqmail_head/*/0$image
 ! 百度翻译
 fanyi.baidu.com###sideAdContainer > div.app-side-ad
 fanyi.baidu.com##div.container:first-child > div.header:first-child > div.inner > div.download-guide:nth-child(5) > ul.download-guide-ul > li.guide-list.download-app:last-child
