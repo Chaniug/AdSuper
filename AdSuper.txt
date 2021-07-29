@@ -6,7 +6,7 @@
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
 
-! 笔趣阁阅读 
+! 笔趣阁阅读
 m.vbiquge.com###appss > div
 m.vbiquge.com##.show-app2-content
 m.vbiquge.com##.show-app2-button
@@ -109,8 +109,62 @@ www.zhenbuka2.com###hth
 www.zhenbuka3.com###hth
 www.zhenbuka2.com###hth616
 www.zhenbuka3.com###hth616
+||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
+www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
+www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
+||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
+www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
+www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
+||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
+www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
+www.zhenbuka5.com###yb112
+www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
+www.zhenbuka5.com###yb112
+||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
+www.zhenbuka5.com###ad01
+www.zhenbuka5.com###ad_img
+www.zhenbuka5.com###ad_img
+www.zhenbuka5.com###ad_img
+www.zhenbuka5.com###md112
+www.zhenbuka5.com##font
+www.zhenbuka5.com##.marquee_outer
+www.zhenbuka5.com##.stui-pannel-box > .clearfix.stui-vodlist__bd
+www.zhenbuka5.com##.stui-pannel-box > .title
+||feigedaojia.com/close_1.png$image
+www.zhenbuka5.com###ad01
+www.zhenbuka5.com###yb112
+www.zhenbuka5.com###md112
+www.zhenbuka5.com##.jq-toast-wrap
+www.zhenbuka5.com##marquee > a > font
+www.zhenbuka5.com##.marquee_txt
+www.zhenbuka5.com##.marquee_outer
+www.zhenbuka5.com##u
+www.zhenbuka5.com##.pull-right.text-muted.more > font
+www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
+www.zhenbuka5.com###ad01
+www.zhenbuka5.com###yb112
+www.zhenbuka5.com###md112
+www.zhenbuka5.com##.jq-toast-wrap
+www.zhenbuka5.com##marquee > a > font
+www.zhenbuka5.com##.marquee_txt
+www.zhenbuka5.com##.marquee_outer
+www.zhenbuka5.com##u
+www.zhenbuka5.com##.pull-right.text-muted.more > font
+www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
+zhenbuka5.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
+zhenbuka5.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
+www.zhenbuka5.com##.row > .clearfix.stui-pannel-box
+www.zhenbuka5.com##.row > .clearfix.stui-pannel-box
+zhenbuka5.com###hth608
+zhenbuka5.com###hth608
+zhenbuka5.com###dw118
+zhenbuka5.com###dw118
+www.zhenbuka5.com###hth
+www.zhenbuka5.com###hth
+www.zhenbuka5.com###hth616
+www.zhenbuka5.com###hth616
 
-! 百度 
+! 百度
 www.baidu.com##canvas
 www.baidu.com##.ball-close__GWg4b > .c-icon
 www.baidu.com##div:nth-of-type(6)
@@ -154,7 +208,7 @@ translate.google.cn##.zJmlgc.rQKk7
 ! b站
 m.bilibili.com##.m-home-float-openapp
 
-! 知乎 
+! 知乎
 www.zhihu.com##.is-shown.OpenInApp.OpenInAppButton
 www.zhihu.com##.DownloadGuide.Card
 www.zhihu.com##.DownloadGuide-blockBg
@@ -181,7 +235,7 @@ wapbaike.baidu.com##.close-image
 ||bkimg.cdn.bcebos.com/pic/cefc1e178a82b9014a904a9b5dc1be773912b31b414c?x-bce-process=image/format,f_auto$image
 
 ！影视拦截
-!  
+!
 www.nfxtv.com##.bottom_fixed
 www.nfxtv.com##.close-box.tips
 dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.content-wrap:first-child > div.content > div.asst.asst-post_header:first-child > div.asst.asst-post_header > a > img
@@ -198,7 +252,7 @@ dy.xianggutuan.cn##section.container:nth-child(3) > div.content-wrap:first-child
 gudanys.com##div.container:nth-child(3) > div.row > div.myui-panel.myui-panel-bg.clearfix:nth-child(3) > div.myui-panel-box.clearfix > div.myui-panel_bd > div.col-xs-1
 gudanys.com###player-sidebar > div.myui-panel.active.clearfix > div.myui-panel-box.clearfix > div.col-pd.mb10:last-child
 gudanys.com##div.container:nth-child(3) > div.row > div.myui-panel.myui-panel-bg.clearfix:nth-child(2) > div.myui-panel-box.clearfix > div.myui-panel_bd > div.col-xs-1
- 
+
 ||www.nfmovies.com/pic/app/laptop_click.png$image
 paofans.tv##.ads-all.ads > div
 www.muguangys.com###content
