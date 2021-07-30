@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 20210729001
+! Version: 202107290022
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -399,3 +399,5 @@ asianpretty.com###post-4149 > header.entry-header:first-child > div.video-player
 asianpretty.com###post-4149 > header.entry-header:first-child > div.happy-under-player:nth-child(2) > a > img.loading
 asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child > div.zone-2:nth-child(2) > a > img.loading
 asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child
+! baidu 网盘
+pan.baidu.com###web-single-bottom > a:last-child
