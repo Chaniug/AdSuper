@@ -401,3 +401,7 @@ asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player
 asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child
 ! baidu 网盘
 pan.baidu.com###web-single-bottom > a:last-child
+! 2021-08-01 http://m.mhxqiu.com
+m.mhxqiu.com##center
+m.mhxqiu.com##.pic
+m.mhxqiu.com###adhtml
