@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2021092750812
+! Version: 2021102750812
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -419,3 +419,15 @@ k.sina.cn##.qweasd.sw_c0
 ! 2021-08-09 https://www.zhenbuka3.com
 www.zhenbuka3.com##div.clearfix.stui-player__item:nth-of-type(2)
 www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
+! 2021-10-07 https://jikipedia.com
+jikipedia.com##.components-container
+jikipedia.com##.search-card
+jikipedia.com##.logo-link-idle.hoverable.logo-link
+jikipedia.com##.collection-activity
+jikipedia.com##.tile-4.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
+jikipedia.com##.download-link
+jikipedia.com##.tile-11.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
+jikipedia.com##.tile-14.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
+jikipedia.com##.tile-24.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
+jikipedia.com##.ad-container-_f6wnnud24kh.ad-container
+jikipedia.com##.tile-34.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
