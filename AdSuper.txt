@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2021102750812
+! Version: 202110227950812
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -390,6 +390,39 @@ bukaivip.com##.carousel_center.carousel
 bukaivip.com##.is-selected.col-xs-1
 
 bukaivip.com##.is-draggable.flickity-enabled.carousel_center.carousel
+
+
+! 2021-12-09 https://xiaopapa.xyz
+||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/6768.gif$image
+||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/960123.gif$image
+||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/6768.gif$image
+||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/8490.gif$image
+xiaopapa.xyz##[href="http://116.206.178.25:2888/5365.html"]
+||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/*.gif$image
+
+! 2021-12-10 https://xiaopapa.xyz
+xiaopapa.xyz##hes:nth-of-type(6)
+xiaopapa.xyz##czd:nth-of-type(10)
+
+! 2021-12-12 https://hsex.men
+hsex.men##[href="http://101hkk.tv"]
+
+! 2021-12-12 https://banyinjia17.com
+banyinjia17.com##.p-0.col-12
+banyinjia17.com##[href="https://banyinjia17.com/adv/121/"] > .img-fluid
+banyinjia17.com##.fixed-adv
+banyinjia17.com##.w-auto.text-center.fixed-bottom
+banyinjia17.com##.col-lg-12 > .mt-2.w-100
+banyinjia17.com###adv-102
+banyinjia17.com###adv-96
+banyinjia17.com###adv-94
+
+! 2021-12-23 https://xiaopapa.xyz
+xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/8490.gif"]
+xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/6768.gif"]
+xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/dizhi.jpg"]
+
+
 
 ! as
 asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(2) > img
