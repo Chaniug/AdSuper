@@ -417,12 +417,11 @@ banyinjia17.com###adv-102
 banyinjia17.com###adv-96
 banyinjia17.com###adv-94
 
-! 2021-12-23 https://xiaopapa.xyz
+! https://xiaopapa.xyz
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/8490.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/6768.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/dizhi.jpg"]
-
-
+xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/96020220702.gif"]
 
 ! as
 asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(2) > img
