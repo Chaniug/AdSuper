@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 20220228695012
+! Version: 20220272695012
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -404,7 +404,11 @@ xiaopapa.xyz##[href="http://116.206.178.25:2888/5365.html"]
 ! 2021-12-10 https://xiaopapa.xyz
 xiaopapa.xyz##hes:nth-of-type(6)
 xiaopapa.xyz##czd:nth-of-type(10)
-
+||friday.cgip-offshorecenter.com$image,script
+||cream.lichengyu.com$image,script
+||demo.yundaibang.com
+||vvs.dongyutextile.xyz
+||ntt.xascjzjx.com
 ! 2021-12-12 https://hsex.men
 hsex.men##[href="http://101hkk.tv"]
 
