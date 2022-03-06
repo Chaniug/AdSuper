@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 20220272925012
+! Version: 20220325925012
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -462,3 +462,16 @@ jikipedia.com##.tile-14.tile > .hoverable-shadow.ad-card-tile-container.curvy.co
 jikipedia.com##.tile-24.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
 jikipedia.com##.ad-container-_f6wnnud24kh.ad-container
 jikipedia.com##.tile-34.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
+! 2022-03-01 https://m.biqufan.cm.biqufan.com###pb_next
+||sdd.alloed.com
+! 2022-03-01 https://xiaopapa.xyz
+xiaopapa.xyz##a[href="http://946.fas68s6sf12.com:1888/946.html"]:nth-of-type(3)
+xiaopapa.xyz##a[href="http://946.fas68s6sf12.com:1888/946.html"]:nth-of-type(4)
+! 2022-03-04 https://xiaopapa.xyz
+xiaopapa.xyz##div:nth-of-type(10)
+xiaopapa.xyz###nFX_kiY_9_0
+||upset.pssszsj.com/UploadPicture/20223510_172.gif$image
+xiaopapa.xyz###MMK_iAY_5_1
+||xiaopapa.xyz^$third-party
+###pt_next.js_page_down.Readpage_down
+###pb_next.js_page_down.Readpage_down
