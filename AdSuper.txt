@@ -457,4 +457,4 @@ xiaopapa.xyz###MMK_iAY_5_1
 ||xiaopapa.xyz^$domain=~xiaopapa.xyz
 ||upset.pssszsj.com^$script,image
 ||cream.lichengyu.com^$script,image
-||m.biqufan.com/20_20331^$~stylesheet
+||m.biqufan.com/20_20331^$script,image
