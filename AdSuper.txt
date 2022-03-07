@@ -455,3 +455,4 @@ xiaopapa.xyz###MMK_iAY_5_1
 ||m.biqufan.com^$domain=~m.biqufan.com
 ||m.biqufan.com^$third-party
 ||xiaopapa.xyz^$domain=~xiaopapa.xyz
+||upset.pssszsj.com
