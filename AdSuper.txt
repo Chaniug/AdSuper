@@ -457,3 +457,4 @@ xiaopapa.xyz###MMK_iAY_5_1
 ||upset.pssszsj.com^$script,image
 ||cream.lichengyu.com^$script,image
 ||sdd.ihkdhn.cn
+||sdd.ihkdhn.cn^$script,image
