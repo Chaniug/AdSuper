@@ -451,7 +451,6 @@ xiaopapa.xyz###nFX_kiY_9_0
 ||upset.pssszsj.com/UploadPicture/20223510_172.gif$image
 xiaopapa.xyz###MMK_iAY_5_1
 ||xiaopapa.xyz^$script
-||m.biqufan.com^$~image,~stylesheet,~script
 ||m.biqufan.com^$domain=~m.biqufan.com
 ||m.biqufan.com^$third-party
 ||xiaopapa.xyz^$domain=~xiaopapa.xyz
