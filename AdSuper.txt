@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2022039102221
+! Version: 2022039502221
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -271,23 +271,14 @@ duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-
 m.thepaper.cn###newDetailHotRecommend > .moblink_btn-650-white
 
 ! 2021-07-12 https://www.ak1080.com
-
 www.ak1080.com###sjdb_img_65323
-
 www.ak1080.com###sjdb_img_43733
-
 www.ak1080.com###sjdb_img_8094
-
 www.ak1080.com##.__cf_infinite.__cf_animated.__cf_rubberBand
-
 www.ak1080.com##.__cf_infinite.__cf_animated.__cf_tada
-
 www.ak1080.com###sjdb_div_53944
-
 www.ak1080.com##.mo-part-zero.mo-foot-advs
-
 www.ak1080.com##.mo-cols-lg6.mo-cols-xs12.mo-cols-info.mo-pamd-10px.mo-paxs-5px.mo-bord-muted.mo-cols-topo > .mo-paxs-5px.mo-cols-topo
-
 ||p.qlogo.cn/qqmail_head/l1MIyibPct4QCBFFwglzgayvpOsxxia6tMaC49Hc6Q52b9UBbufG9NOhfcx5HdIJj9/0$image
 
 ||p.qlogo.cn/qqmail_head/*/0$image
@@ -351,7 +342,6 @@ m.thepaper.cn##li.icon_openapp:nth-of-type(12)
 m.thepaper.cn##li.icon_openapp:nth-of-type(13)
 app.cctv.com###download
 
-
 66law.cn##.consult-top-fixed, .consult-bottom-fixed
 66law.cn##div.w1200.ma.mt15:nth-child(3) > div.clearfix.mt30.pb40:last-child > div.fl.w820:first-child > div.detail-page.mb:first-child > div.det-add-consult:nth-child(4)
 findlaw.cn###recommend-lawyer
@@ -373,20 +363,12 @@ www.nfmovies.com##div.clearfix.myui-panel-bg.myui-panel:nth-of-type(2)
 www.nfmovies.com##[src="https://pic.imgdb.cn/item/6097f4edd1a9ae528fb500ec.jpg"]
 www.nfmovies.com###alcjdCYoJYRP
 ! 2021-06-15 https://bukaivip.com
-
 ||bukaivip.com/loading/loading2.php$subdocument
-
 bukaivip.com###changeFromTip
-
 bukaivip.com##.pull-right.text-muted.more > span
-
 bukaivip.com##.carousel_center.carousel
-
 bukaivip.com##.is-selected.col-xs-1
-
 bukaivip.com##.is-draggable.flickity-enabled.carousel_center.carousel
-
-
 ! 2021-12-09 https://xiaopapa.xyz
 ||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/6768.gif$image
 ||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/960123.gif$image
@@ -394,7 +376,6 @@ bukaivip.com##.is-draggable.flickity-enabled.carousel_center.carousel
 ||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/8490.gif$image
 xiaopapa.xyz##[href="http://116.206.178.25:2888/5365.html"]
 ||jrafspaelojsejbn.xyz/3d3uea4lhz5dr1c0/*.gif$image
-
 ! 2021-12-10 https://xiaopapa.xyz
 xiaopapa.xyz##hes:nth-of-type(6)
 xiaopapa.xyz##czd:nth-of-type(10)
@@ -405,7 +386,6 @@ xiaopapa.xyz##czd:nth-of-type(10)
 ||ntt.xascjzjx.com
 ! 2021-12-12 https://hsex.men
 hsex.men##[href="http://101hkk.tv"]
-
 ! 2021-12-12 https://banyinjia17.com
 banyinjia17.com##.p-0.col-12
 banyinjia17.com##[href="https://banyinjia17.com/adv/121/"] > .img-fluid
@@ -415,13 +395,11 @@ banyinjia17.com##.col-lg-12 > .mt-2.w-100
 banyinjia17.com###adv-102
 banyinjia17.com###adv-96
 banyinjia17.com###adv-94
-
 ! https://xiaopapa.xyz
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/8490.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/6768.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/dizhi.jpg"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/96020220702.gif"]
-
 ! as
 asianpretty.com###simple-banner > div.simple-banner-text > span > a:nth-child(2) > img
 asianpretty.com###simple-banner > div.simple-banner-text > span > a:first-child > img
@@ -473,6 +451,6 @@ xiaopapa.xyz###nFX_kiY_9_0
 ||upset.pssszsj.com/UploadPicture/20223510_172.gif$image
 xiaopapa.xyz###MMK_iAY_5_1
 ||xiaopapa.xyz^$third-party
-
+||m.biqufan.com^$script,stylesheet
 ||m.biqufan.com^$domain=~m.biqufan.com
 ||m.biqufan.com^$third-party
