@@ -60,13 +60,30 @@ m.biqufan.com###appss
 m.biqufan.com###ppaxs
 m.biqufan.com###chaptercontent > p
 m.biqufan.com##[href="/api/goapp/"]
+||googletagmanager.com/gtag/js^
+||gfdg.swsqhj.com/www/1.png$domain=qkt5h97c.cn,third-party
+||gfdg.swsqhj.com/www/html1/statics/styles/index.css$domain=brbsyf55.cn,third-party
+||gfdg.swsqhj.com/www/html1^
+||gfdg.swsqhj.com/www/scripts^
+||google-analytics.com/g/collect^
+||google-analytics.com/g^$domain=brbsyf55.cn,third-party
+||gfdg.swsqhj.com/www/html1^$domain=brbsyf55.cn,third-party
+||gfdg.swsqhj.com/www^$domain=qkt5h97c.cn,third-party
+||gfdg.swsqhj.com/www/scripts^$domain=brbsyf55.cn,third-party
+||brbsyf55.cn/html1?agent_code=3069
+||brbsyf55.cn^
+||brbsyf55.cn/html1^
+||m.biqufan.com/js^
+||m.biqufan.com/js/apzdefg.js^
+220.170.89.150^$network
+||m.biqufan.com/images^$domain=m.biqufan.com
 
 ! 真不卡影视
 ||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
-www.zhenbuka2.com##.jq-icon-warning.jq-has-icon.jq-toast-single
+www.zhenbuka3.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 www.zhenbuka3.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-www.zhenbuka2.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
+www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
 www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
 www.zhenbuka.com##div.clearfix.stui-player__item:nth-of-type(2)
