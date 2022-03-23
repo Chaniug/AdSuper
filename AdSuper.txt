@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 20220322165452
+! Version: 202203221654567
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -77,6 +77,11 @@ m.biqufan.com##[href="/api/goapp/"]
 ||m.biqufan.com/js/apzdefg.js^
 220.170.89.150^$network
 ||m.biqufan.com/images^$domain=m.biqufan.com
+||brbsyf55.cn^$third-party,important
+||qkt5h97c.cn/index/jump/index2?agent_code=3069&tp=1
+||brbsyf55.cn/html1?agent_code=3069
+||qkt5h97c.cn^
+||brbsyf55.cn^
 
 ! 真不卡影视
 ||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
