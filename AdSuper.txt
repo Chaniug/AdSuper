@@ -496,3 +496,4 @@ xiaopapa.xyz###MMK_iAY_5_1
 ||hm.baidu.com/hm.gif?cc=1&ck=1&cl=24-bit&ds=1882x1241&vl=1242&et=0&ja=0&ln=zh-cn&lo=0&lt=1648002285&rnd=1274237321&si=2e4b3ce08a34d193a657c378dc87edc5&v=1.2.91&lv=2&sn=59204&r=90&ww=1882&ct=!!&u=%3A%2F%2Fxbt.guanlangzhaoming.com%2F3%2F%3FchannelCode%3Dd666*1533&tt=%E9%9B%AA%E7%A2%A7%E7%9B%B4%E6%92%AD%20%E5%AE%85%E7%94%B7%E6%B7%B1%E5%A4%9C%E7%A5%9E%E5%99%A8
 ||88888888888888886666666666666.com/66688888888^$domain=xiaopapa.xyz,third-party
 ||dc.xmasker.com/d/1380?t=0.2417237264567087$domain=xiaopapa.xyz,third-party
+##div.gitee-stars-main-widget.pendan-widget:nth-child(25) > a > img.people-image:first-child
