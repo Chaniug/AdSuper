@@ -1,6 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! Version: 2022032854567
+！TimeUpdated: 2022-04-01T11:10:15+00:00
+! Version: 2022032854569
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -197,6 +198,7 @@ www.zhenbuka5.com###hth616
 https://p0.meituan.net/dpgroup/9b674d4f739482fb81c90bdbd100c6ff240825.gif$domain=zhenbuka3.com
 zhenbuka3.com###hth
 https://aod.cos.tx.xmcdn.com/storages/1477-audiofreehighqps/A5/14/GMCoOR8Ff7n0AASQsQD-Lqhj.jpg
+##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:nth-child(2)
 
 ! 百度
 www.baidu.com##canvas
