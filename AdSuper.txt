@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-04-01T11:10:15+00:00
-! Version: 2022032854569
+！TimeUpdated: 2022-04-02T11:10:15+00:00
+! Version: 2022032822123
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -159,17 +159,12 @@ www.zhenbuka5.com###yb112
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
 www.zhenbuka5.com###ad01
 www.zhenbuka5.com###ad_img
-www.zhenbuka5.com###ad_img
-www.zhenbuka5.com###ad_img
 www.zhenbuka5.com###md112
 www.zhenbuka5.com##font
 www.zhenbuka5.com##.marquee_outer
 www.zhenbuka5.com##.stui-pannel-box > .clearfix.stui-vodlist__bd
 www.zhenbuka5.com##.stui-pannel-box > .title
 ||feigedaojia.com/close_1.png$image
-www.zhenbuka5.com###ad01
-www.zhenbuka5.com###yb112
-www.zhenbuka5.com###md112
 www.zhenbuka5.com##.jq-toast-wrap
 www.zhenbuka5.com##marquee > a > font
 www.zhenbuka5.com##.marquee_txt
@@ -177,14 +172,6 @@ www.zhenbuka5.com##.marquee_outer
 www.zhenbuka5.com##u
 www.zhenbuka5.com##.pull-right.text-muted.more > font
 www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
-www.zhenbuka5.com###ad01
-www.zhenbuka5.com###yb112
-www.zhenbuka5.com###md112
-www.zhenbuka5.com##.jq-toast-wrap
-www.zhenbuka5.com##marquee > a > font
-www.zhenbuka5.com##.marquee_txt
-www.zhenbuka5.com##.marquee_outer
-www.zhenbuka5.com##u
 www.zhenbuka5.com##.pull-right.text-muted.more > font
 www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
 zhenbuka5.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
