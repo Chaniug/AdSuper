@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-04-02T11:10:15+00:00
-! Version: 2022032822123
+！TimeUpdated: 2022-04-12T11:10:15+00:00
+! Version: 2022032822124
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -482,6 +482,31 @@ xiaopapa.xyz###MMK_iAY_5_1
 ||dc.dianpingwb.com^
 ||api.vxmpw.com:82^
 ||api.vxmpw.com:82/xuebi
+xiaopapa.xyz##a:nth-child(4) > img
+xiaopapa.xyz##a:nth-child(5) > img
+xiaopapa.xyz##a:nth-child(9) > img
+xiaopapa.xyz##a:nth-child(12) > img
+||bdstatic.com^
+||shjha.top^
+||hm.baidu.com/hm.gif?cc=1&ck=1&cl=24-bit&ds=385x793&vl=700&et=0&ja=0&ln=zh-cn&lo=0&lt=1650008262&rnd=49555760&si=436ce50e22bdd46ed67eb80c1922aab3&v=1.2.92&lv=3&sn=34378&r=0&ww=384&ct=!!&u=https%3A%2F%2Fxiaopapa.xyz%2Ffrim%2Findex30.html&tt=%E5%9B%BD%E4%BA%A7-%E5%B0%8F%E5%95%AA%E5%95%AA%E8%A7%86%E9%A2%91
+||basic.laitaohao.cc/UploadPicture/img/blank.gif
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/dizhi.jpg
+||basic.laitaohao.cc/UploadPicture/202241422_7.gif
+||hm.baidu.com/hm.gif?hca=667BCE246BED8670&cc=1&ck=1&cl=24-bit&ds=385x793&vl=700&ep=18836%2C3810&et=3&ja=0&ln=zh-cn&lo=0&lt=1650008262&rnd=907402734&si=436ce50e22bdd46ed67eb80c1922aab3&v=1.2.92&lv=3&sn=34459&r=0&ww=384&u=https%3A%2F%2Fxiaopapa.xyz%2Ffrim%2Findex30.html
+||hm.baidu.com/hm.gif?hca=667BCE246BED8670&cc=1&ck=1&cl=24-bit&ds=385x793&vl=700&ep=18836%2C3810&et=3&ja=0&ln=zh-cn&lo=0&lt=1650008262&rnd=907402734&si=436ce50e22bdd46ed67eb80c1922aab3&v=1.2.92&lv=3&sn=34459&r=0&ww=384&u=https%3A%2F%2Fxiaopapa.xyz%2Ffrim%2Findex30.html
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/dibu123.js
+||hm.baidu.com/hm.gif?hca=667BCE246BED8670&cc=1&ck=1&cl=24-bit&ds=385x793&vl=700&ep=18836%2C3810&et=3&ja=0&ln=zh-cn&lo=0&lt=1650008262&rnd=907402734&si=436ce50e22bdd46ed67eb80c1922aab3&v=1.2.92&lv=3&sn=34459&r=0&ww=384&u=https%3A%2F%2Fxiaopapa.xyz%2Ffrim%2Findex30.html
+||wkphoto.cdn.bcebos.com/ac6eddc451da81cb0ab220ae4266d01609243178.jpg
+||basic.laitaohao.cc/UploadPicture/202241117_131.gif
+||basic.laitaohao.cc/UploadPicture/202241117_235.gif
+||normal.e13hl.com:7870/vyZd/W-13818-z-Y/txG/bW818y81843240508
+||basic.laitaohao.cc/UploadPicture/202241117_235.gif
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/dingbuppp.js
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/head123.js
+||normal.e13hl.com:7870/bWyg/C-13817-c-E/tff/Gu718y71843240522
+||hm.baidu.com/hm.js?436ce50e22bdd46ed67eb80c1922aab3
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/dibuppp.js
+||efzfcwxjvoentetjwhvuiuqbeyjkubrt.com/eucjhfxh/ts.js
 ||hm.baidu.com/hm.gif?cc=1&ck=1&cl=24-bit&ds=1882x1241&vl=1242&et=0&ja=0&ln=zh-cn&lo=0&lt=1648002285&rnd=1274237321&si=2e4b3ce08a34d193a657c378dc87edc5&v=1.2.91&lv=2&sn=59204&r=90&ww=1882&ct=!!&u=%3A%2F%2Fxbt.guanlangzhaoming.com%2F3%2F%3FchannelCode%3Dd666*1533&tt=%E9%9B%AA%E7%A2%A7%E7%9B%B4%E6%92%AD%20%E5%AE%85%E7%94%B7%E6%B7%B1%E5%A4%9C%E7%A5%9E%E5%99%A8
 ||88888888888888886666666666666.com/66688888888^$domain=xiaopapa.xyz,third-party
 ||dc.xmasker.com/d/1380?t=0.2417237264567087$domain=xiaopapa.xyz,third-party
