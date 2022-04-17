@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-04-12T11:10:15+00:00
-! Version: 2022032822124
+！TimeUpdated: 2022-04-16T11:10:15+00:00
+! Version: 202204171050
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -486,7 +486,6 @@ xiaopapa.xyz##a:nth-child(4) > img
 xiaopapa.xyz##a:nth-child(5) > img
 xiaopapa.xyz##a:nth-child(9) > img
 xiaopapa.xyz##a:nth-child(12) > img
-||bdstatic.com^
 ||shjha.top^
 ||hm.baidu.com/hm.gif?cc=1&ck=1&cl=24-bit&ds=385x793&vl=700&et=0&ja=0&ln=zh-cn&lo=0&lt=1650008262&rnd=49555760&si=436ce50e22bdd46ed67eb80c1922aab3&v=1.2.92&lv=3&sn=34378&r=0&ww=384&ct=!!&u=https%3A%2F%2Fxiaopapa.xyz%2Ffrim%2Findex30.html&tt=%E5%9B%BD%E4%BA%A7-%E5%B0%8F%E5%95%AA%E5%95%AA%E8%A7%86%E9%A2%91
 ||basic.laitaohao.cc/UploadPicture/img/blank.gif
