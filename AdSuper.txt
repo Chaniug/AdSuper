@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ！TimeUpdated: 2022-04-21T08:10:15+00:00
-! Version: 2022041210923
+! Version: 2022041210926
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -515,3 +515,4 @@ xiaopapa.xyz##a:nth-child(12) > img
 @@||www.btbdys.com^$important,document
 90r.cc##div.mo-main-info:nth-child(3) > div.mo-cols-case.mo-java-waps > div.mo-cols-lays.mo-back-white.mo-part-round.mo-cols-rows:first-child > dl.mo-deta-info.mo-cols-rows:first-child > dd.mo-paxs-5px.mo-pamd-10px.mo-coxs-none.mo-colg-block.mo-cols-info.mo-cols-lg3:last-child > div.mo-code-info.mo-part-code.mo-coxs-center.mo-paxs-5px.mo-pamd-10px > img.mo-code-pics:last-child
 90r.cc##div.mo-main-info:nth-child(3) > div.mo-cols-case.mo-java-waps > div.mo-cols-lays.mo-back-white.mo-part-round.mo-cols-rows:first-child > dl.mo-deta-info.mo-cols-rows:first-child > dd.mo-paxs-5px.mo-pamd-10px.mo-coxs-none.mo-colg-block.mo-cols-info.mo-cols-lg3:last-child > div.mo-code-info.mo-part-code.mo-coxs-center.mo-paxs-5px.mo-pamd-10px
+m.txt99.org###cZ116505052294917_img_link1
