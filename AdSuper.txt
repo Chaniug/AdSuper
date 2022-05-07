@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-04-21T08:10:15+00:00
-! Version: 2022041210926
+！TimeUpdated: 2022-05-06T08:10:15+00:00
+! Version: 2022051060826
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -516,3 +516,18 @@ xiaopapa.xyz##a:nth-child(12) > img
 90r.cc##div.mo-main-info:nth-child(3) > div.mo-cols-case.mo-java-waps > div.mo-cols-lays.mo-back-white.mo-part-round.mo-cols-rows:first-child > dl.mo-deta-info.mo-cols-rows:first-child > dd.mo-paxs-5px.mo-pamd-10px.mo-coxs-none.mo-colg-block.mo-cols-info.mo-cols-lg3:last-child > div.mo-code-info.mo-part-code.mo-coxs-center.mo-paxs-5px.mo-pamd-10px > img.mo-code-pics:last-child
 90r.cc##div.mo-main-info:nth-child(3) > div.mo-cols-case.mo-java-waps > div.mo-cols-lays.mo-back-white.mo-part-round.mo-cols-rows:first-child > dl.mo-deta-info.mo-cols-rows:first-child > dd.mo-paxs-5px.mo-pamd-10px.mo-coxs-none.mo-colg-block.mo-cols-info.mo-cols-lg3:last-child > div.mo-code-info.mo-part-code.mo-coxs-center.mo-paxs-5px.mo-pamd-10px
 m.txt99.org###cZ116505052294917_img_link1
+youku.com###app > div > div.callEnd_box:last-child
+youku.com###app > div > div.callEnd_fixed_box:last-child
+m.youku.com###app > div > div:nth-child(3) > div.clipboard.h5-detail-guide > a.text
+m.youku.com###app > div > div:nth-child(4) > div.clipboard.h5-detail-vip-guide
+m.youku.com###app > div > div:nth-child(7) > div.Corner-container > img.Corner:first-child
+m.youku.com###app > div > div:nth-child(7) > div.Corner-container > img.close:last-child
+m.youku.com###app > div > div.h5-header:first-child > header.yk_header:first-child > a.icon.downloadApp:last-child
+youku.com###download_btn
+m.v.qq.com###container-channel > div.at-app-banner:last-child > div.at-app-banner__main-btn.at-app-banner--button
+m.v.qq.com###container-play > section.mod_source:first-child > div.mod_source_box > div.source_container.swiper-wrapper:first-child > div.source_item.swiper-slide.source_item_origin.source_item_fadeIn
+m.v.qq.com###container-play > div.at-app-banner:last-child > div.at-app-banner__main-btn.at-app-banner--button
+m.iqiyi.com###app > div:nth-child(2) > div > div > div:nth-child(2) > div.ChannelHomeBanner_hbd_eiF93:nth-child(5) > div.ChannelHomeBanner_mbox_2Q4aQ > div.m-box-items.m-box-items-full > section.ChannelHomeBanner_hbd_eiF93 > div > img.ChannelHomeBanner_HDVideo-img_1jtpo
+m.iqiyi.com###app > div:nth-child(2) > div > div > div:nth-child(2) > div.m-box:nth-child(4)
+iqiyi.com###root > div > div.m-site-guidePage-wrap > section.site-guide:nth-child(2) > div.btn-wrap:last-child > div.c-btn-link.btn-goIQY
+m.iqiyi.com###app > div:nth-child(2) > div:nth-child(3) > div.m-box:first-child > div:nth-child(2) > div.m-box-items.m-box-items-full:first-child
