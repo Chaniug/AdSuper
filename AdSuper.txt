@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-05-06T08:10:15+00:00
-! Version: 2022051060826
+！TimeUpdated: 2022-05-07T09:10:15+00:00
+! Version: 2022051060927
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -24,6 +24,21 @@ m.vbiquge.com##.see-ppa1-button > div
 m.vbiquge.com##.see-ppa1-button
 m.vbiquge.com###chaptercontent > p
 m.vbiquge.com##.tips
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:first-child
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:last-child
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child > div:last-child
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child > div:first-child
+m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child
+m.biqupai.com###appss > div > div
+m.biqupai.com###appss > div
+m.biqupai.com###chaptercontent > p:nth-child(4) > a
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child > div.see-ppa1-detail:last-child > p:first-child
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child > div.see-ppa1-detail:last-child > p:last-child
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child > div:first-child
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child > div:last-child
+m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child
 m.vbiquge.com##p:nth-of-type(3)
 m.xbiquge.cc##div.show-app2:nth-of-type(3)
 m.xbiquge.cc##div.show-app2:nth-of-type(6)
