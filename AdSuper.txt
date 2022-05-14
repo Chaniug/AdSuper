@@ -201,7 +201,7 @@ https://p0.meituan.net/dpgroup/9b674d4f739482fb81c90bdbd100c6ff240825.gif$domain
 zhenbuka3.com###hth
 https://aod.cos.tx.xmcdn.com/storages/1477-audiofreehighqps/A5/14/GMCoOR8Ff7n0AASQsQD-Lqhj.jpg
 ##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:nth-child(2)
-
+gitee.com##div.gitee-stars-main-widget.pendan-widget:nth-child(27)
 ! 百度
 www.baidu.com##canvas
 www.baidu.com##.ball-close__GWg4b > .c-icon
