@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-05-07T09:10:15+00:00
-! Version: 2022051060927
+！TimeUpdated: 2022-05-12T21:10:15+00:00
+! Version: 2022051122115
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -546,3 +546,21 @@ m.iqiyi.com###app > div:nth-child(2) > div > div > div:nth-child(2) > div.Channe
 m.iqiyi.com###app > div:nth-child(2) > div > div > div:nth-child(2) > div.m-box:nth-child(4)
 iqiyi.com###root > div > div.m-site-guidePage-wrap > section.site-guide:nth-child(2) > div.btn-wrap:last-child > div.c-btn-link.btn-goIQY
 m.iqiyi.com###app > div:nth-child(2) > div:nth-child(3) > div.m-box:first-child > div:nth-child(2) > div.m-box-items.m-box-items-full:first-child
+qimiaomh.com###XZhwjzwpxy > a:first-child > img
+qimiaomh.com##div:first-child > iframe
+qimiaomh.com###XZhwjzwpxy > img:last-child
+qimiaomh.com##div:first-child > iframe
+qimiaomh.com##div:first-child > iframe
+||ougannike.com^
+||kangaroobro.com^
+qimiaomh.com###JAaWahBQkb > a:first-child > img
+qimiaomh.com###JAaWahBQkb > img:last-child
+qimiaomh.com###NGnRwjWRax > a > img
+qimiaomh.com###NGnRwjWRax
+||tikimg.cc^
+qimiaomh.com###img_list > img.lazyload:nth-child(19)
+qimiaomh.com###cKQZyATjds
+qimiaomh.com###DZaZGXdkeQ > img:last-child
+||88bada.com^
+qimiaomh.com###pQDJycYbRh
+qimiaomh.com##div.nmain_conl:nth-child(2) > div.pl_aa_ss_dd:nth-child(2)
