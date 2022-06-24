@@ -1,13 +1,19 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-05-12T21:10:15+00:00
-! Version: 2022051122115
+！TimeUpdated: 2022-06-24T08:10:15+00:00
+! Version: 2022062408115
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
 
 ! 笔趣阁阅读
+m.biqupai.com###g > cgken > syiijo > xtgecr.zw1ljPz:last-child
+m.biqupai.com##div.m_f_a.sw_sp:nth-child(9)
+m.biqupai.com##div.look_more_a:nth-child(18)
+m.biqupai.com##div.m_f_a.sw_sp:nth-child(10)
+m.biqupai.com##div.callApp_fl_btn.an:nth-child(13)
+m.biqupai.com###chaptercontent > div.look_more_a:nth-child(26)
 m.vbiquge.com###appss > div
 m.vbiquge.com##.show-app2-content
 m.vbiquge.com##.show-app2-button
