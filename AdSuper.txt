@@ -35,7 +35,6 @@ m.vbiquge.com###ppaxs > div
 m.vbiquge.com##.see-ppa1-content
 m.vbiquge.com##.see-ppa1-button > div
 m.vbiquge.com##.see-ppa1-button
-m.vbiquge.com###chaptercontent > p
 m.vbiquge.com##.tips
 m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:first-child
 m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:last-child
