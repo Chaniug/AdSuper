@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-06-29T09:30:35+00:00
-! Version: 2022062913212
+！TimeUpdated: 2022-06-30T09:30:35+00:00
+! Version: 202206301512
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -116,7 +116,6 @@ brbsyf55.cn##.ys-box
 ||qkt5h97c.cn^
 
 ! 真不卡影视
-||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
 www.zhenbuka3.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
 www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
