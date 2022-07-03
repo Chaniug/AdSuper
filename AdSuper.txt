@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ！TimeUpdated: 2022-06-30T09:30:35+00:00
-! Version: 202206301512
+! Version: 202206301513
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -569,7 +569,6 @@ qimiaomh.com###NGnRwjWRax > a > img
 qimiaomh.com###NGnRwjWRax
 ||tikimg.cc^
 ||6767ww1jsm3gzoh0wy.com^
-||bcebos.com^
 ||m.biqupai.com/js/biqupai.js
 m.biqupai.com##div.m_f_a.sw_sp:nth-child(11) > aside.m_f_con.sw_sp:nth-child(2) > h2.sw_sp.cm_tit.sp
 m.biqupai.com##div.m_f_a.sw_sp:nth-child(11)
