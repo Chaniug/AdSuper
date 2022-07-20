@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-07-05T08:30:35+00:00
-! Version: 202207059213
+！TimeUpdated: 2022-07-20T08:30:35+00:00
+! Version: 202207205532
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -489,6 +489,11 @@ jikipedia.com##.tile-34.tile > .hoverable-shadow.ad-card-tile-container.curvy.co
 ! 2022-03-01 https://xiaopapa.xyz
 xiaopapa.xyz##a[href="http://946.fas68s6sf12.com:1888/946.html"]:nth-of-type(3)
 xiaopapa.xyz##a[href="http://946.fas68s6sf12.com:1888/946.html"]:nth-of-type(4)
+m.mudvod.tv###bottom_btn > div
+m.mudvod.tv###all_content > div > div > div:nth-child(2) > div.m-box.android_banner:first-child > div.m-box-items.m-box-items-full > section.ChannelHomeBanner_hbd_eiF93 > div > a.pca-link > img.ChannelHomeBanner_HDVideo-img_1jtpo
+m.mudvod.tv###app_content > div:last-child > div:nth-child(3) > div.m-box:first-child > div.m-box-items.m-box-items-full.banner_android:nth-child(3) > section.ChannelHomeBanner_hbd_eiF93 > div
+m.mudvod.tv###app_content > div:last-child > div:nth-child(3) > div.m-box:first-child > div.m-box-items.m-box-items-full.banner_android:nth-child(3) > section.ChannelHomeBanner_hbd_eiF93 > div > a.pca-link > img.ChannelHomeBanner_HDVideo-img_1jtpo
+
 ! 2022-03-04 https://xiaopapa.xyz
 xiaopapa.xyz##div:nth-of-type(10)
 xiaopapa.xyz###nFX_kiY_9_0
