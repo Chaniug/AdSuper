@@ -122,6 +122,7 @@ brbsyf55.cn##.ys-box
 ||qkt5h97c.cn^
 
 ! 真不卡影视
+ikandy.fun##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
 ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child > div.marquee_txt:last-child > marquee > a > font
 ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child
 ikandy.fun##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:first-child > div.stui-player__detail.detail:last-child > h1.title:nth-child(3) > font:last-child
