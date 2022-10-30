@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2022-09-04T08:30:35+00:00
+！TimeUpdated: 2022-10-30T09:30:35+00:00
 ! Version: 20220906833
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
@@ -9,6 +9,8 @@
 
 ! 笔趣阁阅读
 ! 2022-07-24 https://www.5dy5.vip
+@@||creator.douyin.com^$important,document
+@@||mp.v.qq.com^$important,document
 wap.shuquge.com##nag4bv:nth-child(4) > wjhu8i > v2uspe > d89e0n.dUAFnx
 wap.shuquge.com##div:nth-child(2) > nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
 wap.shuquge.com##nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
