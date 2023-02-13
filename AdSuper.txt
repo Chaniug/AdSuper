@@ -601,5 +601,18 @@ qimiaomh.com###img_list > img.lazyload:nth-child(19)
 qimiaomh.com###cKQZyATjds
 qimiaomh.com###DZaZGXdkeQ > img:last-child
 ||88bada.com^
+||856539.com^$domain=856539.com,app=com.lemurbrowser.exts
+||gberfv.uujhveglpo.xyz^
+||ufq2q2qqvgw.static.onnets1.xyz^
+||baomitu.com^
+||lib.baomitu.com^
+||hnrfe.yangwb.com/v2/stats/12860/159140
+||zz.bdstatic.com^
+||ikjwmfeds.xyz^
+||bytegoofy.com^
+||yangwb.com^
+||lib.baomitu.com^
+||ufq2q2qqvgw.static.onnets1.xyz^
+||ufq2q2qqvgw.static.onnets1.xyz^
 qimiaomh.com###pQDJycYbRh
 qimiaomh.com##div.nmain_conl:nth-child(2) > div.pl_aa_ss_dd:nth-child(2)
