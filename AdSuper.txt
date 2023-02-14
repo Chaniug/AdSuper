@@ -1,14 +1,12 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2023-01-03T09:30:35+00:00
-! Version: 202301022833
+！TimeUpdated: 2023-02-03T09:30:35+00:00
+! Version: 202302022833
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
 
-! 笔趣阁阅读
-! 2022-07-24 https://www.5dy5.vip
 @@||creator.douyin.com^$important,document
 @@||mp.v.qq.com^$important,document
 wap.shuquge.com##nag4bv:nth-child(4) > wjhu8i > v2uspe > d89e0n.dUAFnx
@@ -134,60 +132,10 @@ ikandy.fun##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix
 ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child > div.marquee_txt:last-child > marquee > a > font
 ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child
 ikandy.fun##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:first-child > div.stui-player__detail.detail:last-child > h1.title:nth-child(3) > font:last-child
-www.zhenbuka3.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
-www.zhenbuka3.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
-www.zhenbuka.com##div.clearfix.stui-player__item:nth-of-type(2)
-www.zhenbuka.com###yb112
-www.zhenbuka2.com##div.clearfix.stui-player__item:nth-of-type(2)
-www.zhenbuka3.com###yb112
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
-www.zhenbuka.com###ad01
-zhenbuka3.com###buka888
-www.zhenbuka2.com###ad_img
-www.zhenbuka.com###ad_img
-www.zhenbuka3.com###ad_img
-www.zhenbuka.com###md112
-www.zhenbuka.com##font
-www.zhenbuka.com##.marquee_outer
-www.zhenbuka.com##.stui-pannel-box > .clearfix.stui-vodlist__bd
-www.zhenbuka.com##.stui-pannel-box > .title
 ||feigedaojia.com/close_1.png$image
-www.zhenbuka2.com###ad01
-www.zhenbuka2.com###yb112
-www.zhenbuka2.com###md112
-www.zhenbuka2.com##.jq-toast-wrap
-www.zhenbuka2.com##marquee > a > font
-www.zhenbuka2.com##.marquee_txt
-www.zhenbuka2.com##.marquee_outer
-www.zhenbuka2.com##u
-www.zhenbuka2.com##.pull-right.text-muted.more > font
-www.zhenbuka2.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
-www.zhenbuka3.com###ad01
-www.zhenbuka3.com###yb112
-www.zhenbuka3.com###md112
-www.zhenbuka3.com##.jq-toast-wrap
-www.zhenbuka3.com##marquee > a > font
-www.zhenbuka3.com##.marquee_txt
-www.zhenbuka3.com##.marquee_outer
-www.zhenbuka3.com##u
-www.zhenbuka3.com##.pull-right.text-muted.more > font
-www.zhenbuka3.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
-zhenbuka2.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
-zhenbuka3.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
-www.zhenbuka2.com##.row > .clearfix.stui-pannel-box
-www.zhenbuka3.com##.row > .clearfix.stui-pannel-box
-zhenbuka2.com###hth608
-zhenbuka3.com##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:nth-child(2)
-zhenbuka3.com###hth608
-zhenbuka2.com###dw118
-zhenbuka3.com###dw118
-www.zhenbuka2.com###hth
-www.zhenbuka3.com###hth
-www.zhenbuka2.com###hth616
-www.zhenbuka3.com###hth616
 ||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
 www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
@@ -195,38 +143,9 @@ www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
 www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
-www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
-www.zhenbuka5.com###yb112
-www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
-www.zhenbuka5.com###yb112
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
-www.zhenbuka5.com###ad01
-www.zhenbuka5.com###ad_img
-www.zhenbuka5.com###md112
-www.zhenbuka5.com##font
-www.zhenbuka5.com##.marquee_outer
-www.zhenbuka5.com##.stui-pannel-box > .clearfix.stui-vodlist__bd
-www.zhenbuka5.com##.stui-pannel-box > .title
 ||feigedaojia.com/close_1.png$image
-www.zhenbuka5.com##.jq-toast-wrap
-www.zhenbuka5.com##marquee > a > font
-www.zhenbuka5.com##.marquee_txt
-www.zhenbuka5.com##.marquee_outer
-www.zhenbuka5.com##u
-www.zhenbuka5.com##.pull-right.text-muted.more > font
-www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
-www.zhenbuka5.com##.pull-right.text-muted.more > font
-www.zhenbuka5.com##.hidden-xs.clearfix.stui-pannel-bg.stui-pannel > .stui-pannel-box
-zhenbuka5.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
-zhenbuka5.com##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
-www.zhenbuka5.com##.row > .clearfix.stui-pannel-box
-www.zhenbuka5.com##.row > .clearfix.stui-pannel-box
-zhenbuka5.com###hth608
-zhenbuka5.com###dw118
-www.zhenbuka5.com###hth
-www.zhenbuka5.com###hth616
 https://p0.meituan.net/dpgroup/9b674d4f739482fb81c90bdbd100c6ff240825.gif$domain=zhenbuka3.com
-zhenbuka3.com###hth
 https://aod.cos.tx.xmcdn.com/storages/1477-audiofreehighqps/A5/14/GMCoOR8Ff7n0AASQsQD-Lqhj.jpg
 ##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:nth-child(2)
 gitee.com##div.gitee-stars-main-widget.pendan-widget:nth-child(27)
@@ -616,3 +535,4 @@ qimiaomh.com###DZaZGXdkeQ > img:last-child
 ||ufq2q2qqvgw.static.onnets1.xyz^
 qimiaomh.com###pQDJycYbRh
 qimiaomh.com##div.nmain_conl:nth-child(2) > div.pl_aa_ss_dd:nth-child(2)
+ikandy.fun###tj
