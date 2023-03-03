@@ -21,6 +21,16 @@ ikandy.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq
 ||i0.hdslb.com/bfs/album/1ef8eeaaaf12bc152fc5b437983fbb07608fbbdd.jpg$image
 ||i0.hdslb.com/bfs/album/*.jpg$image
 m.biqupai.com##.look_more_a
+||oqwfnqpo.xyz^
+||netease.com^$app=com.lemurbrowser.exts
+||qwcwnjk.com^
+||qifjksdqwd.xyz^
+||ikjwmfeds.xyz^$app=com.lemurbrowser.exts
+||kmbopoie.com^
+||mnklqw.oqwfnqpo.xyz^$app=com.lemurbrowser.exts
+||oqwfnqpo.xyz^$app=com.lemurbrowser.exts
+||mnklqw.oqwfnqpo.xyz^$app=com.lemurbrowser.exts
+||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 @@||3.jetbra.in^$important,document
 m.biqupai.com###bqgGuide > div.bqg_guide_cover:first-child
 m.biqupai.com##div.m_f_a.sw_sp:nth-child(8)
