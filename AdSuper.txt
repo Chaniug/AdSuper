@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2023-02-03T09:30:35+00:00
-! Version: 20230301499
+！TimeUpdated: 2023-06-01T09:30:35+00:00
+! Version: 2023060499
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -552,3 +552,7 @@ ikandy.fun###tj
 ||ceseasons.com/c.aspx
 ||optimizationguide-pa.googleapis.com^
 ||mgsyiv.com^
+||ghnmsd.dwibjkdsn.com:9875/v2/stats/12860/159140$domain=ikandy.fun
+||dwibjkdsn.com^
+||ghnmsd.dwibjkdsn.com:9875/v2/
+||ghnmsd.dwibjkdsn.com^
