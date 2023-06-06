@@ -387,6 +387,7 @@ banyinjia17.com###adv-102
 banyinjia17.com###adv-96
 banyinjia17.com###adv-94
 ! https://xiaopapa.xyz
+ikandy.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-icon-warning
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/8490.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/6768.gif"]
 xiaopapa.xyz##[src="https://88888888888888886666666666666.com/66688888888/dizhi.jpg"]
