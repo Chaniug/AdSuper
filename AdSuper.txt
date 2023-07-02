@@ -32,75 +32,7 @@ m.biqupai.com##.look_more_a
 ||mnklqw.oqwfnqpo.xyz^$app=com.lemurbrowser.exts
 ||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 @@||3.jetbra.in^$important,document
-m.biqupai.com###bqgGuide > div.bqg_guide_cover:first-child
-m.biqupai.com##div.m_f_a.sw_sp:nth-child(8)
-m.biqupai.com##.bqgGuide-content
-m.biqupai.com###chaptercontent > div.look_more_a:nth-child(54)
-m.biqupai.com###chaptercontent > div.look_more_a:nth-child(58)
-m.biqupai.com###g > cgken > syiijo > xtgecr.zw1ljPz:last-child
-m.biqupai.com##div.m_f_a.sw_sp:nth-child(9)
-m.biqupai.com##div.look_more_a:nth-child(18)
-m.biqupai.com##div.m_f_a.sw_sp:nth-child(10)
-m.biqupai.com##div.callApp_fl_btn.an:nth-child(13)
-m.biqupai.com###chaptercontent > div.look_more_a:nth-child(26)
-m.vbiquge.com###appss > div
-m.vbiquge.com##.show-app2-content
-m.vbiquge.com##.show-app2-button
-m.vbiquge.com##ul
-m.vbiquge.com##.W1oMwlgtext
-m.vbiquge.com##.W1oMwlgani
-m.vbiquge.com##.W1oMwlglisten
-m.vbiquge.com###ppaxs
-m.vbiquge.com###ppaxs > div > div
-m.vbiquge.com###ppaxs > div
 ||p.eikuaitao.com/*.gif$image
-m.vbiquge.com##.see-ppa1-content
-m.vbiquge.com##.see-ppa1-button > div
-m.vbiquge.com##.see-ppa1-button
-m.vbiquge.com##.tips
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:first-child
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child > div.show-app2-detail:last-child > p:last-child
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-content:first-child
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child > div:last-child
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child > div:first-child
-m.biqupai.com##div.show-app2:nth-child(7) > a > div.show-app2-button:last-child
-m.biqupai.com###appss > div > div
-m.biqupai.com###appss > div
-m.biqupai.com###chaptercontent > p:nth-child(4) > a
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child > div.see-ppa1-detail:last-child > p:first-child
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child > div.see-ppa1-detail:last-child > p:last-child
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-content:first-child
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child > div:first-child
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child > div:last-child
-m.biqupai.com##div.see-ppa1:nth-child(12) > a > div.see-ppa1-button:last-child
-m.vbiquge.com##p:nth-of-type(3)
-m.xbiquge.cc##div.show-app2:nth-of-type(3)
-m.xbiquge.cc##div.show-app2:nth-of-type(6)
-m.biquge.com.cn##.kan-ap2-content
-m.biquge.com.cn##.kan-ap2-button
-m.biquge.com.cn##.W1oMwlgtext
-m.biquge.com.cn##.W1oMwlglisten
-m.biquge.com.cn##.W1oMwlgbar
-m.biquge.com.cn###huzi > div
-m.biquge.com.cn##div:nth-of-type(8)
-m.kk-xs.com##[href^="http://nh8010.com"] > object
-m.xxbiquge.net##.see-ppa1-button
-m.xxbiquge.net##.W1oMwlgani
-m.xxbiquge.net##.W1oMwlglisten
-m.xxbiquge.net###appss > div
-m.xxbiquge.net##.show-app2-content
-m.xxbiquge.net##.show-app2-button
-m.xxbiquge.net###ppaxs
-m.xxbiquge.net###chaptercontent > p
-m.xxbiquge.net##.see-ppa1-content
-m.xxbiquge.net##.see-ppa1-Button
-m.sobiquge.com##.doulaikan-app3 > [href]
-m.sobiquge.com##.W1oMwlgtext
-m.sobiquge.com##.yyttkz3
-m.sobiquge.com###hanbaobao
-m.sobiquge.com##div:nth-of-type(8)
-m.sobiquge.com##.show-bq
-m.xxbiquge.net##p:nth-of-type(3)
 ! 2021-07-10 https://m.xxbiquge.net
 m.xxbiquge.net##.tips
 ! 2021-09-27 https://m.biqufan.com
