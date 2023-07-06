@@ -128,6 +128,17 @@ m.baidu.com##.ball-wrapper__3Wj_S
 www.360doc.com##.b
 www.360doc.com##.ac_buybook
 www.360doc.com##.floatqrcode
+aa3zz.com##a:nth-child(3) > img
+aa3zz.com##a:nth-child(4) > img
+aa3zz.com##a:nth-child(8) > img
+aa3zz.com##a:nth-child(9) > img
+aa3zz.com##a:nth-child(11) > img
+aa3zz.com##a:nth-child(10) > img
+aa3zz.com##a:nth-child(12) > img
+aa3zz.com##a:nth-child(13) > img
+aa3zz.com##a:nth-child(5) > img
+aa3zz.com##a:nth-child(6) > img
+aa3zz.com##a:nth-child(7) > img
 
 ! 谷歌翻译拦截
 translate.google.cn##.zJmlgc.rQKk7
