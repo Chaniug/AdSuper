@@ -39,6 +39,7 @@ m.biqupai.com##.look_more_a
 ||p.eikuaitao.com/*.gif$image
 ! 2021-07-10 https://m.xxbiquge.net
 m.xxbiquge.net##.tips
+ikandy2.fun###tj
 ! 2021-09-27 https://m.biqufan.com
 m.biqufan.com##.yyttkz3
 m.biqufan.com##.show-app2 > [href="/api/goapp/"]
