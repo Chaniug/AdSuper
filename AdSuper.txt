@@ -18,6 +18,7 @@ ikandy2.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-i
 www.5dy7.vip###\36 309ed797638b
 ikandy.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy5.vip###\36 2ddd149ac91b
+apkmirror.com###ezmobfooter > center:first-child
 ikandy.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ||i0.hdslb.com/bfs/album/c44101c9c08e903198cb13d5d5b59a6200168f01.jpg$image
 ||i0.hdslb.com/bfs/album/1ef8eeaaaf12bc152fc5b437983fbb07608fbbdd.jpg$image
