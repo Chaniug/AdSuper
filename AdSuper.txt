@@ -16,6 +16,7 @@ wap.shuquge.com###appss > dd
 ikandy2.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ikandy2.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy7.vip###\36 309ed797638b
+||sunyu11.cn^$domain=ikandy2.fun
 ikandy.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy5.vip###\36 2ddd149ac91b
 apkmirror.com###ezmobfooter > center:first-child
