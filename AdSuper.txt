@@ -18,6 +18,8 @@ ikandy2.fun##div.container:nth-child(9) > div:first-child > b:first-child > img
 ikandy2.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ikandy2.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy7.vip###\36 309ed797638b
+ikandy2.fun##div.container:nth-child(8) > div.row > div.col-lg-wide-75.col-xs-1:first-child > div.stui-pannel.stui-pannel-bg.clearfix:first-child > div:first-child > a:last-child > img
+ikandy2.fun##div.container:nth-child(8) > div.row > div.col-lg-wide-75.col-xs-1:first-child > div.stui-pannel.stui-pannel-bg.clearfix:first-child > div:first-child > b:first-child > img
 ikandy.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy5.vip###\36 2ddd149ac91b
 ikandy2.fun##div.jq-toast-wrap:nth-child(11) > div.jq-toast-single.jq-has-icon.jq-icon-warning
