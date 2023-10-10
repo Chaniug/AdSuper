@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-！TimeUpdated: 2023-08-21T09:30:35+00:00
-! Version: 20230825923
+！TimeUpdated: 2023-10-08T09:30:35+00:00
+! Version: 202310089231
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -110,11 +110,7 @@ ikandy.fun##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
 ||feigedaojia.com/close_1.png$image
 ||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
-www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
-www.zhenbuka5.com##.jq-icon-warning.jq-has-icon.jq-toast-single
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(1)
-www.zhenbuka5.com##div.jq-icon-warning.jq-has-icon.jq-toast-single:nth-of-type(2)
 ||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
 ||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
 ||feigedaojia.com/close_1.png$image
@@ -170,10 +166,8 @@ aa3zz.com##a:nth-child(13) > img
 aa3zz.com##a:nth-child(5) > img
 aa3zz.com##a:nth-child(6) > img
 aa3zz.com##a:nth-child(7) > img
-
 ! 谷歌翻译拦截
 translate.google.cn##.zJmlgc.rQKk7
-
 ! b站
 m.bilibili.com##.m-home-float-openapp
 
