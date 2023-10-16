@@ -2,7 +2,7 @@ import os
 import time
 
 # 获取当前日期和时间组合的数据
-current_time = time.strftime("%Y%m%d%H%M%S", time.localtime())
+current_time = time.strftime("%Y%m%d%H%M", time.localtime())
 
 # 读取原始文件内容
 with open("AdSuper.txt", "r", encoding="utf-8") as f:
