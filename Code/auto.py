@@ -1,11 +1,20 @@
+# !/usr/bin/python3
+# -*- coding:utf-8 -*-
+# Author: chaniug
+# @Email: chaniug@vip.qq.com
+# @Time: 2023/10/24 0024 下午 14:14
 import os
 import time
 
 # 获取当前日期和时间组合的数据
 current_time = time.strftime("%Y%m%d%H%M", time.localtime())
 
+# 获取当前工作目录
+current_dir = os.getcwd()
+
 # 读取原始文件内容
-with open("Code/AdSuper.txt", "r", encoding="utf-8") as f:
+file_path = os.path.join(current_dir, "AdSuper.txt")
+with open(file_path, "r", encoding="utf-8") as f:
     lines = f.readlines()
 
 # 创建一个新的列表，用于存储更新后的内容
@@ -26,5 +35,7 @@ for line in lines:
     updated_lines.append(updated_line)
 
 # 将更新后的内容写入原始文件
-with open("Code/AdSuper.txt", "w", encoding="utf-8") as f:
+file_path = os.path.join(current_dir, "AdSuper.txt")
+with open(file_path, "w", encoding="utf-8") as f:
     f.writelines(updated_lines)
+
