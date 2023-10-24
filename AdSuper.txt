@@ -524,3 +524,15 @@ biheq1.cc###full-width-tabpanel-0 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.MuiBox-root.css-mgur8:last-child > div.c-bPCgao > a:first-child > img
 biheq1.cc###full-width-tabpanel-0 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:nth-child(3) > div.bg > img
 biheq1.cc###full-width-tabpanel-0 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:last-child > div.bg > img
+biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-essLpi:first-child > div.c-caUZiY > div.c-bAXmbO:first-child > a:nth-child(2) > div.bg > img
+biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-essLpi:first-child > div.c-caUZiY > div.c-bAXmbO:first-child > a:nth-child(3) > div.bg
+biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-essLpi:first-child > div.c-caUZiY > div.c-bAXmbO:first-child > a:nth-child(4) > div.bg
+biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-essLpi:first-child > div.c-caUZiY > div.c-bAXmbO:first-child > a:last-child > div.bg > img
+biheq1.cc###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:first-child > div.bg > img
+biheq1.cc###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:nth-child(2) > div.bg
+biheq1.cc###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:nth-child(3) > div.bg > img
+biheq1.cc###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:last-child > div.bg
+biheq1.cc###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:first-child > div.bg > img
+biheq1.cc###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:nth-child(2) > div.bg
+biheq1.cc###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:nth-child(3) > div.bg > img
+biheq1.cc###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a:last-child > div.bg
