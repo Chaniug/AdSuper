@@ -5,7 +5,7 @@ import time
 current_time = time.strftime("%Y%m%d%H%M", time.localtime())
 
 # 读取原始文件内容
-with open(r"AdSuper.txt", "r", encoding="utf-8") as f:
+with open("AdSuper.txt", "r", encoding="utf-8") as f:
     lines = f.readlines()
 
 # 创建一个新的列表，用于存储更新后的内容
@@ -26,5 +26,5 @@ for line in lines:
     updated_lines.append(updated_line)
 
 # 将更新后的内容写入原始文件
-with open(r"AdSuper.txt", "w", encoding="utf-8") as f:
+with open("AdSuper.txt", "w", encoding="utf-8") as f:
     f.writelines(updated_lines)
