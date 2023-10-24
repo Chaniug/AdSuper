@@ -13,7 +13,7 @@ current_time = time.strftime("%Y%m%d%H%M", time.localtime())
 current_dir = os.getcwd()
 
 # 读取原始文件内容
-file_path = os.path.join(current_dir, "AdSuper.txt")
+file_path = os.path.join(current_dir, r"Adsuper\Code\AdSuper.txt")
 with open(file_path, "r", encoding="utf-8") as f:
     lines = f.readlines()
 
@@ -35,7 +35,7 @@ for line in lines:
     updated_lines.append(updated_line)
 
 # 将更新后的内容写入原始文件
-file_path = os.path.join(current_dir, "AdSuper.txt")
+file_path = os.path.join(current_dir, r"Adsuper\Code\AdSuper.txt")
 with open(file_path, "w", encoding="utf-8") as f:
     f.writelines(updated_lines)
 
