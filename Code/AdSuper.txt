@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2023-11-05 17:00:00
-! Version: 202311050925
+! Version: 202311051025
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -75,6 +75,8 @@ m.biqufan.com##[href="/api/goapp/"]
 ||gfdg.hncxld.com/www/html1/statics/styles/index.css
 ||gfdg.hncxld.com/www/1.png
 brbsyf55.cn##.ys-box
+hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.col-md-3.single-show-list:last-child > div.hidden-xs.hidden-sm:first-child > iframe:last-child
+hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.col-md-3.single-show-list:last-child > div.hidden-xs.hidden-sm:first-child
 ||googletagmanager.com/gtag/js^
 ||gfdg.swsqhj.com/www/1.png$domain=qkt5h97c.cn,third-party
 ||gfdg.swsqhj.com/www/html1/statics/styles/index.css$domain=brbsyf55.cn,third-party
