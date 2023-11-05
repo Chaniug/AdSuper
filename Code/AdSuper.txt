@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2023-11-05 17:00:00
-! Version: 202311051004
+! Version: 202311051005
 ! License: https://gitee.com/chaniug/ad-super/raw/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -245,7 +245,11 @@ www.ak1080.com##.mo-cols-lg6.mo-cols-xs12.mo-cols-info.mo-pamd-10px.mo-paxs-5px.
 ! 百度翻译
 fanyi.baidu.com###sideAdContainer > div.app-side-ad
 fanyi.baidu.com##div.container:first-child > div.header:first-child > div.inner > div.download-guide:nth-child(5) > ul.download-guide-ul > li.guide-list.download-app:last-child
-
+sbihe.club###full-width-tabpanel-0 > div.c-essLpi > div.c-bAXmbO:nth-child(2)
+sbihe.club###root > div.c-hGcguO > main:nth-child(2) > div.MuiBox-root.css-mgur8:last-child
+sbihe.club###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2)
+sbihe.club###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2)
+sbihe.club###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvsWy > div.c-bAXmbO:nth-child(8)
 ! 2021-04-29 120asky
 m.120ask.com###body_main > .tiao_pop
 m.120ask.com##.test_b.foot-fix.ba_1_106
