@@ -12,6 +12,7 @@ wap.shuquge.com##nag4bv:nth-child(4) > wjhu8i > v2uspe > d89e0n.dUAFnx
 wap.shuquge.com##div:nth-child(2) > nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
 wap.shuquge.com##nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
 wap.shuquge.com###appss > dd
+vidhub.tv###main > div.content > div.adwap:nth-child(5)
 ikandy2.fun##div.container:nth-child(9) > div:first-child > a:last-child > img
 ikandy2.fun##div.container:nth-child(9) > div:first-child > b:first-child > img
 ikandy2.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
