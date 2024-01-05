@@ -2,6 +2,6 @@
 ! TimeUpdated: 2024-01-05 13:59:59
 ! Version: 202401051406
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
-! Title: AdSuper (gitee)
+! Title: DNSSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
