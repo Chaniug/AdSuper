@@ -5,3 +5,11 @@
 ! Title: DNSSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
+||ufz.doesxyz.com^
+||id1.cn^
+||xdrig.com^
+||usp1.baidu.com^
+||i2.myapkcdn.in^
+||c3.myapkcdn.in^
+||plugin.mobopay.baidu.com^
+||mo.freeindoapp.com^
