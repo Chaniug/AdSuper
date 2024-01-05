@@ -1,37 +1,29 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! TimeUpdated:  2023-11-16 13:45:00
-! Version: 202312161158
+! TimeUpdated: 2024-01-05 14:15:15
+! Version: 202401051415
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
 !-----------------------General advert blocking filters-----------------------!
-
 @@||creator.douyin.com^$important,document
 @@||mp.v.qq.com^$important,document
 wap.shuquge.com##nag4bv:nth-child(4) > wjhu8i > v2uspe > d89e0n.dUAFnx
 wap.shuquge.com##div:nth-child(2) > nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
 wap.shuquge.com##nag4bv:nth-child(3) > wjhu8i > v2uspe > d89e0n.dUAFnx:last-child
 wap.shuquge.com###appss > dd
+m.2biqu.com###show_img-8225462100335650212-855
+m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
-ikandy2.fun##div.container:nth-child(9) > div:first-child > a:last-child > img
-ikandy2.fun##div.container:nth-child(9) > div:first-child > b:first-child > img
-ikandy2.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
-ikandy2.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy7.vip###\36 309ed797638b
 vidhub.tv###main > div.content:last-child > div.adwap:first-child > div.promote-link
 ikandy2.fun##div.container:nth-child(8) > div.row > div.col-lg-wide-75.col-xs-1:first-child > div.stui-pannel.stui-pannel-bg.clearfix:first-child > div:first-child > a:last-child > img
 ikandy2.fun##div.container:nth-child(8) > div.row > div.col-lg-wide-75.col-xs-1:first-child > div.stui-pannel.stui-pannel-bg.clearfix:first-child > div:first-child > b:first-child > img
 ikandy.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 www.5dy5.vip###\36 2ddd149ac91b
-ikandy2.fun##div.jq-toast-wrap:nth-child(11) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 apkmirror.com###ezmobfooter > center:first-child
 ikandy.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ||i0.hdslb.com/bfs/album/c44101c9c08e903198cb13d5d5b59a6200168f01.jpg$image
 ||i0.hdslb.com/bfs/album/1ef8eeaaaf12bc152fc5b437983fbb07608fbbdd.jpg$image
-ikandy2.fun###tj
-ikandy2.fun###\30 8P8EC
-ikandy2.fun##div.jq-toast-wrap:last-child > div.jq-toast-single.jq-has-icon.jq-icon-warning
-ikandy2.fun##szkta:nth-child(69)
 ||renzhen8.cn^$domain=ikandy2.fun
 ||thyn.renzhen8.cn^$domain=ikandy2.fun
 ||thyn.renzhen8.cn:7891/stats/$domain=ikandy2.fun
@@ -102,25 +94,6 @@ hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.
 ||qkt5h97c.cn/index/jump/index2?agent_code=3100&tp=1
 ||brbsyf55.cn/html1?agent_code=3100
 ||qkt5h97c.cn^
-
-! 真不卡影视
-ikandy.fun##div.container:nth-child(10) > div.row > div.stui-pannel-box.clearfix:nth-child(3) > div.stui-pannel_hd > a > img
-ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child > div.marquee_txt:last-child > marquee > a > font
-ikandy.fun##div.container:nth-child(8) > div.marquee_outer:first-child
-ikandy.fun##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:first-child > div.stui-player__detail.detail:last-child > h1.title:nth-child(3) > font:last-child
-||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
-||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
-||feigedaojia.com/close_1.png$image
-||bj.bcebos.com/im-cs/c0d50d0e059fd517d01491b20051b3f5.png$image
-||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1610435846553_2gonx4ptuj2c.png$image
-||alime-customer-upload-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/customer-upload/1600778564942_g7ij1xwwbcmn.gif$image
-||pic.luolanshijia.com/img/upload/gg/yb20210307.gif$image
-||feigedaojia.com/close_1.png$image
-https://p0.meituan.net/dpgroup/9b674d4f739482fb81c90bdbd100c6ff240825.gif$domain=zhenbuka3.com
-https://aod.cos.tx.xmcdn.com/storages/1477-audiofreehighqps/A5/14/GMCoOR8Ff7n0AASQsQD-Lqhj.jpg
-##div.container:nth-child(8) > div.row:last-child > div.col-lg-wide-75.col-xs-1:first-child > div.stui-player__item.clearfix:nth-child(2)
-gitee.com##div.gitee-stars-main-widget.pendan-widget:nth-child(27)
 ! 百度
 www.baidu.com##canvas
 www.baidu.com##.ball-close__GWg4b > .c-icon
@@ -303,7 +276,6 @@ m.thepaper.cn##li.icon_openapp:nth-of-type(11)
 m.thepaper.cn##li.icon_openapp:nth-of-type(12)
 m.thepaper.cn##li.icon_openapp:nth-of-type(13)
 app.cctv.com###download
-
 66law.cn##.consult-top-fixed, .consult-bottom-fixed
 66law.cn##div.w1200.ma.mt15:nth-child(3) > div.clearfix.mt30.pb40:last-child > div.fl.w820:first-child > div.detail-page.mb:first-child > div.det-add-consult:nth-child(4)
 findlaw.cn###recommend-lawyer
