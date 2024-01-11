@@ -38,4 +38,4 @@ for line in lines:
 file_path = os.path.join(current_dir, "Adsuper\DNS\dns.txt")
 with open(file_path, "w", encoding="utf-8") as f:
     f.writelines(updated_lines)
-print(f"规则已更新！版本号为: {current_time}")
+print(f"DNS规则已更新！版本号为: {current_time}")
