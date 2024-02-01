@@ -519,3 +519,4 @@ biheq1.cc###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2) > a
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvsWy > div.c-bAXmbO:nth-child(5) > a:first-child > div.bg > img
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvsWy > div.c-bAXmbO:nth-child(5)
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-gwWeng > div.c-bAXmbO:nth-child(3)
+||vpic.cms.qq.com$image
