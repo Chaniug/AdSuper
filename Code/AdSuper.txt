@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2024-01-05 14:15:15
-! Version: 202402010821
+! Version: 202402080803
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -520,3 +520,7 @@ biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvs
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvsWy > div.c-bAXmbO:nth-child(5)
 biheq1.cc###root > div.c-hGcguO > main:nth-child(2) > div.c-gwWeng > div.c-bAXmbO:nth-child(3)
 ||vpic.cms.qq.com$image
+||nav-site.com^$domain=dongjingre-api.nav-site.com
+||hwhvh.com^
+||oss.hwhvh.com
+||hwhvh.com^$important
