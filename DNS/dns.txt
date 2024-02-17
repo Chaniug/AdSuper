@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c69349
 ! TimeUpdated: 2024-01-05 13:59:59
-! Version: 202401231056
+! Version: 202402171406
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: DNSSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
