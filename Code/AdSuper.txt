@@ -86,6 +86,7 @@ hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.
 ||qkt5h97c.cn/index/jump/index2?agent_code=3100&tp=1
 ||brbsyf55.cn/html1?agent_code=3100
 ||qkt5h97c.cn^
+||community.image.video.qpic.cn$image
 ! 百度
 www.baidu.com##canvas
 www.baidu.com##.ball-close__GWg4b > .c-icon
