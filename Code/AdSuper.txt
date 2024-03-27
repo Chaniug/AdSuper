@@ -31,8 +31,6 @@ ikandy.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq
 m.biqupai.com##.look_more_a
 ||e23jhk23.xyz^
 @@||aaaf.top^$important,document
-ikandy2.fun###\30 8P8EC
-ikandy2.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ||osdfs32dff.xyz^
 ||21888cdnyun2023.cyou^
 ||21888cdnyun2023.cyou^$important
@@ -48,16 +46,6 @@ ikandy2.fun##div.jq-toast-wrap:nth-child(12) > div.jq-toast-single.jq-has-icon.j
 ||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 @@||3.jetbra.in^$important,document
 ||p.eikuaitao.com/*.gif$image
-! 2021-07-10 https://m.xxbiquge.net
-m.xxbiquge.net##.tips
-ikandy2.fun###tj
-! 2021-09-27 https://m.biqufan.com
-m.biqufan.com##.yyttkz3
-m.biqufan.com##.show-app2 > [href="/api/goapp/"]
-m.biqufan.com###appss
-m.biqufan.com###ppaxs
-m.biqufan.com###chaptercontent > p
-m.biqufan.com##[href="/api/goapp/"]
 ||gfdg.hncxld.com/www/html1/statics/styles/index.css
 ||gfdg.hncxld.com/www/1.png
 brbsyf55.cn##.ys-box
@@ -77,9 +65,7 @@ hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.
 ||brbsyf55.cn/html1?agent_code=3069
 ||brbsyf55.cn/html1/?agent_code=3100
 ||brbsyf55.cn/html1^
-||m.biqufan.com/js/apzdefg.js^
 220.170.89.150^$network
-||m.biqufan.com/images^$domain=m.biqufan.com
 ||brbsyf55.cn^$third-party,important
 ||qkt5h97c.cn/index/jump/index2?agent_code=3069&tp=1
 ||brbsyf55.cn/html1?agent_code=3069
@@ -218,15 +204,6 @@ sbihe.club###root > div.c-hGcguO > main:nth-child(2) > div.MuiBox-root.css-mgur8
 sbihe.club###full-width-tabpanel-1 > div.c-essLpi > div.c-bAXmbO:nth-child(2)
 sbihe.club###full-width-tabpanel-2 > div.c-essLpi > div.c-bAXmbO:nth-child(2)
 sbihe.club###root > div.c-hGcguO > main:nth-child(2) > main.c-ctDJSG > div.c-bcvsWy > div.c-bAXmbO:nth-child(8)
-! 2021-04-29 120asky
-m.120ask.com###body_main > .tiao_pop
-m.120ask.com##.test_b.foot-fix.ba_1_106
-m.120ask.com##.lee.tiao_pop > .YWBDAD
-m.120ask.com##.lee.tiao_pop
-m.120ask.com##.fixed-right
-m.120ask.com###ad-right-piao > .close_b
-m.120ask.com##div.ba_1_106 > .YWBDAD
-m.120ask.com###zhuanjiahuifuxia
 ! APkpure
 m.apkpure.com##.aegon-warp
 ! 百家号 https://baijiahao.baidu.com
@@ -277,18 +254,6 @@ findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div
 ! 2021-05-19 https://baijiahao.baidu.com
 baijiahao.baidu.com##.openImg
 baijiahao.baidu.com##._1dZbwpATPO52gYzG5MIML
-! 2021-05-20 https://www.nfmovies.com
-www.nfmovies.com##.android
-www.nfmovies.com###afJNKRZfrpav > [href^="https://nf.brushshopy.com/"]
-www.nfmovies.com##div.container.myui-ra-container:nth-of-type(4)
-www.nfmovies.com##div.container.myui-ra-container:nth-of-type(3)
-www.nfmovies.com###afQNwnhLkBDU > [href^="https://nf.brushshopy.com/"]
-www.nfmovies.com###afySKCKToZRD > [href^="https://nf.brushshopy.com/"]
-www.nfmovies.com##.close-box.tips
-www.nfmovies.com##div.padding-0.col-xs-1.col-md-wide-7:nth-of-type(3)
-www.nfmovies.com##div.clearfix.myui-panel-bg.myui-panel:nth-of-type(2)
-www.nfmovies.com##[src="https://pic.imgdb.cn/item/6097f4edd1a9ae528fb500ec.jpg"]
-www.nfmovies.com###alcjdCYoJYRP
 ! 2021-06-15 https://bukaivip.com
 ||bukaivip.com/loading/loading2.php$subdocument
 bukaivip.com###changeFromTip
