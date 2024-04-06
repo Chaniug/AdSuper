@@ -12,6 +12,7 @@ m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
 www.5dy7.vip###\36 309ed797638b
 www.5dy5.vip###\36 2ddd149ac91b
+apkmirror.com###bottom-slider > a.f-100.p-relative.d-flex.f-nowrap
 apkmirror.com###ezmobfooter > center:first-child
 ikandy.fun##div.jq-toast-wrap:nth-child(10) > div.jq-toast-single.jq-has-icon.jq-icon-warning
 ||i0.hdslb.com/bfs/album/c44101c9c08e903198cb13d5d5b59a6200168f01.jpg$image
