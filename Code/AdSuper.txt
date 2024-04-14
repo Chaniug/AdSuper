@@ -157,11 +157,6 @@ wapbaike.baidu.com##.close-image
 duckduckgo.com##.app-store-badge--google.app-store-badge
 duckduckgo.com##.js-open-in-app-link.open-in-app__deep-link
 duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-js__hide.js-tag-home:nth-child(4) > div.tag-home__wrapper > div.tag-home__item
-
-! 2021-07-11 https://m.thepaper.cn
-m.thepaper.cn###newDetailHotRecommend > .moblink_btn-650-white
-
-
 ||p.qlogo.cn/qqmail_head/*/0$image
 ! 百度翻译
 fanyi.baidu.com###sideAdContainer > div.app-side-ad
