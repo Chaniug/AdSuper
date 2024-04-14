@@ -154,30 +154,6 @@ wapbaike.baidu.com##.close-image
 ||bkimg.cdn.bcebos.com/pic/cefc1e178a82b9014a904a9b5dc1be773912b31b414c?x-bce-process=image/format,f_auto$image
 
 ！影视拦截
-!
-www.nfxtv.com##.bottom_fixed
-www.nfxtv.com##.close-box.tips
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.content-wrap:first-child > div.content > div.asst.asst-post_header:first-child > div.asst.asst-post_header > a > img
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.sidebar:nth-child(2) > div.widget.widget-textasst:nth-child(2) > a.style03:first-child
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.sidebar:nth-child(2) > div.widget.widget-textasst:first-child > a.style03
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.sidebar:nth-child(2) > div.widget.widget-textasst:nth-child(3) > a.style03
-dy.xianggutuan.cn###cyEmoji > div.cy-wrapper > ul.emoji-list:last-child
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.content-wrap:first-child > div.content > div.article-wechats:nth-child(6)
-dy.xianggutuan.cn##a.cebian:nth-child(24)
-dy.xianggutuan.cn##div.single-post:nth-child(21) > section.container > div.content-wrap:first-child > div.content > strong.single-strong:nth-child(7)
-dy.xianggutuan.cn###cyEmoji > div.cy-wrapper > div.emoji-tip:first-child
-dy.xianggutuan.cn##section.container:nth-child(3) > div.content-wrap:first-child > div.content > div.asst.asst-single-header:nth-child(2) > div.asst.asst-post_header > a > img
-
-gudanys.com##div.container:nth-child(3) > div.row > div.myui-panel.myui-panel-bg.clearfix:nth-child(3) > div.myui-panel-box.clearfix > div.myui-panel_bd > div.col-xs-1
-gudanys.com###player-sidebar > div.myui-panel.active.clearfix > div.myui-panel-box.clearfix > div.col-pd.mb10:last-child
-gudanys.com##div.container:nth-child(3) > div.row > div.myui-panel.myui-panel-bg.clearfix:nth-child(2) > div.myui-panel-box.clearfix > div.myui-panel_bd > div.col-xs-1
-
-||www.nfmovies.com/pic/app/laptop_click.png$image
-paofans.tv##.ads-all.ads > div
-www.muguangys.com###content
-www.muguangys.com##.mb10.col-pd > div
-www.muguangys.com##.clearfix.myui-panel-box > .close-box.tips
-www.o8tv.com##.clearfix.hl-this-box.conch-ads-box
 duckduckgo.com##.app-store-badge--google.app-store-badge
 duckduckgo.com##.js-open-in-app-link.open-in-app__deep-link
 duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-js__hide.js-tag-home:nth-child(4) > div.tag-home__wrapper > div.tag-home__item
@@ -185,16 +161,6 @@ duckduckgo.com###content_homepage > div.cw--c > div.tag-home.tag-home--slide.no-
 ! 2021-07-11 https://m.thepaper.cn
 m.thepaper.cn###newDetailHotRecommend > .moblink_btn-650-white
 
-! 2021-07-12 https://www.ak1080.com
-www.ak1080.com###sjdb_img_65323
-www.ak1080.com###sjdb_img_43733
-www.ak1080.com###sjdb_img_8094
-www.ak1080.com##.__cf_infinite.__cf_animated.__cf_rubberBand
-www.ak1080.com##.__cf_infinite.__cf_animated.__cf_tada
-www.ak1080.com###sjdb_div_53944
-www.ak1080.com##.mo-part-zero.mo-foot-advs
-www.ak1080.com##.mo-cols-lg6.mo-cols-xs12.mo-cols-info.mo-pamd-10px.mo-paxs-5px.mo-bord-muted.mo-cols-topo > .mo-paxs-5px.mo-cols-topo
-||p.qlogo.cn/qqmail_head/l1MIyibPct4QCBFFwglzgayvpOsxxia6tMaC49Hc6Q52b9UBbufG9NOhfcx5HdIJj9/0$image
 
 ||p.qlogo.cn/qqmail_head/*/0$image
 ! 百度翻译
@@ -215,23 +181,6 @@ baijiahao.baidu.com##.contentPadding.bottomTTSStruct
 baijiahao.baidu.com##.related-news > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyKUDLU3h5K > ._2zI_1HDV_e-G25lK7muW14
 baijiahao.baidu.com###page_wrapper > div > div > ._3Lg9_aL1ZIf7Ry_XN0wdHc > ._1T6TbV3IOYsTyKUDLU3h5K > ._2zI_1HDV_e-G25lK7muW14
 baijiahao.baidu.com##._1-nFvWd71g07irMlxzeVz_
-! 新浪新闻 https://news.sina.cn
-news.sina.cn##.qweasd.sw_c0
-news.sina.cn##.btn_follow.j_article_wbreco
-news.sina.cn##.an.j_callST.callApp_fl_btn
-news.sina.cn##.ld_com_bar_btn
-news.sina.cn###j_relevent_reading > a.j_callST.m_f_a_r.template_v6_picTxt.template_v6 > .m_f_con > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
-news.sina.cn###j_relevent_reading > a.j_callST.show.m_f_a.template_v6_threePic.template_v6 > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
-news.sina.cn###j_relevent_news > a.j_callST.m_f_a_r.template_v6_picTxt.template_v6 > .m_f_con > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
-news.sina.cn###j_relevent_news > .j_callST.show.m_f_a.template_v6_threePic.template_v6 > .cm_f_ic_l.cm_f_ic > .cm_mark_r.cm_mark
-news.sina.cn##.z_c2.j_article_relevent_news.s_card > .ldy_cm_h2 > .j_call_native.ldy_cm_h2_more
-! 腾讯新闻 https://xw.qq.com
-xw.qq.com##.pictureBottomBtn.jsx-303514326
-xw.qq.com##.channel-entry.jsx-2375966888
-xw.qq.com##span.jsx-2135715324:nth-of-type(1)
-xw.qq.com##.btn-app.jsx-2577878351
-! 红星新闻
-##span.inlineimage.fullwidth.storyimage > .image > .loaded
 ! 蓝奏云 https://lrho.lanzoui.com
 lrho.lanzoui.com##div:nth-of-type(8)
 ! 2021-07-05 https://yxssp.lanzoui.com
@@ -313,27 +262,8 @@ asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player
 asianpretty.com###post-5091 > header.entry-header:first-child > div.video-player:first-child > div.happy-inside-player:last-child
 ! baidu 网盘
 pan.baidu.com###web-single-bottom > a:last-child
-! 2021-08-01 http://m.mhxqiu.com
-m.mhxqiu.com##center
-m.mhxqiu.com##.pic
-m.mhxqiu.com###adhtml
 k.sina.cn##.an.j_callST.callApp_fl_btn
 k.sina.cn##.qweasd.sw_c0
-! 2021-08-09 https://www.zhenbuka3.com
-www.zhenbuka3.com##div.clearfix.stui-player__item:nth-of-type(2)
-www.zhenbuka5.com##div.clearfix.stui-player__item:nth-of-type(2)
-! 2021-10-07 https://jikipedia.com
-jikipedia.com##.components-container
-jikipedia.com##.search-card
-jikipedia.com##.logo-link-idle.hoverable.logo-link
-jikipedia.com##.collection-activity
-jikipedia.com##.tile-4.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
-jikipedia.com##.download-link
-jikipedia.com##.tile-11.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
-jikipedia.com##.tile-14.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
-jikipedia.com##.tile-24.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
-jikipedia.com##.ad-container-_f6wnnud24kh.ad-container
-jikipedia.com##.tile-34.tile > .hoverable-shadow.ad-card-tile-container.curvy.container.ad-card
 ! 2022-03-01 https://m.biqufan.cm.biqufan.com###pb_next
 ||sdd.alloed.com
 ! 2022-03-01 https://xiaopapa.xyz
