@@ -11,6 +11,7 @@ m.2biqu.com###show_img-8225462100335650212-855
 m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
 5drm5.com###\36 636d5018324b
+wyb3vd8sdysbjddwg193bshbdh.48387082.com:8888
 duckduckgo.com###__next > main > desktop-homepage_belowTheFoldWrapper__ruEBp
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.desktop-homepage_heroContent__px79B.container_root__Lmrbx.container_responsive__IDWnv:nth-child(2)
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.homepage-cta-section_scrollCta__HuSCL.center_root__Uf1xM.center_intrinsic__mk_Ab.center_andText__ejUnC:last-child > h6.heading_heading6__hJig2.heading_heading__IiMSV.heading_responsive__oZpJJ:first-child
