@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2024-04-14 14:28:51
-! Version: 202405051013
+! Version: 202405051015
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -15,7 +15,6 @@ www.5dy5.vip###\36 2ddd149ac91b
 5drm5.com###\36 636d5018324b
 ||647bc185.szrtcpa.com/2024/04/26/*g$image
 5drm5.com##.module-main > .is_mb
-||647bc185.szrtcpa.com/2024/0*g$image
 duckduckgo.com###__next > main > desktop-homepage_belowTheFoldWrapper__ruEBp
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.desktop-homepage_heroContent__px79B.container_root__Lmrbx.container_responsive__IDWnv:nth-child(2)
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.homepage-cta-section_scrollCta__HuSCL.center_root__Uf1xM.center_intrinsic__mk_Ab.center_andText__ejUnC:last-child > h6.heading_heading6__hJig2.heading_heading__IiMSV.heading_responsive__oZpJJ:first-child
