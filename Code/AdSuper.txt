@@ -13,7 +13,6 @@ vidhub.tv###main > div.content > div.adwap:nth-child(5)
 www.5dy7.vip###\36 309ed797638b
 www.5dy5.vip###\36 2ddd149ac91b
 5drm5.com###\36 636d5018324b
-||647bc185.szrtcpa.com/2024/04/26/*g$image
 5drm5.com##.module-main > .is_mb
 duckduckgo.com###__next > main > desktop-homepage_belowTheFoldWrapper__ruEBp
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.desktop-homepage_heroContent__px79B.container_root__Lmrbx.container_responsive__IDWnv:nth-child(2)
