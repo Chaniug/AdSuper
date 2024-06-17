@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! TimeUpdated: 2024-04-14 14:28:51
-! Version: 202405051357
+! TimeUpdated: 2024-06-17 15:05:22
+! Version: 202406171505
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -11,6 +11,10 @@ m.2biqu.com###show_img-8225462100335650212-855
 m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
 5drm5.com###\36 636d5018324b
+@@||cn.bing.com^$important,document
+apkmirror.com###bottom-slider > a.f-100.p-relative.d-flex.f-nowrap
+apkmirror.com###aswift_1_host
+apkmirror.com###content > div.ains.ains-43.ains-has-label.ains-apkm_search_page_top:first-child
 wyb3vd8sdysbjddwg193bshbdh.48387082.com:8888
 duckduckgo.com###__next > main > desktop-homepage_belowTheFoldWrapper__ruEBp
 duckduckgo.com###__next > main > article.desktop-homepage_root__nDI2s > div.desktop-homepage_hero__Zoh95:first-child > div.desktop-homepage_heroContent__px79B.container_root__Lmrbx.container_responsive__IDWnv:nth-child(2)
