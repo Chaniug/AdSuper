@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2024-06-17 15:05:22
-! Version: 202407261730
+! Version: 202408161324
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -34,6 +34,11 @@ https://647bc185.szrtcpa.com/2024/04/26/adfa9d92dc3e3.png
 https://647bc185.szrtcpa.com/2024/04/26/cf5866904865d.jpg
 https://647bc185.szrtcpa.com/2024/04/23/b92483d67e12a.png
 aa3zz.com##[src]
+aa3zz.com##a:nth-child(3) > img
+aa3zz.com##a:nth-child(4) > img
+aa3zz.com##a:nth-child(5) > img
+aa3zz.com##a:nth-child(6) > img
+aa3zz.com##a:nth-child(7) > img
 w5cin.com##.is_pc
 duckduckgo.com###__next > main.minimal-homepage_layout__Wlfi7 > div.minimal-homepage_minimalHero__f1x_g:first-child > div.minimal-homepage_minimalContentWrap__W4HdL:nth-child(2) > div.minimalHomepageDesktopCta_minimalHomepageDesktopCtaWrapper__kyObE.center_root__Uf1xM:last-child > a.downloadBrowserButton_button__nFe_k.minimalHomepageDesktopCta_minimalHomepageDesktopCta__QI_ZY.button_button__qrSvw.button_secondary__DAail.button_size-md__dS3Yr
 duckduckgo.com###__next > main.minimal-homepage_layout__Wlfi7 > div.minimal-homepage_minimalHero__f1x_g:first-child > div.homepage-cta-section_scrollCta__HuSCL.minimal-homepage_exploreFeatureScroller__TL5Vx.center_root__Uf1xM.center_intrinsic__mk_Ab.center_andText__ejUnC:last-child > h6.heading_heading6__hJig2.heading_heading__IiMSV.heading_responsive__oZpJJ:first-child
