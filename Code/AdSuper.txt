@@ -164,7 +164,11 @@ www.zhihu.com##.DownloadGuide-open
 www.zhihu.com##.OpenGuide-wrapper
 www.zhihu.com##.AnswerItem.ContentItem > .is-collapsed.RichContent > .RichContent-inner > .Button--plain.ContentItem-more.Button
 www.zhihu.com##.CommentEditor--normal.Comments-footer
-
+aa3zz.com##a:nth-child(3) > img
+aa3zz.com##a:nth-child(4) > img
+aa3zz.com##a:nth-child(5) > img
+aa3zz.com##a:nth-child(6) > img
+aa3zz.com##a:nth-child(7) > img
 ! 百度翻译
 fanyi.baidu.com##.app-guide-main
 fanyi.baidu.com##.app-guide-wrapper
