@@ -1,6 +1,6 @@
 ! Checksum: 72b8121cebc673dba85eed5c6934afa9
 ! TimeUpdated: 2024-06-17 15:05:22
-! Version: 202410121304
+! Version: 202410161802
 ! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
 ! Title: AdSuper (gitee)
 ! Homepage: https://gitee.com/chaniug/ad-super
@@ -9,6 +9,8 @@
 @@||mp.v.qq.com^$important,document
 @@||www.volcengine.com^$important,document
 @@||console.volcengine.com^$important,document
+@@||console.cloud.tencent.com^$important,document
+bilibili.com##div.desktop-download-tip:nth-child(17)
 m.2biqu.com###show_img-8225462100335650212-855
 m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
