@@ -11,6 +11,8 @@
 @@||console.volcengine.com^$important,document
 @@||console.cloud.tencent.com^$important,document
 bilibili.com##div.desktop-download-tip:nth-child(17)
+aa3zz.com##a:nth-child(8) > img
+bilibili.com##div.desktop-download-tip:nth-child(17)
 m.2biqu.com###show_img-8225462100335650212-855
 m.2biqu.com###\38 225462100335650212-855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
