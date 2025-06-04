@@ -1,10 +1,3 @@
-! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! TimeUpdated: 2024-06-17 15:05:22
-! Version: 202505251053
-! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
-! Title: AdSuper (gitee)
-! Homepage: https://gitee.com/chaniug/ad-super
-!-----------------------General advert blocking filters-----------------------!
 @@||creator.douyin.com^$important,document
 @@||mp.v.qq.com^$important,document
 @@||www.volcengine.com^$important,document
