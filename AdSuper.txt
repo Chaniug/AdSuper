@@ -1,10 +1,3 @@
-! Checksum: 72b8121cebc673dba85eed5c6934afa9
-! TimeUpdated: 2024-06-17 15:05:22
-! Version: 202505251053
-! License: https://gitee.com/chaniug/ad-super/blob/master/LICENSE
-! Title: AdSuper (gitee)
-! Homepage: https://gitee.com/chaniug/ad-super
-!-----------------------General advert blocking filters-----------------------!
 @@||creator.douyin.com^$important,document
 @@||mp.v.qq.com^$important,document
 @@||www.volcengine.com^$important,document
@@ -114,7 +107,6 @@ hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.
 ||brbsyf55.cn/html1?agent_code=3100
 ||qkt5h97c.cn^
 ||community.image.video.qpic.cn$image
-! 百度
 www.baidu.com##canvas
 www.baidu.com##.ball-close__GWg4b > .c-icon
 www.baidu.com##div:nth-of-type(6)
@@ -142,21 +134,16 @@ m.baidu.com###se-form > div > .new-search-con.con-wrap > .con-inner-left > .call
 m.baidu.com###se-form2 > div > .new-search-con.con-wrap > .con-inner-left > .callicon-wrap > .baiduapp-icon
 m.baidu.com##.banner-wrap__3jXPE
 m.baidu.com###bottom
-! 2021-06-01 https://m.baidu.com
 m.baidu.com##.ball-spread__1o_Kc.c-blocka.ball-wrapper__cJuFe
 m.baidu.com##.c-blocka.ball-wrapper__cJuFe
 m.baidu.com##.ball-wrapper__3Wj_S
 
-! 360Doc
 www.360doc.com##.b
 www.360doc.com##.ac_buybook
 www.360doc.com##.floatqrcode
-! 谷歌翻译拦截
 translate.google.cn##.zJmlgc.rQKk7
-! b站
 m.bilibili.com##.m-home-float-openapp
 
-! 知乎
 www.zhihu.com##.is-shown.OpenInApp.OpenInAppButton
 www.zhihu.com##.DownloadGuide.Card
 www.zhihu.com##.DownloadGuide-blockBg
