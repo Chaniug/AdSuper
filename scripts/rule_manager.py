@@ -113,9 +113,9 @@ class RuleManager:
         """
         try:
             with open(filename, 'w', encoding='utf-8') as f:
-                f.write(f"# AdSuper 规则文件\n")
-                f.write(f"# 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"# 规则总数: {len(rules)}\n\n")
+                f.write(f"! AdSuper 规则文件\n")
+                f.write(f"! 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                f.write(f"! 规则总数: {len(rules)}\n\n")
                 rules_by_type = {}
                 for rule in rules:
                     if rule.type not in rules_by_type:
