@@ -69,12 +69,17 @@ def main():
                 all_new_rules.extend(valid_rules)
         if not all_new_rules:
             log("没有找到新的规则")
+            # 保证 adnew.txt 存在
+            if not os.path.exists('adnew.txt'):
+                with open('adnew.txt', 'w') as f:
+                    f.write("# 自动生成的空 adnew.txt\n")
             return
         log(f"\n找到 {len(all_new_rules)} 条有效规则，开始合并...")
         new_filename = manager.merge_rules(all_new_rules)
         log(f"merge_rules 返回文件名: {new_filename}")
-        log("当前目录所有文件:")
-        log(str(os.listdir('.')))
+        log(f"os.getcwd(): {os.getcwd()}")
+        log(f"os.listdir('.'): {os.listdir('.')}")
+        log(f"adnew.txt exists: {os.path.exists('adnew.txt')}")
         adnew_path = os.path.join('.', new_filename)
         if not os.path.exists(adnew_path):
             log(f"错误：文件 {adnew_path} 未生成")
@@ -84,6 +89,10 @@ def main():
     except Exception as e:
         log(f"主流程异常: {e}")
         log(traceback.format_exc())
+        # 保证 adnew.txt 存在
+        if not os.path.exists('adnew.txt'):
+            with open('adnew.txt', 'w') as f:
+                f.write("# 自动生成的空 adnew.txt\n")
         sys.exit(1)
 
 if __name__ == "__main__":
