@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 from datetime import datetime
 from github import Github
 from scripts.rule_validator import RuleValidator, Rule
@@ -7,10 +8,13 @@ from scripts.rule_manager import RuleManager
 from scripts.utils import log
 
 def get_github_repo() -> tuple:
+    """
+    获取 GitHub 仓库
+    """
     g = Github(os.getenv('GITHUB_TOKEN'))
     repo_name = os.getenv('GITHUB_REPOSITORY')
     if not repo_name:
-        repo_name = 'chani/AdSuper'
+        repo_name = 'chani/AdSuper'  # 本地调试时手动指定你的GitHub仓库名
     try:
         repo = g.get_repo(repo_name)
         return repo, repo_name
@@ -20,6 +24,9 @@ def get_github_repo() -> tuple:
         sys.exit(1)
 
 def extract_rules_from_issue(issue) -> list:
+    """
+    从 issue 中提取规则
+    """
     rules = []
     if '||' in issue.title or '##' in issue.title:
         rules.append(issue.title.strip())
@@ -40,11 +47,12 @@ def main():
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
         manager = RuleManager()
-        # labels 参数要用字符串！而不是列表
-        issues = repo.get_issues(state='all', labels="ad-rule")
+        # 获取全部issues，后面手动过滤ad-rule标签
+        issues = repo.get_issues(state='all')
         all_new_rules = []
         for issue in issues:
-            if not any(label.name == 'ad-rule' for label in issue.labels):
+            label_names = [label.name for label in issue.labels]
+            if 'ad-rule' not in label_names:
                 continue
             rules = extract_rules_from_issue(issue)
             if rules:
@@ -82,6 +90,7 @@ def main():
         log("规则合并完成！")
     except Exception as e:
         log(f"主流程异常: {e}")
+        log(traceback.format_exc())
         sys.exit(1)
 
 if __name__ == "__main__":
