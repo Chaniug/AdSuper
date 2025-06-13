@@ -1,20 +1,16 @@
 import os
 import sys
 import traceback
-from datetime import datetime
 from github import Github
 from scripts.rule_validator import RuleValidator, Rule
 from scripts.rule_manager import RuleManager
 from scripts.utils import log
 
 def get_github_repo() -> tuple:
-    """
-    获取 GitHub 仓库
-    """
     g = Github(os.getenv('GITHUB_TOKEN'))
     repo_name = os.getenv('GITHUB_REPOSITORY')
     if not repo_name:
-        repo_name = 'chani/AdSuper'  # 本地调试时手动指定你的GitHub仓库名
+        repo_name = 'chani/AdSuper'
     try:
         repo = g.get_repo(repo_name)
         return repo, repo_name
@@ -24,9 +20,6 @@ def get_github_repo() -> tuple:
         sys.exit(1)
 
 def extract_rules_from_issue(issue) -> list:
-    """
-    从 issue 中提取规则
-    """
     rules = []
     if '||' in issue.title or '##' in issue.title:
         rules.append(issue.title.strip())
@@ -46,8 +39,7 @@ def main():
     try:
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
-        manager = RuleManager()
-        # 获取全部issues，后面手动过滤ad-rule标签
+        manager = RuleManager()  # 默认写根目录
         issues = repo.get_issues(state='all')
         all_new_rules = []
         for issue in issues:
@@ -83,10 +75,11 @@ def main():
         log(f"merge_rules 返回文件名: {new_filename}")
         log("当前目录所有文件:")
         log(str(os.listdir('.')))
-        if not os.path.exists(new_filename):
-            log(f"错误：文件 {new_filename} 未生成")
+        adnew_path = os.path.join('.', new_filename)
+        if not os.path.exists(adnew_path):
+            log(f"错误：文件 {adnew_path} 未生成")
             sys.exit(1)
-        log(f"规则已合并到 {new_filename}")
+        log(f"规则已合并到 {adnew_path}")
         log("规则合并完成！")
     except Exception as e:
         log(f"主流程异常: {e}")
