@@ -5,6 +5,41 @@ from github import Github
 from scripts.rule_validator import RuleValidator, Rule
 from scripts.rule_manager import RuleManager
 from scripts.utils import log
+import re
+
+def extract_rules_from_issue(issue):
+    """
+    从 issue 的标题和正文中提取所有广告规则。
+    返回 [(规则文本, 来源)] 列表，来源为 'title' 或 'body'。
+    """
+    rules = []
+    rule_patterns = [
+        r'\|\|[^\s\^$，。！？；：、…]+?\^[^\s，。！？；：、…]*',       # ||domain^$option
+        r'@@\|\|[^\s\^$，。！？；：、…]+?\^[^\s，。！？；：、…]*',    # @@||domain^$option
+        r'(^|[^\S\r\n])\$.+',                                     # $script,$image等修饰符一整行
+        r'[^#\s][^\s]*#@?#.+',                                   # example.com#@#something
+        r'[^#\s][^\s]*##.+',                                     # example.com##something
+        r'[^#\s][^\s]*#\$#.+',                                   # example.com#$#something
+        r'[^#\s][^\s]*##\^.+',                                   # example.com##^something
+        r'##[^\s，。！？；：、…]+',                                 # ##.ad-banner
+        r'@@[^\s]+',                                             # @@规则(非||也可)
+        r'^!.*$',                                                # 注释
+    ]
+    pattern = re.compile('|'.join(rule_patterns), re.MULTILINE)
+
+    seen = set()
+    lines = [issue.title.strip()]
+    if issue.body:
+        lines += issue.body.split('\n')
+
+    for idx, line in enumerate(lines):
+        source = 'title' if idx == 0 else 'body'
+        for match in pattern.finditer(line):
+            rule = match.group().strip()
+            if rule and rule not in seen:
+                seen.add(rule)
+                rules.append((rule, source))
+    return rules
 
 def get_github_repo() -> tuple:
     g = Github(os.getenv('GITHUB_TOKEN'))
@@ -19,20 +54,6 @@ def get_github_repo() -> tuple:
         log(str(e))
         sys.exit(1)
 
-def extract_rules_from_issue(issue) -> list:
-    rules = []
-    if '||' in issue.title or '##' in issue.title:
-        rules.append(issue.title.strip())
-        log(f"从 issue #{issue.number} 的标题中提取规则: {issue.title}")
-    if issue.body:
-        lines = issue.body.split('\n')
-        for line in lines:
-            line = line.strip()
-            if line and ('||' in line or '##' in line):
-                rules.append(line)
-                log(f"从 issue #{issue.number} 的内容中提取规则: {line}")
-    return rules
-
 def main():
     log(f"当前工作目录：{os.getcwd()}")
     log("开始从 GitHub Issues 获取新规则...")
@@ -46,7 +67,8 @@ def main():
             label_names = [label.name for label in issue.labels]
             if 'ad-rule' not in label_names:
                 continue
-            rules = extract_rules_from_issue(issue)
+            rule_tuples = extract_rules_from_issue(issue)
+            rules = [r for r, src in rule_tuples]
             if rules:
                 valid_rules, errors = validator.validate_rules(rules, f"issue #{issue.number}")
                 if errors:
