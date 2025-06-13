@@ -45,7 +45,8 @@ def main():
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
         manager = RuleManager()
-        issues = repo.get_issues(state='open', labels=['ad-rule'])
+        # 获取所有带ad-rule标签的issues（包括已关闭的）
+        issues = repo.get_issues(state='all', labels=['ad-rule'])
         all_new_rules = []
         for issue in issues:
             if not any(label.name == 'ad-rule' for label in issue.labels):

@@ -82,7 +82,7 @@ class RuleManager:
                 log(f"  来源1: {rule1.source}")
                 log(f"  来源2: {rule2.source}")
         sorted_rules = self.validator.sort_rules(unique_rules)
-        new_filename = 'Adsupernew.txt'
+        new_filename = 'adnew.txt'
         self._save_rules(sorted_rules, os.path.join(self.base_dir, new_filename))
         log(f"已写入合并规则到 {new_filename}")
         # 备份
