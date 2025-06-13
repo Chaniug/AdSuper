@@ -64,8 +64,13 @@ def main():
         issues = repo.get_issues(state='all')
         all_new_rules = []
         for issue in issues:
-            label_names = [label.name for label in issue.labels]
-            if 'ad-rule' not in label_names:
+            labels = [label.name for label in issue.labels]
+            # 只收集同时有 ad-rule 和 completed，且没有 not planned 标签的 issue
+            if 'ad-rule' not in labels:
+                continue
+            if 'completed' not in labels:
+                continue
+            if 'not planned' in labels:
                 continue
             rule_tuples = extract_rules_from_issue(issue)
             rules = [r for r, src in rule_tuples]
@@ -93,8 +98,8 @@ def main():
             log("没有找到新的规则")
             # 保证 adnew.txt 存在
             if not os.path.exists('adnew.txt'):
-                with open('adnew.txt', 'w') as f:
-                    f.write("# 自动生成的空 adnew.txt\n")
+                with open('adnew.txt', 'w', encoding='utf-8') as f:
+                    f.write("! 自动生成的空 adnew.txt\n")
             return
         log(f"\n找到 {len(all_new_rules)} 条有效规则，开始合并...")
         new_filename = manager.merge_rules(all_new_rules)
@@ -113,8 +118,8 @@ def main():
         log(traceback.format_exc())
         # 保证 adnew.txt 存在
         if not os.path.exists('adnew.txt'):
-            with open('adnew.txt', 'w') as f:
-                f.write("# 自动生成的空 adnew.txt\n")
+            with open('adnew.txt', 'w', encoding='utf-8') as f:
+                f.write("! 自动生成的空 adnew.txt\n")
         sys.exit(1)
 
 if __name__ == "__main__":
