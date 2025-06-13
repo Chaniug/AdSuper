@@ -1,4 +1,4 @@
-# 🚀 AdSuper规则收集与管理工具
+# 🚀 规则收集与管理工具
 
 [![主项目 @Chaniug/FilterFusion](https://img.shields.io/badge/Main%20Project-FilterFusion-blue?logo=github)](https://github.com/Chaniug/FilterFusion)
 [![贡献者](https://img.shields.io/github/contributors/Chaniug/AdSuper)](https://github.com/Chaniug/AdSuper/graphs/contributors)
