@@ -29,6 +29,10 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
+      - name: Set Run Time
+        id: set_time
+        run: echo "run_time=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
+
       - name: Zip project
         run: |
           zip -r "AD广告收集.zip" . -x "*.git*" ".github/*"  # 可排除.git和github workflows自身
@@ -40,7 +44,7 @@ jobs:
           name: "AD广告收集 ${{ steps.set_version.outputs.version }}"
           body: |
             本次为自动打包发布，包含项目全部内容。
-            触发时间：${{ github.run_started_at }}
+            触发时间：${{ steps.set_time.outputs.run_time }}
           files: AD广告收集.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
