@@ -7,6 +7,12 @@ from scripts.rule_manager import RuleManager
 from scripts.utils import log
 import re
 
+# ============= 需根据你的项目实际修改的配置 ===============
+PROJECT_NAME = 'AdSuper'           # 项目板名称（请确保和 GitHub 项目板标题完全一致）
+DONE_COLUMN_NAME = ''                # 完成列名称（如：'Done' 或 '已完成'）
+NOT_PLANNED_COLUMN_NAME = ''      # 不计划实现列名称（如有就填，没有可留空）
+# ========================================================
+
 def extract_rules_from_issue(issue):
     """
     从 issue 的标题和正文中提取所有广告规则。
@@ -45,7 +51,7 @@ def get_github_repo() -> tuple:
     g = Github(os.getenv('GITHUB_TOKEN'))
     repo_name = os.getenv('GITHUB_REPOSITORY')
     if not repo_name:
-        repo_name = 'chani/AdSuper'
+        repo_name = 'Chaniug/AdSuper'
     try:
         repo = g.get_repo(repo_name)
         return repo, repo_name
@@ -54,24 +60,62 @@ def get_github_repo() -> tuple:
         log(str(e))
         sys.exit(1)
 
+def get_valid_issues_from_project(repo):
+    """
+    只获取 Project Board 的“已完成”列且不在“不计划实现”列的 issues
+    """
+    projects = repo.get_projects()
+    project = None
+    for p in projects:
+        if p.name.strip() == PROJECT_NAME.strip():
+            project = p
+            break
+    if not project:
+        log(f"未找到名为 '{PROJECT_NAME}' 的项目板（请检查项目板名称是否正确）")
+        sys.exit(1)
+    done_col = None
+    not_plan_col = None
+    for c in project.get_columns():
+        if c.name.strip() == DONE_COLUMN_NAME.strip():
+            done_col = c
+        if NOT_PLANNED_COLUMN_NAME and c.name.strip() == NOT_PLANNED_COLUMN_NAME.strip():
+            not_plan_col = c
+    if not done_col:
+        log(f"未找到名为 '{DONE_COLUMN_NAME}' 的列（请检查列名是否正确）")
+        sys.exit(1)
+    # 收集“已完成”列的 issue
+    def get_issue_numbers_from_col(col):
+        issue_numbers = set()
+        for card in col.get_cards():
+            if card.content_url and '/issues/' in card.content_url:
+                try:
+                    num = int(card.content_url.split('/')[-1])
+                    issue_numbers.add(num)
+                except Exception as e:
+                    log(f"卡片 content_url 格式异常: {card.content_url}")
+        return issue_numbers
+    done_issues = get_issue_numbers_from_col(done_col)
+    not_plan_issues = get_issue_numbers_from_col(not_plan_col) if not_plan_col else set()
+    valid_issue_numbers = done_issues - not_plan_issues
+    issues = []
+    for n in valid_issue_numbers:
+        try:
+            issues.append(repo.get_issue(number=n))
+        except Exception as e:
+            log(f"无法获取 issue #{n}: {e}")
+    return issues
+
 def main():
     log(f"当前工作目录：{os.getcwd()}")
-    log("开始从 GitHub Issues 获取新规则...")
+    log("开始从 GitHub Project Board 获取新规则...")
     try:
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
         manager = RuleManager()  # 默认写根目录
-        issues = repo.get_issues(state='all')
+        # 用 Project Board 获取有效 issues
+        issues = get_valid_issues_from_project(repo)
         all_new_rules = []
         for issue in issues:
-            labels = [label.name for label in issue.labels]
-            # 只收集同时有 ad-rule 和 completed，且没有 not planned 标签的 issue
-            if 'ad-rule' not in labels:
-                continue
-            if 'completed' not in labels:
-                continue
-            if 'not planned' in labels:
-                continue
             rule_tuples = extract_rules_from_issue(issue)
             rules = [r for r, src in rule_tuples]
             if rules:
