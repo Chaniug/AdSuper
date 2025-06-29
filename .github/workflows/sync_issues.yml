@@ -1,15 +1,9 @@
 name: Sync Issues to AdSuper
 
-permissions:
-  contents: write
-  issues: read
-  pull-requests: read
-  projects: read
-
 on:
   schedule:
-    - cron: '0 2 */5 * *'
-  workflow_dispatch:
+    - cron: '0 2 */5 * *'  # 每5天UTC时间2点运行
+  workflow_dispatch:       # 允许手动触发
 
 jobs:
   sync:
