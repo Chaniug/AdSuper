@@ -11,6 +11,7 @@ import re
 # ============= 需根据你的项目实际修改的配置 ===============
 REPO_OWNER = "Chaniug"
 REPO_NAME = "AdSuper"
+USER_LOGIN = "Chaniug"         # 你的 GitHub 用户名
 PROJECT_NUMBER = 4             # 项目编号（数字，不是id）
 DONE_STATUS = "Done"           # "完成"状态的字段值
 NOT_PLANNED_STATUS = "Not Planned"  # "不计划实现"状态的字段值
@@ -32,10 +33,10 @@ def run_graphql(query, variables=None):
     return r.json()
 
 def get_project_v2_items():
-    # 查询 project v2 的所有卡片及其字段（包含状态、关联 issue）
+    # 查询 user projects v2 的所有卡片及其字段（包含状态、关联 issue）
     query = """
-    query($owner: String!, $name: String!, $number: Int!, $after: String) {
-      repository(owner: $owner, name: $name) {
+    query($user: String!, $number: Int!, $after: String) {
+      user(login: $user) {
         projectV2(number: $number) {
           id
           title
@@ -73,18 +74,18 @@ def get_project_v2_items():
     }
     """
     variables = {
-        "owner": REPO_OWNER,
-        "name": REPO_NAME,
+        "user": USER_LOGIN,
         "number": PROJECT_NUMBER,
         "after": None
     }
     issues = []
     while True:
         data = run_graphql(query, variables)
-        project = data["data"]["repository"]["projectV2"]
-        if not project:
-            log("未找到指定的项目板，请确认项目板编号和仓库名无误。")
+        user = data["data"]["user"]
+        if not user or not user["projectV2"]:
+            log("未找到指定的用户项目板，请确认项目板编号和用户名无误。")
             sys.exit(1)
+        project = user["projectV2"]
         items = project["items"]["nodes"]
         issues.extend(items)
         page_info = project["items"]["pageInfo"]
@@ -159,7 +160,7 @@ def get_github_repo() -> tuple:
 
 def main():
     log(f"当前工作目录：{os.getcwd()}")
-    log("开始从 GitHub Projects v2 获取新规则...")
+    log("开始从 GitHub 用户 Projects v2 获取新规则...")
     try:
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
