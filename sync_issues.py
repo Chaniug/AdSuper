@@ -1,6 +1,7 @@
 import os
 import sys
 import traceback
+import requests
 from github import Github
 from scripts.rule_validator import RuleValidator, Rule
 from scripts.rule_manager import RuleManager
@@ -8,10 +9,108 @@ from scripts.utils import log
 import re
 
 # ============= 需根据你的项目实际修改的配置 ===============
-PROJECT_NAME = 'AdSuper'           # 项目板名称（请确保和 GitHub 项目板标题完全一致）
-DONE_COLUMN_NAME = ''                # 完成列名称（如：'Done' 或 '已完成'）
-NOT_PLANNED_COLUMN_NAME = ''      # 不计划实现列名称（如有就填，没有可留空）
+REPO_OWNER = "Chaniug"
+REPO_NAME = "AdSuper"
+PROJECT_NUMBER = 4             # 项目编号（数字，不是id）
+DONE_STATUS = "Done"           # "完成"状态的字段值
+NOT_PLANNED_STATUS = "Not Planned"  # "不计划实现"状态的字段值
+STATUS_FIELD = "Status"        # 状态字段名
 # ========================================================
+
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+
+def run_graphql(query, variables=None):
+    headers = {
+        "Authorization": f"bearer {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github+json"
+    }
+    json_data = {"query": query}
+    if variables:
+        json_data["variables"] = variables
+    r = requests.post("https://api.github.com/graphql", json=json_data, headers=headers)
+    r.raise_for_status()
+    return r.json()
+
+def get_project_v2_items():
+    # 查询 project v2 的所有卡片及其字段（包含状态、关联 issue）
+    query = """
+    query($owner: String!, $name: String!, $number: Int!, $after: String) {
+      repository(owner: $owner, name: $name) {
+        projectV2(number: $number) {
+          id
+          title
+          items(first: 100, after: $after) {
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
+            nodes {
+              id
+              content {
+                ... on Issue {
+                  id
+                  number
+                  title
+                  url
+                }
+              }
+              fieldValues(first: 30) {
+                nodes {
+                  ... on ProjectV2ItemFieldSingleSelectValue {
+                    name
+                    field {
+                      ... on ProjectV2FieldCommon {
+                        name
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    variables = {
+        "owner": REPO_OWNER,
+        "name": REPO_NAME,
+        "number": PROJECT_NUMBER,
+        "after": None
+    }
+    issues = []
+    while True:
+        data = run_graphql(query, variables)
+        project = data["data"]["repository"]["projectV2"]
+        if not project:
+            log("未找到指定的项目板，请确认项目板编号和仓库名无误。")
+            sys.exit(1)
+        items = project["items"]["nodes"]
+        issues.extend(items)
+        page_info = project["items"]["pageInfo"]
+        if page_info["hasNextPage"]:
+            variables["after"] = page_info["endCursor"]
+        else:
+            break
+    return issues
+
+def filter_issues_by_status(items, done_status=DONE_STATUS, not_plan_status=NOT_PLANNED_STATUS, status_field=STATUS_FIELD):
+    issues_done = []
+    issues_not_plan = set()
+    for item in items:
+        issue = item.get('content')
+        if not issue or 'number' not in issue:
+            continue
+        status = None
+        for v in item.get('fieldValues', {}).get('nodes', []):
+            if v.get("field", {}).get("name") == status_field:
+                status = v.get("name")
+        if status == done_status:
+            issues_done.append(issue['number'])
+        elif status == not_plan_status:
+            issues_not_plan.add(issue['number'])
+    # 最终有效 issue
+    return [n for n in issues_done if n not in issues_not_plan]
 
 def extract_rules_from_issue(issue):
     """
@@ -48,10 +147,8 @@ def extract_rules_from_issue(issue):
     return rules
 
 def get_github_repo() -> tuple:
-    g = Github(os.getenv('GITHUB_TOKEN'))
-    repo_name = os.getenv('GITHUB_REPOSITORY')
-    if not repo_name:
-        repo_name = 'Chaniug/AdSuper'
+    g = Github(GITHUB_TOKEN)
+    repo_name = f"{REPO_OWNER}/{REPO_NAME}"
     try:
         repo = g.get_repo(repo_name)
         return repo, repo_name
@@ -60,62 +157,31 @@ def get_github_repo() -> tuple:
         log(str(e))
         sys.exit(1)
 
-def get_valid_issues_from_project(repo):
-    """
-    只获取 Project Board 的“已完成”列且不在“不计划实现”列的 issues
-    """
-    projects = repo.get_projects()
-    project = None
-    for p in projects:
-        if p.name.strip() == PROJECT_NAME.strip():
-            project = p
-            break
-    if not project:
-        log(f"未找到名为 '{PROJECT_NAME}' 的项目板（请检查项目板名称是否正确）")
-        sys.exit(1)
-    done_col = None
-    not_plan_col = None
-    for c in project.get_columns():
-        if c.name.strip() == DONE_COLUMN_NAME.strip():
-            done_col = c
-        if NOT_PLANNED_COLUMN_NAME and c.name.strip() == NOT_PLANNED_COLUMN_NAME.strip():
-            not_plan_col = c
-    if not done_col:
-        log(f"未找到名为 '{DONE_COLUMN_NAME}' 的列（请检查列名是否正确）")
-        sys.exit(1)
-    # 收集“已完成”列的 issue
-    def get_issue_numbers_from_col(col):
-        issue_numbers = set()
-        for card in col.get_cards():
-            if card.content_url and '/issues/' in card.content_url:
-                try:
-                    num = int(card.content_url.split('/')[-1])
-                    issue_numbers.add(num)
-                except Exception as e:
-                    log(f"卡片 content_url 格式异常: {card.content_url}")
-        return issue_numbers
-    done_issues = get_issue_numbers_from_col(done_col)
-    not_plan_issues = get_issue_numbers_from_col(not_plan_col) if not_plan_col else set()
-    valid_issue_numbers = done_issues - not_plan_issues
-    issues = []
-    for n in valid_issue_numbers:
-        try:
-            issues.append(repo.get_issue(number=n))
-        except Exception as e:
-            log(f"无法获取 issue #{n}: {e}")
-    return issues
-
 def main():
     log(f"当前工作目录：{os.getcwd()}")
-    log("开始从 GitHub Project Board 获取新规则...")
+    log("开始从 GitHub Projects v2 获取新规则...")
     try:
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
-        manager = RuleManager()  # 默认写根目录
-        # 用 Project Board 获取有效 issues
-        issues = get_valid_issues_from_project(repo)
+        manager = RuleManager()
+        # 获取项目板 items
+        items = get_project_v2_items()
+        valid_issue_numbers = filter_issues_by_status(items)
+        if not valid_issue_numbers:
+            log("没有符合条件的项目板 issue")
+            # 保证 adnew.txt 存在
+            if not os.path.exists('adnew.txt'):
+                with open('adnew.txt', 'w', encoding='utf-8') as f:
+                    f.write("! 自动生成的空 adnew.txt\n")
+            return
+
         all_new_rules = []
-        for issue in issues:
+        for issue_number in valid_issue_numbers:
+            try:
+                issue = repo.get_issue(number=issue_number)
+            except Exception as e:
+                log(f"无法获取 issue #{issue_number}: {e}")
+                continue
             rule_tuples = extract_rules_from_issue(issue)
             rules = [r for r, src in rule_tuples]
             if rules:
