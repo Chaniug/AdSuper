@@ -7,10 +7,9 @@ from scripts.rule_manager import RuleManager
 from scripts.utils import log
 import re
 
-# 配置项
 REPO_OWNER = "Chaniug"
 REPO_NAME = "AdSuper"
-REQUIRED_LABELS = {"ad-rule", "completed"}  # 同时需要有这两个标签才同步
+REQUIRED_LABELS = {"ad-rule", "completed"}  # 需要同时有这两个标签
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 
 def extract_rules_from_issue(issue):
@@ -64,13 +63,13 @@ def issue_has_required_labels(issue, required_labels):
 
 def main():
     log(f"当前工作目录：{os.getcwd()}")
-    log("开始同步带 ad-rule 和 completed 标签的 issues...")
+    log("开始同步带 ad-rule 和 completed 标签且已关闭（closed）的 issues...")
     try:
         repo, repo_name = get_github_repo()
         validator = RuleValidator()
         manager = RuleManager()
-        # 获取所有 open 状态的 issue
-        issues = repo.get_issues(state="open")
+        # 只同步已关闭（closed）且带标签的issue
+        issues = repo.get_issues(state="closed")
         all_new_rules = []
         for issue in issues:
             if not issue_has_required_labels(issue, REQUIRED_LABELS):
