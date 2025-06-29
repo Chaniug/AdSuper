@@ -1,9 +1,15 @@
 name: Sync Issues to AdSuper
 
+permissions:
+  contents: write
+  issues: read
+  pull-requests: read
+  projects: read
+
 on:
   schedule:
-    - cron: '0 2 */5 * *'  # 每5天UTC时间2点运行
-  workflow_dispatch:       # 允许手动触发
+    - cron: '0 2 */5 * *'
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -17,7 +23,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install PyGithub
+        run: pip install PyGithub requests
 
       - name: Run sync script
         env:
