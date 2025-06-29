@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2025-06-13 09:30:22
-! 规则总数: 310
+! 生成时间: 2025-06-29 11:37:15
+! 规则总数: 315
 
 
 ! EXCEPTION 规则 (11条)
@@ -16,14 +16,12 @@
 @@||www.btbdys.com^$important,document
 @@||www.volcengine.com^$important,document
 
-! DOMAIN 规则 (57条)
+! DOMAIN 规则 (55条)
 ||21888cdnyun2023.cyou^
 ||21888cdnyun2023.cyou^$important
 ||6767ww1jsm3gzoh0wy.com^
 ||856539.com^$domain=856539.com,app=com.lemurbrowser.exts
 ||88bada.com^
-! 来源: issue #6
-||ads.example.com^
 ||baomitu.com^
 ||brbsyf55.cn^
 ||brbsyf55.cn^$third-party,important
@@ -66,8 +64,6 @@
 ||sdd.ihkdhn.cn^$script,image
 ||shjha.top^
 ||shuyu2001.cn^$domain=ikandy2.fun
-! 来源: issue #6
-||test.com^
 ||thyn.renzhen8.cn^$domain=ikandy2.fun
 ||tikimg.cc^
 ||ufq2q2qqvgw.static.onnets1.xyz^
@@ -77,7 +73,7 @@
 ||yangwb.com^
 ||zz.bdstatic.com^
 
-! ELEMENT 规则 (234条)
+! ELEMENT 规则 (241条)
 5drm5.com###\36 636d5018324b
 66law.cn##.consult-top-fixed, .consult-bottom-fixed
 66law.cn##div.w1200.ma.mt15:nth-child(3) > div.clearfix.mt30.pb40:last-child > div.fl.w820:first-child > div.detail-page.mb:first-child > div.det-add-consult:nth-child(4)
@@ -175,6 +171,20 @@ fanyi.baidu.com##div.container:first-child > div.header:first-child > div.inner 
 findlaw.cn###recommend-lawyer
 findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child
 findlaw.cn##div.full-container.light-gray-bg.padding-bottom50:nth-child(4) > div.container > div.c-w880:first-child > div.common-section-block.light-white-bg.margin-top20.box-block:first-child > div.article-detail > div.article-action:last-child > div.act-zan > button.zan-btn:first-child
+! 来源: issue #7
+godamh.com##.adshow:style(display: none !important;)
+! 来源: issue #7
+godamh.com##.bannerImg, .height-100
+! 来源: issue #7
+godamh.com##.banners > a:last-child > img.bannerImg
+! 来源: issue #7
+godamh.com##.flex.justify-center.space-x-4.py-8
+! 来源: issue #7
+godamh.com##div.adshow.height-1:first-child
+! 来源: issue #7
+godamh.com##div.adshow.height-2
+! 来源: issue #7
+godamh.com##div[class*="adshow"]:has(> .banners)
 hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.col-md-3.single-show-list:last-child > div.hidden-xs.hidden-sm:first-child
 hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.col-md-3.single-show-list:last-child > div.hidden-xs.hidden-sm:first-child > iframe:last-child
 hao38.xyz##[href="https://liuyan2024.com/"]
