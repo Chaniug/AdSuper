@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2025-07-12 11:11:13
-! 规则总数: 39
+! 生成时间: 2025-07-12 11:30:32
+! 规则总数: 41
 
 
 ! EXCEPTION 规则 (13条)
@@ -27,8 +27,12 @@
 ||qifjksdqwd.xyz^
 ||qwcwnjk.com^
 
-! ELEMENT 规则 (19条)
+! ELEMENT 规则 (21条)
 5drm5.com###6636d5018324b
+! 来源: issue #10
+5u7c8r8w8j0.shop##.small-icon-container, .is_pc
+! 来源: issue #10
+5u7c8r8w8j0.shop##div.homepage > div.main:nth-child(10) > div.content > div.small-icon-container:nth-child(2)
 ! 来源: issue #9
 5u7c8r8w8j0.shop##div.homepage > div.main:nth-child(7) > div.content > div.small-icon-container:nth-child(2)
 ! 来源: issue #9
