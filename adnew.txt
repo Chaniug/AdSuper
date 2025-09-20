@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2025-09-16 02:48:19
-! 规则总数: 48
+! 生成时间: 2025-09-20 05:20:56
+! 规则总数: 49
 
 
 ! EXCEPTION 规则 (13条)
@@ -27,7 +27,7 @@
 ||qifjksdqwd.xyz^
 ||qwcwnjk.com^
 
-! ELEMENT 规则 (28条)
+! ELEMENT 规则 (29条)
 5drm5.com###6636d5018324b
 ! 来源: issue #10
 5u7c8r8w8j0.shop##.small-icon-container, .is_pc
@@ -40,6 +40,8 @@
 ! 来源: issue #9
 5u7c8r8w8j0.shop##div.page.player > div.main:nth-child(7) > div.content > div.module.module-player:first-child > div.small-icon-container.is_pc:first-child
 aa3zz.com##a:nth-child(3) > img, a:nth-child(4) > img, a:nth-child(5) > img, a:nth-child(6) > img, a:nth-child(7) > img
+! 来源: issue #12
+aa3zz.com##a:nth-child(8) > img
 apkmirror.com###bottom-slider > a.f-100.p-relative.d-flex.f-nowrap, ###aswift_1_host, ###content > div.ains.ains-43.ains-has-label.ains-apkm_search_page_top:first-child
 ! 来源: issue #11
 apkmirror.com##a[href*="ads"]:upward(div.f-100)
