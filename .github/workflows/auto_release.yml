@@ -2,7 +2,7 @@ name: Auto Release
 
 on:
   schedule:
-    - cron: '0 3 */5 * *'    # 每5天UTC 3点运行
+    - cron: '0 3 * * 0'    # 每周一UTC 3点运行
   workflow_dispatch:
 
 jobs:
@@ -33,18 +33,59 @@ jobs:
         id: set_time
         run: echo "run_time=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
 
+      - name: Get stats
+        id: stats
+        run: |
+          RULE_COUNT=$(grep -c "^||" adnew.txt 2>/dev/null || echo "0")
+          CONTRIBUTOR_COUNT=$(git log --all --format='%aN' | sort -u | wc -l)
+          echo "rules=$RULE_COUNT" >> $GITHUB_OUTPUT
+          echo "contributors=$CONTRIBUTOR_COUNT" >> $GITHUB_OUTPUT
+
       - name: Zip project
         run: |
-          zip -r "AD广告收集.zip" . -x "*.git*" ".github/*"  # 可排除.git和github workflows自身
+          zip -r "AdSuper-Rules.zip" . -x "*.git*" ".github/*"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
-          name: "AD广告收集 ${{ steps.set_version.outputs.version }}"
+          name: "🚀 AdSuper Release ${{ steps.set_version.outputs.version }}"
           body: |
-            本次为自动打包发布，包含项目全部内容。
-            触发时间：${{ steps.set_time.outputs.run_time }}
-          files: AD广告收集.zip
+            # 🎉 广告规则新鲜出炉！ 
+
+            ## 📊 本次发布统计
+            - ⭐ **规则总数**：${{ steps.stats.outputs.rules }} 条
+            - 👥 **社区贡献者**：${{ steps.stats.outputs.contributors }} 位
+            - 🔄 **自动打包时间**：${{ steps.set_time.outputs.run_time }}
+
+            ## 📦 内容说明
+            本次发布包含：
+            - 🛡️ 最新的广告过滤规则集合
+            - 📝 完整的社区贡献规则
+            - 📚 项目全部文档和资源
+
+            ## 🎯 使用方式
+            1. 解压 `AdSuper-Rules.zip` 文件
+            2. 查看 `adnew.txt` 获取最新规则
+            3. 复制规则链接到你的广告拦截工具
+            4. 享受无广告体验 😎
+
+            ## 🌟 推荐操作
+            - 📲 订阅规则链接以获得自动更新
+            - 💬 在 [Discussions](https://github.com/Chaniug/AdSuper/discussions) 分享反馈
+            - 🐛 发现问题？在 [Issues](https://github.com/Chaniug/AdSuper/issues) 告诉我们
+            - 🤝 有新规则？[提交 Issue](https://github.com/Chaniug/AdSuper/issues/new?labels=ad-rule) 参与贡献
+
+            ## 📖 更多信息
+            - 🔗 查看 [FilterFusion 主项目](https://github.com/Chaniug/FilterFusion)
+            - 📚 阅读 [项目 README](https://github.com/Chaniug/AdSuper/blob/master/README.md)
+            - 🎓 学习 [规则编写指南](https://github.com/Chaniug/AdSuper/blob/master/README.md#-规则格式详解)
+
+            ---
+            
+            ✨ *每周一次自动发布，永远保持规则最新！*
+            
+            💡 *有想法？[加入我们](https://github.com/Chaniug/AdSuper)！*
+          files: AdSuper-Rules.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
