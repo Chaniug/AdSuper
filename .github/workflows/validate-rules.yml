@@ -7,30 +7,85 @@ on:
   issues:
     types: [closed]
   schedule:
-    - cron: '0 0 * * 1'
+    # 每周一 02:00 UTC 运行（北京时间 10:00）
+    - cron: '0 2 * * 1'
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    outputs:
+      status: ${{ job.status }}
+      result_summary: ${{ steps.validate.outputs.summary }}
+    
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+      
+      - name: 🐍 配置 Python 环境
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - run: pip install requests
-      - run: python scripts/validate_rules.py
-      - if: failure() && github.event_name == 'pull_request'
+          cache: 'pip'
+      
+      - name: 📦 安装依赖
+        run: |
+          pip install -q requests
+      
+      - name: ✅ 验证规则完整性
+        id: validate
+        run: |
+          python scripts/validate_rules.py > validation.log 2>&1
+          echo "summary=$(cat validation.log | tail -1)" >> $GITHUB_OUTPUT
+          cat validation.log
+      
+      - name: 💬 PR 验证失败时评论
+        if: failure() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            const log = fs.readFileSync('validation.log', 'utf8');
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '❌ 规则验证失败！请运行 `python scripts/validate_rules.py` 查看详细信息。'
+              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n请运行 \`python scripts/validate_rules.py\` 查看详细信息。`
             })
-      - uses: actions/upload-artifact@v3
+      
+      - name: 📊 生成验证总结
         if: always()
+        run: |
+          cat > VALIDATION_SUMMARY.md << 'EOF'
+          # 规则验证总结
+          
+          **验证时间**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          **工作流**: ${{ github.workflow }}
+          **触发者**: ${{ github.event_name }}
+          **状态**: ${{ job.status == 'success' && '✅ 通过' || '❌ 失败' }}
+          
+          EOF
+          cat validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
+      
+      - name: 📤 上传验证报告
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: validation-report
-          path: VALIDATION_REPORT.md
+          name: validation-report-${{ github.run_id }}
+          path: |
+            VALIDATION_SUMMARY.md
+            VALIDATION_REPORT.md
+            validation.log
+          retention-days: 30
+          compression-level: 9
+  
+  notify:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: 📌 输出验证结果
+        run: |
+          echo "✅ 验证流程完成"
+          echo "状态: ${{ needs.validate.outputs.status }}"
+          echo "结果: ${{ needs.validate.outputs.result_summary }}"
