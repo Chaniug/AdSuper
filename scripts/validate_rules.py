@@ -11,7 +11,7 @@ from typing import Set, Dict, List
 import requests
 from datetime import datetime
 
-class RuleValidator:
+class CompletenessValidator:
     def __init__(self, repo_owner: str, repo_name: str):
         self.repo_owner = repo_owner
         self.repo_name = repo_name
@@ -125,7 +125,7 @@ class RuleValidator:
             return True
 
 def main():
-    validator = RuleValidator("Chaniug", "AdSuper")
+    validator = CompletenessValidator("Chaniug", "AdSuper")
     success = validator.validate()
     
     # 生成验证报告

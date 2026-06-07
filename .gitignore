@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# CI generated artifacts
+VALIDATION_REPORT.md
+VALIDATION_SUMMARY.md
+validation.log
+AdSuper-Rules.zip
+
+# Runtime backup directory
+merged_rules/
+
+# OS
+.DS_Store
+Thumbs.db
