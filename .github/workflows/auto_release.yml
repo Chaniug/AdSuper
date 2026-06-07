@@ -2,7 +2,7 @@ name: Auto Release
 
 on:
   schedule:
-    - cron: '0 3 * * 0'    # 每周一UTC 3点运行
+    - cron: '0 3 * * 1'    # 每周一 UTC 03:00 运行
   workflow_dispatch:
 
 jobs:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,6 +25,8 @@ jobs:
       - name: Generate version
         id: set_version
         run: |
+          # 确保 tags 可用以便正确计数
+          git fetch --tags --prune || true
           DATE=$(date +'%Y%m%d')
           COUNT=$(git tag | grep "v$DATE" | wc -l)
           VERSION="v$DATE.$((COUNT+1))"
