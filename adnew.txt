@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2026-06-06 05:43:05
-! 规则总数: 52
+! 生成时间: 2026-06-07 08:52:14
+! 规则总数: 58
 
 
 ! EXCEPTION 规则 (13条)
@@ -27,7 +27,7 @@
 ||qifjksdqwd.xyz^
 ||qwcwnjk.com^
 
-! ELEMENT 规则 (32条)
+! ELEMENT 规则 (38条)
 ! 来源: issue #14
 55i6k1g3u0.shop##div.homepage > div.main:nth-child(7) > div.content > div.small-icon-container:nth-child(2)
 ! 来源: issue #14
@@ -43,11 +43,23 @@
 5u7c8r8w8j0.shop##div.page.list > div.main:nth-child(7) > div.content > div.module:first-child > div.small-icon-container:nth-child(2)
 ! 来源: issue #9
 5u7c8r8w8j0.shop##div.page.player > div.main:nth-child(7) > div.content > div.module.module-player:first-child > div.small-icon-container.is_pc:first-child
+! 来源: issue #15
+aa3zz.com##*:matches-css(position:fixed):not(body):not(html)
+! 来源: issue #15
+aa3zz.com##*:matches-css(position:sticky):not(header):not(nav)
+! 来源: issue #15
+aa3zz.com##[class*="tj"],[id*="tj"],[class*="float"],[class*="sticky"],[class*="banner"]
 aa3zz.com##a:nth-child(3) > img, a:nth-child(4) > img, a:nth-child(5) > img, a:nth-child(6) > img, a:nth-child(7) > img
 ! 来源: issue #13
 aa3zz.com##a:nth-child(8)
 ! 来源: issue #12
 aa3zz.com##a:nth-child(8) > img
+! 来源: issue #15
+aa3zz.com##a[href^="http://115.126.116.108:1888/lucky.html"] > [src]
+! 来源: issue #15
+aa3zz.com##a[href^="http://115.126.116.108:1888/lucky.html"]:nth-of-type(1)
+! 来源: issue #15
+aa3zz.com##tjx
 apkmirror.com###bottom-slider > a.f-100.p-relative.d-flex.f-nowrap, ###aswift_1_host, ###content > div.ains.ains-43.ains-has-label.ains-apkm_search_page_top:first-child
 ! 来源: issue #11
 apkmirror.com##a[href*="ads"]:upward(div.f-100)
