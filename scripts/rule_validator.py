@@ -33,14 +33,14 @@ class RuleValidator:
     def __init__(self):
         # 编译正则表达式以提高性能
         self.patterns = {
-            RuleType.DOMAIN: re.compile(r'^\|\|[\w.-]+(\^|\$).*$'),
+            RuleType.DOMAIN: re.compile(r'^\|\|[^\s]+(\^|\$).*$'),
             RuleType.ELEMENT: re.compile(r'^[\w.-]+##.+$'),
-            RuleType.SCRIPT: re.compile(r'^\|\|[\w.-]+\$script.*$'),
-            RuleType.IMAGE: re.compile(r'^\|\|[\w.-]+\$image.*$'),
+            RuleType.SCRIPT: re.compile(r'^\|\|[^\s]+\$script.*$'),
+            RuleType.IMAGE: re.compile(r'^\|\|[^\s]+\$image.*$'),
             RuleType.EXCEPTION: re.compile(r'^@@.+$'),
             RuleType.NETWORK: re.compile(r'^[\d.]+(\^|\$).*$'),
-            RuleType.THIRD_PARTY: re.compile(r'^\|\|[\w.-]+\$third-party.*$'),
-            RuleType.APP: re.compile(r'^\|\|[\w.-]+\$app=.*$'),
+            RuleType.THIRD_PARTY: re.compile(r'^\|\|[^\s]+\$third-party.*$'),
+            RuleType.APP: re.compile(r'^\|\|[^\s]+\$app=.*$'),
             RuleType.COMMENT: re.compile(r'^!.*$'),
         }
         
