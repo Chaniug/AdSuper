@@ -9,7 +9,7 @@ concurrency:
 
 on:
   schedule:
-    - cron: '0 3 * * 1'    # 每周一 UTC 03:00 运行
+    - cron: '0 3 * * 1'    # 每周一 UTC 03:00（北京时间 11:00）
   workflow_dispatch:
 
 jobs:
@@ -21,33 +21,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
       - name: Generate version
         id: set_version
         run: |
-          # 确保 tags 可用以便正确计数
           git fetch --tags --prune || true
           DATE=$(date -u +'%Y%m%d')
           COUNT=$(git tag | grep "v$DATE" | wc -l)
           VERSION="v$DATE.$((COUNT+1))"
+          RUN_TIME=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-
-      - name: Set Run Time
-        id: set_time
-        run: echo "run_time=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
+          echo "run_time=$RUN_TIME" >> $GITHUB_OUTPUT
 
       - name: Get stats
         id: stats
         run: |
-          RULE_COUNT=$(grep -c "^||" adnew.txt 2>/dev/null || echo "0")
+          RULE_COUNT=$(grep -cPv '^\s*(!|$)' adnew.txt 2>/dev/null || echo "0")
           CONTRIBUTOR_COUNT=$(git log --all --format='%aE' | sort -u | wc -l)
           echo "rules=$RULE_COUNT" >> $GITHUB_OUTPUT
           echo "contributors=$CONTRIBUTOR_COUNT" >> $GITHUB_OUTPUT
@@ -75,7 +64,7 @@ jobs:
             ## 📊 本次发布统计
             - ⭐ **规则总数**：${{ steps.stats.outputs.rules }} 条
             - 👥 **社区贡献者**：${{ steps.stats.outputs.contributors }} 位
-            - 🔄 **自动打包时间**：${{ steps.set_time.outputs.run_time }}
+            - 🔄 **自动打包时间**：${{ steps.set_version.outputs.run_time }}
 
             ## 📦 内容说明
             本次发布包含：

@@ -13,16 +13,12 @@ on:
     paths:
       - 'adnew.txt'
   schedule:
-    # 每周一 02:00 UTC 运行（北京时间 10:00）
-    - cron: '0 2 * * 1'
+    # 每周一 01:30 UTC（北京时间 09:30），早于 sync_issues 和 auto_release
+    - cron: '30 1 * * 1'
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    outputs:
-      status: ${{ job.status }}
-      result_summary: ${{ steps.validate.outputs.summary }}
-      exit_code: ${{ steps.validate.outputs.exit_code }}
     
     steps:
       - name: 📥 检出代码
@@ -35,23 +31,19 @@ jobs:
           cache: 'pip'
       
       - name: 📦 安装依赖
-        run: |
-          pip install -q requests
+        run: pip install -q -r requirements.txt
       
       - name: ✅ 验证规则完整性
         id: validate
         run: |
-          # 运行脚本并保存输出
           python scripts/validate_rules.py > validation.log 2>&1
           EXIT_CODE=$?
           SUMMARY=$(tail -n 1 validation.log || true)
           if [ -z "$SUMMARY" ]; then
             SUMMARY="No summary output"
           fi
-          # 导出 outputs，供后续步骤与 job outputs 使用
           echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
           echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
-          # 若脚本失败，确保工作流以非零退出（以触发 failure() 分支)
           if [ $EXIT_CODE -ne 0 ]; then
             exit $EXIT_CODE
           fi
@@ -64,7 +56,6 @@ jobs:
           script: |
             const fs = require('fs');
             let log = fs.readFileSync('validation.log', 'utf8');
-            // 限制评论长度，保留日志结尾部分以便定位
             const MAX = 6000;
             if (log.length > MAX) {
               log = log.slice(-MAX);
@@ -80,16 +71,21 @@ jobs:
       - name: 📊 生成验证总结与报告
         if: always()
         run: |
-          cat > VALIDATION_SUMMARY.md << 'EOF'
+          VALIDATION_TIME=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          if [ "${{ job.status }}" = "success" ]; then
+            STATUS_TEXT="✅ 通过"
+          else
+            STATUS_TEXT="❌ 失败"
+          fi
+          cat > VALIDATION_SUMMARY.md << EOF
           # 规则验证总结
           
-          **验证时间**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          **验证时间**: ${VALIDATION_TIME}
           **工作流**: ${{ github.workflow }}
           **触发者**: ${{ github.event_name }}
-          **状态**: ${{ job.status == 'success' && '✅ 通过' || '❌ 失败' }}
+          **状态**: ${STATUS_TEXT}
           
           EOF
-          # 把最后 500 行追加到 SUMMARY，完整日志写进 REPORT
           tail -n 500 validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
           cp validation.log VALIDATION_REPORT.md 2>/dev/null || true
       
@@ -103,17 +99,3 @@ jobs:
             VALIDATION_REPORT.md
             validation.log
           retention-days: 30
-          compression-level: 9
-  
-  notify:
-    needs: validate
-    runs-on: ubuntu-latest
-    if: always()
-    
-    steps:
-      - name: 📌 输出验证结果
-        run: |
-          echo "✅ 验证流程完成"
-          echo "状态: ${{ needs.validate.outputs.status }}"
-          echo "结果: ${{ needs.validate.outputs.result_summary }}"
-          echo "exit_code: ${{ needs.validate.outputs.exit_code }}"
