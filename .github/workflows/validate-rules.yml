@@ -16,13 +16,14 @@ jobs:
     outputs:
       status: ${{ job.status }}
       result_summary: ${{ steps.validate.outputs.summary }}
+      exit_code: ${{ steps.validate.outputs.exit_code }}
     
     steps:
       - name: 📥 检出代码
         uses: actions/checkout@v4
       
       - name: 🐍 配置 Python 环境
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -34,25 +35,43 @@ jobs:
       - name: ✅ 验证规则完整性
         id: validate
         run: |
+          # 运行脚本并保存输出
           python scripts/validate_rules.py > validation.log 2>&1
-          echo "summary=$(cat validation.log | tail -1)" >> $GITHUB_OUTPUT
+          EXIT_CODE=$?
+          SUMMARY=$(tail -n 1 validation.log || true)
+          if [ -z "$SUMMARY" ]; then
+            SUMMARY="No summary output"
+          fi
+          # 导出 outputs，供后续步骤与 job outputs 使用
+          echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
+          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+          # 若脚本失败，确保工作流以非零退出（以触发 failure() 分支)
+          if [ $EXIT_CODE -ne 0 ]; then
+            exit $EXIT_CODE
+          fi
           cat validation.log
-      
+
       - name: 💬 PR 验证失败时评论
         if: failure() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-            const log = fs.readFileSync('validation.log', 'utf8');
+            let log = fs.readFileSync('validation.log', 'utf8');
+            // 限制评论长度，保留日志结尾部分以便定位
+            const MAX = 6000;
+            if (log.length > MAX) {
+              log = log.slice(-MAX);
+              log = '...（已截断，查看 artifact 获取完整日志）\n' + log;
+            }
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n请运行 \`python scripts/validate_rules.py\` 查看详细信息。`
+              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n完整日志已作为 artifact 上传，请下载查看，或在本地运行 \`python scripts/validate_rules.py\` 查看详细信息.`
             })
       
-      - name: 📊 生成验证总结
+      - name: 📊 生成验证总结与报告
         if: always()
         run: |
           cat > VALIDATION_SUMMARY.md << 'EOF'
@@ -64,7 +83,9 @@ jobs:
           **状态**: ${{ job.status == 'success' && '✅ 通过' || '❌ 失败' }}
           
           EOF
-          cat validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
+          # 把最后 500 行追加到 SUMMARY，完整日志写进 REPORT
+          tail -n 500 validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
+          cp validation.log VALIDATION_REPORT.md 2>/dev/null || true
       
       - name: 📤 上传验证报告
         if: always()
@@ -89,3 +110,4 @@ jobs:
           echo "✅ 验证流程完成"
           echo "状态: ${{ needs.validate.outputs.status }}"
           echo "结果: ${{ needs.validate.outputs.result_summary }}"
+          echo "exit_code: ${{ needs.validate.outputs.exit_code }}"
