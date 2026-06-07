@@ -1,0 +1,36 @@
+name: Validate Ad Rules
+
+on:
+  pull_request:
+    paths:
+      - 'adnew.txt'
+  issues:
+    types: [closed]
+  schedule:
+    - cron: '0 0 * * 1'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python scripts/validate_rules.py
+      - if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ 规则验证失败！请运行 `python scripts/validate_rules.py` 查看详细信息。'
+            })
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: validation-report
+          path: VALIDATION_REPORT.md
