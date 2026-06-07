@@ -1,11 +1,17 @@
 name: Validate Ad Rules
 
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: validate-ad-rules
+  cancel-in-progress: true
+
 on:
   pull_request:
     paths:
       - 'adnew.txt'
-  issues:
-    types: [closed]
   schedule:
     # 每周一 02:00 UTC 运行（北京时间 10:00）
     - cron: '0 2 * * 1'
