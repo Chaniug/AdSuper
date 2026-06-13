@@ -129,8 +129,6 @@ class RuleManager:
                     if rule_type in rules_by_type:
                         f.write(f"\n! {rule_type.value.upper()} 规则 ({len(rules_by_type[rule_type])}条)\n")
                         for rule in rules_by_type[rule_type]:
-                            if rule.source and rule.source != "existing":
-                                f.write(f"! 来源: {rule.source}\n")
                             f.write(f"{rule.content}\n")
         except Exception as e:
             log(f"保存规则文件失败: {filename}, 错误: {e}")
