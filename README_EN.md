@@ -469,9 +469,9 @@ Users subscribe and use
 
 ### Social Media
 
-- 🌐 [Personal Website](https://valk.ccwu.cc/)
-- 🐦 [X (Twitter)](https://x.com/chenboss14)
-- ✈️ [Telegram](https://t.me/chaniug)
+- 🌐 [Personal Website](https://my.valk.ccwu.cc/)
+- 🐦 [X (Twitter)](https://x.com/valkjin)
+- ✈️ [Telegram](https://t.me/valkjin)
 - 📧 [Email](mailto:cheniug99@gmail.com)
 
 ---
