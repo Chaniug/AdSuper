@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2026-06-13 08:49:51
-! 规则总数: 63
+! 生成时间: 2026-06-13 10:24:08
+! 规则总数: 68
 
 
 ! EXCEPTION 规则 (13条)
@@ -18,17 +18,27 @@
 @@||www.btbdys.com^$important,document
 @@||www.volcengine.com^$important,document
 
-! DOMAIN 规则 (10条)
+! DOMAIN 规则 (15条)
 ||21888cdnyun2023.cyou^$important
+! 来源: issue #5
+||buytsl.xyz
 ||cdn208888888.20288888yuncdn66668888.com/20240205.gif$image
+! 来源: issue #8
+||chromewebstore.google.com/*/ChromeWebStoreConsumerFeUi/web-reports?
 ||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 ||i0.hdslb.com/bfs/album/*.jpg$image
+! 来源: issue #15
+||img.imgtupianaiguo.com/tu2020/uploads/allimg/202201/d70c5cd6542d8f37.jpg$image
 ||kmbopoie.com^
 ||oqwfnqpo.xyz^
 ||osdfs32dff.xyz^
 ||qifjksdqwd.xyz^
 ||qwcwnjk.com^
 ||tutu.facaiimage.com/*960-*.gif$image
+! 来源: issue #15
+||tutu.facaiimage.com/vip/960-60max.gif$image
+! 来源: issue #15
+||xsxsxs222.xn--id-ov2cb7n32b01yl6auun2bpzk4p2dgip.com/2026-05/6a0af34295863.gif$image
 
 ! ELEMENT 规则 (40条)
 ! 来源: issue #14
