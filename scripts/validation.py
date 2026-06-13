@@ -14,11 +14,13 @@ import os
 import argparse
 from pathlib import Path
 from typing import Set, Dict, List
-import requests
 from datetime import datetime
+from github import Github
 
 # 导入共享的规则提取模块
 from .rule_extractor import extract_rules_from_text
+# 导入工具函数
+from .utils import log, retry_on_exception, is_github_api_error_retryable, load_rules_from_file
 
 
 class ConsistencyChecker:
@@ -29,61 +31,45 @@ class ConsistencyChecker:
         self.file2 = file2
     
     def load_rules(self, filename: str) -> Set[str]:
-        """从文件中加载规则（跳过注释和空行）"""
-        rules = set()
-        
-        if not Path(filename).exists():
-            print(f"❌ 找不到文件: {filename}")
-            return rules
-        
-        with open(filename, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                # 跳过注释和空行
-                if not line or line.startswith('!'):
-                    continue
-                rules.add(line)
-        
-        return rules
+        """从文件中加载规则（跳过注释和空行）- 使用公共函数"""
+        return load_rules_from_file(filename, skip_comments=True)
     
     def check(self) -> bool:
         """执行一致性检查"""
-        print("🔍 开始一致性检查 (adnew.txt vs AdSuper.txt)...\n")
+        log("🔍 开始一致性检查 (adnew.txt vs AdSuper.txt)...", "INFO")
         
         # 加载两个文件中的规则
         rules1 = self.load_rules(self.file1)
         rules2 = self.load_rules(self.file2)
         
-        print(f"📄 {self.file1} 中找到 {len(rules1)} 条规则")
-        print(f"📄 {self.file2} 中找到 {len(rules2)} 条规则\n")
+        log(f"📄 {self.file1} 中找到 {len(rules1)} 条规则", "INFO")
+        log(f"📄 {self.file2} 中找到 {len(rules2)} 条规则", "INFO")
         
         # 检查差异
         missing_in_file1 = rules2 - rules1
         extra_in_file1 = rules1 - rules2
         
         if missing_in_file1:
-            print(f"⚠️  发现 {len(missing_in_file1)} 条规则在 {self.file1} 中缺失：")
+            log(f"⚠️  发现 {len(missing_in_file1)} 条规则在 {self.file1} 中缺失：", "WARNING")
             for rule in sorted(missing_in_file1):
-                print(f"  - {rule}")
-            print()
+                log(f"  - {rule}", "WARNING")
         else:
-            print(f"✅ {self.file1} 包含所有 {self.file2} 中的规则\n")
+            log(f"✅ {self.file1} 包含所有 {self.file2} 中的规则", "INFO")
         
         if extra_in_file1:
-            print(f"ℹ️  发现 {len(extra_in_file1)} 条规则在 {self.file1} 中额外存在：")
+            log(f"ℹ️  发现 {len(extra_in_file1)} 条规则在 {self.file1} 中额外存在：", "INFO")
             for rule in sorted(extra_in_file1):
-                print(f"  - {rule}")
-            print()
+                log(f"  - {rule}", "INFO")
         else:
-            print(f"✅ {self.file1} 中没有额外规则\n")
+            log(f"✅ {self.file1} 中没有额外规则", "INFO")
         
         # 总结
         if missing_in_file1:
-            print("❌ 一致性检查失败：文件不一致")
-            print("建议：运行 sync_issues.py 重新生成 adnew.txt")
+            log("❌ 一致性检查失败：文件不一致", "ERROR")
+            log("建议：运行 sync_issues.py 重新生成 adnew.txt", "INFO")
             return False
         else:
-            print("✅ 一致性检查通过！")
+            log("✅ 一致性检查通过！", "INFO")
             return True
 
 
@@ -93,32 +79,41 @@ class CompletenessValidator:
     def __init__(self, repo_owner: str, repo_name: str):
         self.repo_owner = repo_owner
         self.repo_name = repo_name
-        self.api_base = "https://api.github.com"
         self.rules_file = "adnew.txt"
-        # 添加 GitHub API 认证（避免速率限制）
+        # 使用 PyGithub（统一 API 调用方式）
         self.github_token = os.getenv('GITHUB_TOKEN')
-        self.headers = {}
         if self.github_token:
-            self.headers['Authorization'] = f'token {self.github_token}'
-            print(f"✓ 使用 GitHub 认证")
+            self.github = Github(self.github_token)
+            log(f"✓ 使用 GitHub 认证", "INFO")
         else:
-            print(f"⚠️  未设置 GITHUB_TOKEN 环境变量，API 调用可能受速率限制")
+            self.github = Github()
+            log(f"⚠️  未设置 GITHUB_TOKEN 环境变量，API 调用可能受速率限制", "WARNING")
+        
+        # 获取仓库对象
+        try:
+            self.repo = self.github.get_repo(f"{repo_owner}/{repo_name}")
+        except Exception as e:
+            log(f"❌ 无法访问仓库 {repo_owner}/{repo_name}: {e}", "ERROR")
+            self.repo = None
     
-    def get_completed_issues(self) -> List[Dict]:
-        """获取所有标记为 completed 的 issues"""
-        url = f"{self.api_base}/search/issues"
-        params = {
-            'q': f'repo:{self.repo_owner}/{self.repo_name} is:issue label:completed',
-            'per_page': 100
-        }
+    @retry_on_exception(max_retries=3, exceptions=(Exception,), should_retry=is_github_api_error_retryable)
+    def get_completed_issues(self) -> List:
+        """获取所有标记为 completed 的 issues（使用 PyGithub）"""
+        if not self.repo:
+            log("❌ 仓库对象未初始化", "ERROR")
+            return []
         
         try:
-            # 使用认证 headers（如果可用）
-            response = requests.get(url, params=params, headers=self.headers)
-            response.raise_for_status()
-            return response.json().get('items', [])
+            # 使用 PyGithub 搜索 API
+            query = f"repo:{self.repo_owner}/{self.repo_name} is:issue label:completed"
+            issues = self.github.search_issues(query)
+            
+            # 转换为列表（PyGithub 返回的是 PaginatedList）
+            issues_list = list(issues)
+            log(f"找到 {len(issues_list)} 个已完成的 Issues", "INFO")
+            return issues_list
         except Exception as e:
-            print(f"❌ 获取 Issues 失败: {e}")
+            log(f"❌ 获取 Issues 失败: {e}", "ERROR")
             return []
     
     def extract_rules_from_issue_body(self, body: str) -> Set[str]:
@@ -137,40 +132,26 @@ class CompletenessValidator:
         return rules
     
     def load_rules_from_file(self) -> Set[str]:
-        """从 adnew.txt 中加载规则"""
-        rules = set()
-        
-        if not Path(self.rules_file).exists():
-            print(f"❌ 找不到文件: {self.rules_file}")
-            return rules
-        
-        with open(self.rules_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line.strip()
-                # 跳过注释和空行
-                if not line or line.startswith('!'):
-                    continue
-                rules.add(line)
-        
-        return rules
+        """从 adnew.txt 中加载规则 - 使用公共函数"""
+        return load_rules_from_file(self.rules_file, skip_comments=True)
     
     def validate(self) -> bool:
         """执行验证"""
-        print("🔍 开始完整性验证 (GitHub Issues vs adnew.txt)...\n")
+        log("🔍 开始完整性验证 (GitHub Issues vs adnew.txt)...", "INFO")
         
         # 加载文件中的规则
         file_rules = self.load_rules_from_file()
-        print(f"📄 {self.rules_file} 中找到 {len(file_rules)} 条规则\n")
+        log(f"📄 {self.rules_file} 中找到 {len(file_rules)} 条规则", "INFO")
         
         # 获取所有已完成的 issues
         issues = self.get_completed_issues()
-        print(f"📋 找到 {len(issues)} 个已完成的 Issues\n")
+        log(f"📋 找到 {len(issues)} 个已完成的 Issues", "INFO")
         
         # 收集所有 issue 中的规则
         issue_rules: Dict[int, Set[str]] = {}
         for issue in issues:
-            issue_num = issue['number']
-            body = issue.get('body', '')
+            issue_num = issue.number
+            body = issue.body or ''
             rules = self.extract_rules_from_issue_body(body)
             if rules:
                 issue_rules[issue_num] = rules
@@ -184,17 +165,17 @@ class CompletenessValidator:
         
         # 输出结果
         if missing_rules:
-            print("⚠️  发现遗漏的规则:\n")
+            log("⚠️  发现遗漏的规则:", "WARNING")
             for issue_num, rules in sorted(missing_rules.items()):
-                print(f"Issue #{issue_num}:")
+                log(f"Issue #{issue_num}:", "WARNING")
                 for rule in sorted(rules):
-                    print(f"  - {rule}")
-                print()
+                    log(f"  - {rule}", "WARNING")
             
-            print(f"❌ 共发现 {sum(len(r) for r in missing_rules.values())} 条遗漏的规则")
+            total_missing = sum(len(r) for r in missing_rules.values())
+            log(f"❌ 共发现 {total_missing} 条遗漏的规则", "ERROR")
             return False
         else:
-            print("✅ 所有规则都已被正确包含！")
+            log("✅ 所有规则都已被正确包含！", "INFO")
             return True
 
 
@@ -239,42 +220,42 @@ def main():
     
     # 一致性检查
     if args.mode in ['consistency', 'all']:
-        print("=" * 60)
-        print("执行一致性检查")
-        print("=" * 60 + "\n")
+        log("=" * 60, "INFO")
+        log("执行一致性检查", "INFO")
+        log("=" * 60, "INFO")
         
         checker = ConsistencyChecker()
         success = checker.check()
         results.append(('一致性检查', success))
         
-        print()
+        log("", "INFO")
     
     # 完整性验证
     if args.mode in ['completeness', 'all']:
-        print("=" * 60)
-        print("执行完整性验证")
-        print("=" * 60 + "\n")
+        log("=" * 60, "INFO")
+        log("执行完整性验证", "INFO")
+        log("=" * 60, "INFO")
         
         validator = CompletenessValidator(args.repo_owner, args.repo_name)
         success = validator.validate()
         results.append(('完整性验证', success))
         
-        print()
+        log("", "INFO")
     
     # 生成报告
     if len(results) > 1:
-        print("=" * 60)
-        print("验证总结")
-        print("=" * 60 + "\n")
+        log("=" * 60, "INFO")
+        log("验证总结", "INFO")
+        log("=" * 60, "INFO")
         
         all_passed = True
         for name, success in results:
             status = "✅ 通过" if success else "❌ 失败"
-            print(f"{name}: {status}")
+            log(f"{name}: {status}", "INFO")
             if not success:
                 all_passed = False
         
-        print()
+        log("", "INFO")
         
         # 生成报告文件
         report_file = "VALIDATION_REPORT.md"
@@ -286,7 +267,8 @@ def main():
                 status = "✅ 通过" if success else "❌ 失败"
                 f.write(f"- {name}: {status}\n")
             f.write(f"\n## 总结\n\n")
-            f.write(f"总体结果: {'✅ 全部通过' if all_passed else '❌ 存在失败'}\n")
+            status_text = "✅ 全部通过" if all_passed else "❌ 存在失败"
+            f.write(f"总体结果: {status_text}\n")
         
         # 返回退出码
         sys.exit(0 if all_passed else 1)

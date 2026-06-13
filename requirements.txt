@@ -1,5 +1,4 @@
 # 依赖版本固定（确保环境一致性）
 # 使用最低版本策略，允许安全更新
 PyGithub>=2.9.1
-requests>=2.34.2
 python-dateutil>=2.9.0.post0
