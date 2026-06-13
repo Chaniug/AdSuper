@@ -109,18 +109,19 @@ log("这是一条错误日志", level="ERROR")
 
 ---
 
-### 6. ✅ 修复 validate_rules.py (fix-validate-rules)
+### 6. ✅ 创建统一验证工具 (create-validation-tool)
 
-**文件**: `scripts/validate_rules.py`
+**文件**: `scripts/validation.py`
 
-**修复的问题**:
-1. **API 认证缺失**:
-   - 添加 GitHub API 认证（使用 GITHUB_TOKEN 环境变量）
-   - 避免未认证 API 调用的严格速率限制（每小时 60 次请求）
+**功能**:
+- 合并了一致性检查和完整性验证功能
+- 支持多种验证模式：`consistency`, `completeness`, `all`
+- 使用共享模块 `scripts/rule_extractor.py` 提取规则
 
-2. **正则表达式不完整**:
-   - 修复 `extract_rules_from_issue_body` 方法中的正则表达式
-   - 支持更多规则格式（多域名、所有域名规则等）
+**验证模式**:
+1. **consistency** - 一致性检查：比较 `adnew.txt` 和 `AdSuper.txt`
+2. **completeness** - 完整性验证：检查 GitHub Issues 规则是否都在 `adnew.txt` 中
+3. **all** - 运行所有检查（默认）
 
 ---
 
@@ -147,22 +148,15 @@ python-dateutil>=2.8.2
 
 ### 8. ✅ 检查数据一致性 (check-data-consistency)
 
-**创建的脚本**: `scripts/check_consistency.py`
-
 **功能**:
 - 检查 `adnew.txt` 和 `AdSuper.txt` 的数据一致性
 - 识别缺失的规则和额外的规则
 - 提供诊断建议
 
-**发现的问题**:
-- `adnew.txt` 包含约 20 条规则
-- `AdSuper.txt` 包含 61 条规则
-- **可能的原因**: `adnew.txt` 可能不是最新合并的结果
-
-**建议使用**:
+**使用统一验证工具**:
 ```bash
-# 检查数据一致性
-python scripts/check_consistency.py
+# 检查数据一致性（一致性检查模式）
+python scripts/validation.py --mode consistency
 
 # 重新生成 adnew.txt
 python sync_issues.py
@@ -173,7 +167,7 @@ python sync_issues.py
 ## 后续建议
 
 ### 1. 数据一致性修复
-运行 `python scripts/check_consistency.py` 检查数据一致性，如果发现不一致，运行 `python sync_issues.py` 重新生成 `adnew.txt`。
+运行 `python scripts/validation.py --mode consistency` 检查数据一致性，如果发现不一致，运行 `python sync_issues.py` 重新生成 `adnew.txt`。
 
 ### 2. 测试优化后的代码
 建议对优化后的代码进行完整测试，包括：

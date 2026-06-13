@@ -22,10 +22,10 @@ jobs:
     
     steps:
       - name: 📥 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       
       - name: 🐍 配置 Python 环境
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -36,7 +36,7 @@ jobs:
       - name: ✅ 验证规则完整性
         id: validate
         run: |
-          python scripts/validate_rules.py > validation.log 2>&1
+          python scripts/validation.py --mode all > validation.log 2>&1
           EXIT_CODE=$?
           SUMMARY=$(tail -n 1 validation.log || true)
           if [ -z "$SUMMARY" ]; then
@@ -65,7 +65,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n完整日志已作为 artifact 上传，请下载查看，或在本地运行 \`python scripts/validate_rules.py\` 查看详细信息.`
+              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n完整日志已作为 artifact 上传，请下载查看，或在本地运行 \`python scripts/validation.py --mode all\` 查看详细信息.`
             })
       
       - name: 📊 生成验证总结与报告

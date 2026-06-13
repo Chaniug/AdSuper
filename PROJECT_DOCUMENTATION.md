@@ -35,10 +35,11 @@ AdSuper/
 ├── sync_issues.py            # 主脚本：同步 GitHub Issues 中的规则
 └── scripts/                  # Python 脚本模块
     ├── __init__.py           # 包初始化文件
+    ├── rule_extractor.py    # 规则提取模块
     ├── rule_validator.py     # 规则验证器
     ├── rule_manager.py       # 规则管理器
-    ├── utils.py              # 工具函数
-    └── validate_rules.py     # 规则完整性验证工具
+    ├── validation.py         # 统一验证工具（一致性检查 + 完整性验证）
+    └── utils.py              # 工具函数
 ```
 
 ### 技术栈
@@ -213,13 +214,25 @@ example.com##.ad-banner
 - `merge_rules()` - 合并规则并优化
 - `_save_rules()` - 保存规则到文件
 
-### scripts/validate_rules.py
+### scripts/validation.py
 
-**功能**: 规则完整性验证工具，检查所有已完成的 Issues 中的规则是否都被包含在 `adnew.txt` 中
+**功能**: 统一验证工具，合并了一致性检查和完整性验证功能
+
+**验证模式**:
+- `consistency` - 一致性检查：比较 `adnew.txt` 和 `AdSuper.txt`
+- `completeness` - 完整性验证：检查 GitHub Issues 规则是否都在 `adnew.txt` 中
+- `all` - 运行所有检查（默认）
 
 **使用方法**:
 ```bash
-python scripts/validate_rules.py
+# 运行所有检查
+python scripts/validation.py --mode all
+
+# 仅运行一致性检查
+python scripts/validation.py --mode consistency
+
+# 仅运行完整性验证
+python scripts/validation.py --mode completeness
 ```
 
 ### scripts/utils.py
@@ -265,10 +278,17 @@ python sync_issues.py
 
 ### 验证规则完整性
 
-检查规则是否完整：
+检查规则一致性和完整性：
 
 ```bash
-python scripts/validate_rules.py
+# 运行所有验证
+python scripts/validation.py --mode all
+
+# 仅检查一致性（adnew.txt vs AdSuper.txt）
+python scripts/validation.py --mode consistency
+
+# 仅检查完整性（GitHub Issues vs adnew.txt）
+python scripts/validation.py --mode completeness
 ```
 
 ---

@@ -77,11 +77,11 @@ rules = extract_rules_from_issue(issue.title, issue.body)
 
 ### 3. ✅ 更新现有脚本
 
-**文件**: `sync_issues.py`, `scripts/validate_rules.py`
+**文件**: `sync_issues.py`, `scripts/validation.py`
 
 **修改内容**:
 - `sync_issues.py`: 使用共享模块 `scripts/rule_extractor.py`
-- `scripts/validate_rules.py`: 更新 `extract_rules_from_issue_body` 函数，使用共享模块
+- `scripts/validation.py`: 统一验证工具，合并了一致性检查和完整性验证功能
 
 ---
 
@@ -195,7 +195,7 @@ python test_rule_extraction.py
 设置 `GITHUB_TOKEN` 环境变量，然后运行 `python sync_issues.py`。
 
 ### 3. 检查数据一致性
-运行 `python scripts/check_consistency.py` 检查 `adnew.txt` 和 `AdSuper.txt` 的一致性。
+运行 `python scripts/validation.py --mode consistency` 检查 `adnew.txt` 和 `AdSuper.txt` 的一致性。
 
 ### 4. 提交并推送更改
 将修改后的代码推送到 GitHub 仓库，启用自动化工作流。
@@ -215,7 +215,7 @@ python test_rule_extraction.py
 
 ### 修改文件
 1. `sync_issues.py` - 重写规则提取逻辑，使用共享模块
-2. `scripts/validate_rules.py` - 更新规则提取函数，使用共享模块
+2. `scripts/validation.py` - 创建统一验证工具，合并一致性检查和完整性验证
 
 ### 保持不变
 1. `scripts/rule_validator.py` - 已在之前的优化中更新
