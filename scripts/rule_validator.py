@@ -32,15 +32,29 @@ class RuleValidator:
     
     def __init__(self):
         # 编译正则表达式以提高性能
+        # AdBlock 规则格式说明：
+        # - ||domain^ : 域名规则，^ 表示域名结束
+        # - ||domain$filter : 带选项的域名规则，$ 是选项分隔符
+        # - domain##selector : 元素隐藏规则
+        # - domain1,domain2##selector : 多域名元素规则
         self.patterns = {
-            RuleType.DOMAIN: re.compile(r'^\|\|[^\s]+(\^|\$).*$'),
-            RuleType.ELEMENT: re.compile(r'^[\w.-]+##.+$'),
-            RuleType.SCRIPT: re.compile(r'^\|\|[^\s]+\$script.*$'),
-            RuleType.IMAGE: re.compile(r'^\|\|[^\s]+\$image.*$'),
-            RuleType.EXCEPTION: re.compile(r'^@@.+$'),
-            RuleType.NETWORK: re.compile(r'^[\d.]+(\^|\$).*$'),
-            RuleType.THIRD_PARTY: re.compile(r'^\|\|[^\s]+\$third-party.*$'),
-            RuleType.APP: re.compile(r'^\|\|[^\s]+\$app=.*$'),
+            # DOMAIN: ||domain^ 或 ||domain^$option 或 ||domain$option
+            RuleType.DOMAIN: re.compile(r'^\|\|[^\s^]+(\^(\$.+)?|\$.+)?$'),
+            # ELEMENT: 支持单域名和多域名格式 (domain1,domain2##selector)
+            RuleType.ELEMENT: re.compile(r'^([\w.-]+,)*[\w.-]+##.+'),
+            # SCRIPT: ||domain$script
+            RuleType.SCRIPT: re.compile(r'^\|\|[^\s]+\$script'),
+            # IMAGE: ||domain$image
+            RuleType.IMAGE: re.compile(r'^\|\|[^\s]+\$image'),
+            # EXCEPTION: @@开头的例外规则
+            RuleType.EXCEPTION: re.compile(r'^@@.+'),
+            # NETWORK: 网络规则 (如 ||domain/path 或 |http://...)
+            RuleType.NETWORK: re.compile(r'^(\|\|[^\s]+\/|[|]https?://).*'),
+            # THIRD_PARTY: ||domain$third-party
+            RuleType.THIRD_PARTY: re.compile(r'^\|\|[^\s]+\$third-party'),
+            # APP: ||domain$app=com.example
+            RuleType.APP: re.compile(r'^\|\|[^\s]+\$app=.+'),
+            # COMMENT: 以 ! 开头的注释行
             RuleType.COMMENT: re.compile(r'^!.*$'),
         }
         
@@ -124,21 +138,37 @@ class RuleValidator:
     def check_conflicts(self, rules: List[Rule]) -> List[Tuple[Rule, Rule, str]]:
         """
         检查规则冲突，返回冲突规则对列表
+        时间复杂度: O(n)
         """
         conflicts = []
-        for i, rule1 in enumerate(rules):
-            for rule2 in rules[i+1:]:
-                if self._is_conflicting(rule1, rule2):
-                    conflicts.append((
-                        rule1,
-                        rule2,
-                        f"规则冲突: {rule1.content} 和 {rule2.content}"
-                    ))
+        exception_rules = {}  # key: 规则内容（去掉@@前缀），value: Rule对象
+        normal_rules = {}      # key: 规则内容，value: Rule对象
+        
+        # 第一次遍历：分别收集例外规则和普通规则
+        for rule in rules:
+            if rule.type == RuleType.EXCEPTION:
+                # 去掉@@前缀作为key
+                key = rule.content[2:] if rule.content.startswith('@@') else rule.content
+                exception_rules[key] = rule
+            else:
+                normal_rules[rule.content] = rule
+        
+        # 第二次遍历：检查冲突
+        # 如果例外规则的key（去掉@@后）与某条普通规则相同，则冲突
+        for exc_content, exception_rule in exception_rules.items():
+            if exc_content in normal_rules:
+                normal_rule = normal_rules[exc_content]
+                conflicts.append((
+                    exception_rule,
+                    normal_rule,
+                    f"规则冲突: {exception_rule.content} 和 {normal_rule.content} (例外规则会禁用普通规则)"
+                ))
+        
         return conflicts
 
     def _is_conflicting(self, rule1: Rule, rule2: Rule) -> bool:
         """
-        检查两条规则是否冲突
+        检查两条规则是否冲突（保留此方法以保持向后兼容）
         """
         # 如果一个是例外规则，一个是普通规则，且匹配相同目标
         if (rule1.type == RuleType.EXCEPTION and rule2.type != RuleType.EXCEPTION) or \

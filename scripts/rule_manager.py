@@ -37,7 +37,8 @@ class RuleManager:
             for i, line in enumerate(f, 1):
                 line = line.strip()
                 if line and not line.startswith('!'):
-                    is_valid, content, rule_type = self.validator.validate_rule(line, i)
+                    # 修复：添加缺失的 source 参数
+                    is_valid, content, rule_type = self.validator.validate_rule(line, i, "existing")
                     if is_valid and content:
                         rules.append(Rule(
                             content=content,
@@ -48,13 +49,14 @@ class RuleManager:
                         ))
         return rules
 
-    def merge_rules(self, new_rules: List[Rule], base_filename: str = 'AdSuper.txt') -> str:
+    def merge_rules(self, new_rules: List[Rule], base_filename: str = 'AdSuper.txt', output_filename: str = 'adnew.txt') -> str:
         """
         合并规则并优化，返回新文件名
 
         Args:
             new_rules: 新规则列表（必须是Rule对象列表）
             base_filename: 基础规则文件名
+            output_filename: 输出规则文件名（可配置）
 
         Returns:
             新规则文件名
@@ -68,11 +70,13 @@ class RuleManager:
             normalized = rule.content.strip()
             if not normalized:
                 continue
+            # 修复：在去重检查之前先规范化注释格式
+            # 这样可以确保 !title 和 ! title 被视为相同规则
+            if normalized.startswith('!') and not normalized.startswith('! '):
+                normalized = '! ' + normalized[1:]
+                rule.content = normalized
             if normalized not in seen:
                 seen.add(normalized)
-                if normalized.startswith('!') and not normalized.startswith('! '):
-                    normalized = '! ' + normalized[1:]
-                rule.content = normalized
                 unique_rules.append(rule)
         conflicts = self.validator.check_conflicts(unique_rules)
         if conflicts:
@@ -82,7 +86,7 @@ class RuleManager:
                 log(f"  来源1: {rule1.source}")
                 log(f"  来源2: {rule2.source}")
         sorted_rules = self.validator.sort_rules(unique_rules)
-        new_filename = 'adnew.txt'
+        new_filename = output_filename
         self._save_rules(sorted_rules, os.path.join(self.base_dir, new_filename))
         log(f"已写入合并规则到 {new_filename}")
         # 备份

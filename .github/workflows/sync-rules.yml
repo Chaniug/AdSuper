@@ -1,0 +1,57 @@
+name: 同步 GitHub Issues 规则
+
+# 每 3 天自动运行
+on:
+  schedule:
+    # 每 3 天的凌晨 2 点运行
+    - cron: '0 2 */3 * *'
+  # 允许手动触发
+  workflow_dispatch:
+
+jobs:
+  sync-rules:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@v6
+    
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.11'
+    
+    - name: 安装依赖
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: 运行规则同步脚本
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python sync_issues.py
+    
+    - name: 检查是否有更改
+      id: check_changes
+      run: |
+        if [[ -n $(git status --porcelain) ]]; then
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
+      shell: bash
+    
+    - name: 提交并推送更改
+      if: steps.check_changes.outputs.has_changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add adnew.txt
+        git diff --quiet && git diff --staged --quiet || git commit -m "自动同步规则：$(date +'%Y-%m-%d')"
+        git push
+    
+    - name: 输出结果
+      run: |
+        echo "规则同步完成！"
+        echo "生成的规则文件：adnew.txt"

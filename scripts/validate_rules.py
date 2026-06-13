@@ -6,10 +6,14 @@ AdSuper 规则验证工具
 
 import re
 import sys
+import os
 from pathlib import Path
 from typing import Set, Dict, List
 import requests
 from datetime import datetime
+
+# 导入共享的规则提取模块
+from .rule_extractor import extract_rules_from_issue, extract_rules_from_text, extract_code_blocks
 
 class CompletenessValidator:
     def __init__(self, repo_owner: str, repo_name: str):
@@ -17,6 +21,14 @@ class CompletenessValidator:
         self.repo_name = repo_name
         self.api_base = "https://api.github.com"
         self.rules_file = "adnew.txt"
+        # 添加 GitHub API 认证（避免速率限制）
+        self.github_token = os.getenv('GITHUB_TOKEN')
+        self.headers = {}
+        if self.github_token:
+            self.headers['Authorization'] = f'token {self.github_token}'
+            print(f"✓ 使用 GitHub 认证")
+        else:
+            print(f"⚠️  未设置 GITHUB_TOKEN 环境变量，API 调用可能受速率限制")
         
     def get_completed_issues(self) -> List[Dict]:
         """获取所有标记为 completed 的 issues"""
@@ -27,7 +39,8 @@ class CompletenessValidator:
         }
         
         try:
-            response = requests.get(url, params=params)
+            # 使用认证 headers（如果可用）
+            response = requests.get(url, params=params, headers=self.headers)
             response.raise_for_status()
             return response.json().get('items', [])
         except Exception as e:
@@ -35,31 +48,17 @@ class CompletenessValidator:
             return []
     
     def extract_rules_from_issue_body(self, body: str) -> Set[str]:
-        """从 Issue 描述中提取规则"""
+        """从 Issue 描述中提取规则（使用共享模块）"""
         if not body:
             return set()
         
-        rules = set()
-        # 匹配 uBlock Origin 规则格式
-        # 支持: ||domain.com^ 或 domain.com##selector 等格式
-        patterns = [
-            r'^\|\|[^\s]+.*$',  # 域名规则
-            r'^@@\|\|[^\s]+.*$',  # 例外规则
-            r'^[a-zA-Z0-9\.\-]+\.com##.+$',  # 元素规则
-            r'^[a-zA-Z0-9\.\-]+\.com###.+$',  # ID 规则
-        ]
+        # 使用共享模块提取规则
+        rules_list = extract_rules_from_text(body, 'body')
         
-        for line in body.split('\n'):
-            line = line.strip()
-            # 跳过注释和空行
-            if not line or line.startswith('!'):
-                continue
-            
-            # 检查是否匹配规则格式
-            for pattern in patterns:
-                if re.match(pattern, line):
-                    rules.add(line)
-                    break
+        # 转换为集合
+        rules = set()
+        for rule, src in rules_list:
+            rules.add(rule)
         
         return rules
     
