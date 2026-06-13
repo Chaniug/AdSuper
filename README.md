@@ -468,9 +468,9 @@ FilterFusion 自动拉取规则
 
 ### 社交媒体
 
-- 🌐 [个人主页](https://valk.ccwu.cc/)
-- 🐦 [X (Twitter)](https://x.com/chenboss14)
-- ✈️ [Telegram](https://t.me/chaniug)
+- 🌐 [个人主页](https://my.valk.ccwu.cc/)
+- 🐦 [X (Twitter)](https://x.com/valkjin)
+- ✈️ [Telegram](https://t.me/valkjin)
 - 📧 [邮箱](mailto:cheniug99@gmail.com)
 
 ---
