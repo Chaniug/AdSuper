@@ -54,7 +54,7 @@ jobs:
           echo "✅ AdSuper-Rules.zip created ($(du -h AdSuper-Rules.zip | cut -f1))"
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.set_version.outputs.version }}
           name: "🚀 AdSuper Release ${{ steps.set_version.outputs.version }}"
