@@ -1,4 +1,4 @@
-name: Auto Release
+name: 自动规则发布
 
 permissions:
   contents: write
