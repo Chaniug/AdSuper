@@ -80,15 +80,15 @@ jobs:
           else
             STATUS_TEXT="❌ 失败"
           fi
-          cat > VALIDATION_SUMMARY.md << ENDOFFILE
-# 规则验证总结
-
-**验证时间**: ${VALIDATION_TIME}
-**工作流**: ${{ github.workflow }}
-**触发者**: ${{ github.event_name }}
-**状态**: ${STATUS_TEXT}
-
-ENDOFFILE
+          {
+            echo "# 规则验证总结"
+            echo ""
+            echo "**验证时间**: ${VALIDATION_TIME}"
+            echo "**工作流**: ${{ github.workflow }}"
+            echo "**触发者**: ${{ github.event_name }}"
+            echo "**状态**: ${STATUS_TEXT}"
+            echo ""
+          } > VALIDATION_SUMMARY.md
           tail -n 500 validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
           cp validation.log VALIDATION_REPORT.md 2>/dev/null || true
       
