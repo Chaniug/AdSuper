@@ -1,4 +1,5 @@
 import os
+import copy
 from datetime import datetime
 from typing import List
 from .rule_validator import Rule, RuleValidator
@@ -70,14 +71,15 @@ class RuleManager:
             normalized = rule.content.strip()
             if not normalized:
                 continue
-            # 修复：在去重检查之前先规范化注释格式
-            # 这样可以确保 !title 和 ! title 被视为相同规则
+            # 规范化注释格式（不修改原始 rule 对象，创建副本）
             if normalized.startswith('!') and not normalized.startswith('! '):
                 normalized = '! ' + normalized[1:]
-                rule.content = normalized
             if normalized not in seen:
                 seen.add(normalized)
-                unique_rules.append(rule)
+                # 创建新 Rule 对象以避免修改传入参数
+                new_rule = copy.copy(rule)
+                new_rule.content = normalized
+                unique_rules.append(new_rule)
         conflicts = self.validator.check_conflicts(unique_rules)
         if conflicts:
             log("\n发现规则冲突：")

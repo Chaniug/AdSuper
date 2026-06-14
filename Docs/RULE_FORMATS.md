@@ -198,7 +198,7 @@ example.com##.ad-banner
 ### 规则未被提取
 - 确保规则放在 ` ```adblock ` 代码块中
 - 确保规则格式正确
-- 运行 `python test_rule_extraction.py` 测试规则提取功能
+- 运行 `python -m pytest test_rule_extraction.py -v` 测试规则提取功能
 
 ### 规则验证失败
 - 检查规则是否包含多个连续空格

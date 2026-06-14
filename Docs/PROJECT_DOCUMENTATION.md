@@ -237,10 +237,17 @@ python scripts/validation.py --mode completeness
 
 ### scripts/utils.py
 
-**功能**: 工具函数，提供统一的日志输出
+**功能**: 工具函数，提供日志输出、重试机制、GitHub API 辅助等功能
 
 **主要函数**:
 - `log()` - 输出带时间戳的日志信息
+- `setup_logging()` - 配置日志系统（支持分级日志和文件输出）
+- `set_log_level()` - 动态设置日志级别
+- `retry_on_exception()` - 重试装饰器（支持指数退避）
+- `exponential_backoff()` - 计算指数退避延迟时间
+- `is_github_api_error_retryable()` - 判断 GitHub API 错误是否可重试
+- `handle_github_rate_limit()` - 处理 GitHub API 速率限制
+- `load_rules_from_file()` - 从文件加载规则
 
 ---
 

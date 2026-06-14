@@ -119,7 +119,11 @@ example.com##a:nth-child(3) > img, a:nth-child(4) > img
 
 **使用方法**:
 ```bash
-python test_rule_extraction.py
+# 运行所有测试
+python -m pytest test_rule_extraction.py -v
+
+# 直接运行（需要 pytest 已安装）
+pytest test_rule_extraction.py -v
 ```
 
 ---
@@ -163,7 +167,7 @@ python test_rule_extraction.py
 
 1. **运行测试脚本**:
    ```bash
-   python test_rule_extraction.py
+   python -m pytest test_rule_extraction.py -v
    ```
 
 2. **运行规则同步**:
@@ -189,7 +193,7 @@ python test_rule_extraction.py
 ## 后续建议
 
 ### 1. 测试新实现
-运行 `python test_rule_extraction.py` 验证规则提取功能。
+运行 `python -m pytest test_rule_extraction.py -v` 验证规则提取功能。
 
 ### 2. 手动运行同步
 设置 `GITHUB_TOKEN` 环境变量，然后运行 `python sync_issues.py`。

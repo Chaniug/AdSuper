@@ -2,3 +2,6 @@
 # 使用最低版本策略，允许安全更新
 PyGithub>=2.9.1
 python-dateutil>=2.9.0.post0
+
+# 开发/测试依赖
+pytest>=8.0.0

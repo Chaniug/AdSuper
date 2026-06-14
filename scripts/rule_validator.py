@@ -92,12 +92,15 @@ class RuleValidator:
                 return True, rule, rule_type
                 
         # 检查其他可能的规则格式
-        if rule.startswith('http'):
+        # 仅接受以 http(s):// 开头的完整 URL 规则
+        if rule.startswith(('http://', 'https://')):
+            return True, rule, RuleType.NETWORK
+        # 接受正则表达式规则（以 / 开头和结尾）
+        if rule.startswith('/') and rule.endswith('/'):
             return True, rule, RuleType.OTHER
-        if ':' in rule and not rule.startswith('||'):
-            return True, rule, RuleType.OTHER
-        if '/' in rule and not rule.startswith('||'):
-            return True, rule, RuleType.OTHER
+        # 接受纯域名规则（不含空格的简单域名）
+        if re.match(r'^[\w.-]+\.[a-z]{2,}$', rule, re.IGNORECASE):
+            return True, rule, RuleType.DOMAIN
             
         return False, f"无效的规则格式: {rule}", RuleType.OTHER
 
@@ -176,5 +179,5 @@ class RuleValidator:
             r1 = rule1.content[2:] if rule1.type == RuleType.EXCEPTION else rule1.content
             r2 = rule2.content[2:] if rule2.type == RuleType.EXCEPTION else rule2.content
             return r1 == r2
-            
+
         return False

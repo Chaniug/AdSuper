@@ -95,6 +95,7 @@ class CompletenessValidator:
         except Exception as e:
             log(f"❌ 无法访问仓库 {repo_owner}/{repo_name}: {e}", "ERROR")
             self.repo = None
+            raise RuntimeError(f"无法访问仓库 {repo_owner}/{repo_name}，完整性验证无法继续") from e
     
     @retry_on_exception(max_retries=3, exceptions=(Exception,), should_retry=is_github_api_error_retryable)
     def get_completed_issues(self) -> List:

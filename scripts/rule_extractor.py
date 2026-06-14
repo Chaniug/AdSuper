@@ -18,16 +18,11 @@ def is_likely_rule(line: str) -> bool:
     Returns:
         是否是可能的规则
     """
-    if not line:
-        return False
-    
     line = line.strip()
     
-    # 跳过空行
+    # 跳过空行和 Markdown 标题（以 # 开头且不是 ## 规则）
     if not line:
         return False
-    
-    # 跳过 Markdown 标题（以 # 开头且不是 ## 规则）
     if line.startswith('#') and not line.startswith('!') and '##' not in line[1:]:
         return False
     

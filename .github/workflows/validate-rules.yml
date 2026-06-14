@@ -33,6 +33,9 @@ jobs:
       - name: 📦 安装依赖
         run: pip install -q -r requirements.txt
       
+      - name: 🧪 运行单元测试
+        run: python -m pytest test_rule_extraction.py -v
+      
       - name: ✅ 验证规则完整性
         id: validate
         run: |
@@ -77,15 +80,15 @@ jobs:
           else
             STATUS_TEXT="❌ 失败"
           fi
-          cat > VALIDATION_SUMMARY.md << EOF
-          # 规则验证总结
-          
-          **验证时间**: ${VALIDATION_TIME}
-          **工作流**: ${{ github.workflow }}
-          **触发者**: ${{ github.event_name }}
-          **状态**: ${STATUS_TEXT}
-          
-          EOF
+          cat > VALIDATION_SUMMARY.md << ENDOFFILE
+# 规则验证总结
+
+**验证时间**: ${VALIDATION_TIME}
+**工作流**: ${{ github.workflow }}
+**触发者**: ${{ github.event_name }}
+**状态**: ${STATUS_TEXT}
+
+ENDOFFILE
           tail -n 500 validation.log >> VALIDATION_SUMMARY.md 2>/dev/null || true
           cp validation.log VALIDATION_REPORT.md 2>/dev/null || true
       
