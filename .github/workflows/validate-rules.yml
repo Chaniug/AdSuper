@@ -38,8 +38,10 @@ jobs:
       
       - name: ✅ 验证规则完整性
         id: validate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/validation.py --mode all > validation.log 2>&1
+          python -m scripts.validation --mode all > validation.log 2>&1
           EXIT_CODE=$?
           SUMMARY=$(tail -n 1 validation.log || true)
           if [ -z "$SUMMARY" ]; then
@@ -68,7 +70,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n完整日志已作为 artifact 上传，请下载查看，或在本地运行 \`python scripts/validation.py --mode all\` 查看详细信息.`
+              body: `❌ **规则验证失败**\n\n\`\`\`\n${log}\n\`\`\`\n\n完整日志已作为 artifact 上传，请下载查看，或在本地运行 \`python -m scripts.validation --mode all\` 查看详细信息.`
             })
       
       - name: 📊 生成验证总结与报告
@@ -94,7 +96,7 @@ jobs:
       
       - name: 📤 上传验证报告
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: validation-report-${{ github.run_id }}
           path: |
