@@ -4,7 +4,7 @@ import traceback
 from github import Github
 from scripts.rule_validator import RuleValidator
 from scripts.rule_manager import RuleManager
-from scripts.utils import log, retry_on_exception, is_github_api_error_retryable, handle_github_rate_limit
+from scripts.utils import log, retry_on_exception, is_github_api_error_retryable
 from scripts.rule_extractor import extract_rules_from_issue
 
 REPO_OWNER = "Chaniug"
@@ -62,11 +62,7 @@ def main():
     
     try:
         repo, repo_name, g = get_github_repo()
-        
-        # 检查 GitHub API 速率限制
-        if g:
-            handle_github_rate_limit(g)
-        
+
         validator = RuleValidator()
         manager = RuleManager()
         

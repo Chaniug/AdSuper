@@ -1,0 +1,4 @@
+# 本地开发 / 测试依赖
+# 安装方式: pip install -r requirements-dev.txt
+-r requirements.txt
+pytest>=8.0.0
