@@ -77,11 +77,10 @@ rules = extract_rules_from_issue(issue.title, issue.body)
 
 ### 3. ✅ 更新现有脚本
 
-**文件**: `sync_issues.py`, `scripts/validation.py`
+**文件**: `sync_issues.py`
 
 **修改内容**:
 - `sync_issues.py`: 使用共享模块 `scripts/rule_extractor.py`
-- `scripts/validation.py`: 统一验证工具，合并了一致性检查和完整性验证功能
 
 ---
 
@@ -107,28 +106,7 @@ example.com##a:nth-child(3) > img, a:nth-child(4) > img
 
 ---
 
-### 5. ✅ 创建测试脚本
-
-**文件**: `test_rule_extraction.py`
-
-**功能**:
-- 测试 `is_likely_rule` 函数
-- 测试 `extract_code_blocks` 函数
-- 测试 `extract_rules_from_issue` 函数
-- 验证各种规则格式的提取
-
-**使用方法**:
-```bash
-# 运行所有测试
-python -m pytest test_rule_extraction.py -v
-
-# 直接运行（需要 pytest 已安装）
-pytest test_rule_extraction.py -v
-```
-
----
-
-### 6. ✅ 创建规则格式文档
+### 5. ✅ 创建规则格式文档
 
 **文件**: `RULE_FORMATS.md`
 
@@ -141,7 +119,7 @@ pytest test_rule_extraction.py -v
 
 ---
 
-### 7. ✅ 创建自动化工作流
+### 6. ✅ 创建自动化工作流
 
 **文件**: `.github/workflows/sync-rules.yml`
 
@@ -165,12 +143,7 @@ pytest test_rule_extraction.py -v
 
 ### 手动测试
 
-1. **运行测试脚本**:
-   ```bash
-   python -m pytest test_rule_extraction.py -v
-   ```
-
-2. **运行规则同步**:
+1. **运行规则同步**:
    ```bash
    # 设置 GITHUB_TOKEN 环境变量
    export GITHUB_TOKEN=your_token_here
@@ -179,7 +152,7 @@ pytest test_rule_extraction.py -v
    python sync_issues.py
    ```
 
-3. **验证提取的规则**:
+2. **验证提取的规则**:
    - 检查 `adnew.txt` 是否包含预期的规则
    - 检查运行日志，确认没有错误
 
@@ -192,19 +165,13 @@ pytest test_rule_extraction.py -v
 
 ## 后续建议
 
-### 1. 测试新实现
-运行 `python -m pytest test_rule_extraction.py -v` 验证规则提取功能。
-
-### 2. 手动运行同步
+### 1. 手动运行同步
 设置 `GITHUB_TOKEN` 环境变量，然后运行 `python sync_issues.py`。
 
-### 3. 检查数据一致性
-运行 `python scripts/validation.py --mode consistency` 检查 `adnew.txt` 和 `AdSuper.txt` 的一致性。
-
-### 4. 提交并推送更改
+### 2. 提交并推送更改
 将修改后的代码推送到 GitHub 仓库，启用自动化工作流。
 
-### 5. 监控工作流
+### 3. 监控工作流
 在 GitHub Actions 页面监控自动化工作流的运行情况。
 
 ---
@@ -213,13 +180,11 @@ pytest test_rule_extraction.py -v
 
 ### 新增文件
 1. `scripts/rule_extractor.py` - 共享规则提取模块
-2. `test_rule_extraction.py` - 规则提取功能测试脚本
-3. `RULE_FORMATS.md` - 规则格式说明文档
-4. `.github/workflows/sync-rules.yml` - GitHub Actions 自动化工作流
+2. `RULE_FORMATS.md` - 规则格式说明文档
+3. `.github/workflows/sync-rules.yml` - GitHub Actions 自动化工作流
 
 ### 修改文件
 1. `sync_issues.py` - 重写规则提取逻辑，使用共享模块
-2. `scripts/validation.py` - 创建统一验证工具，合并一致性检查和完整性验证
 
 ### 保持不变
 1. `scripts/rule_validator.py` - 已在之前的优化中更新

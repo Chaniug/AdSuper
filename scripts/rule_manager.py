@@ -91,22 +91,26 @@ class RuleManager:
         new_filename = output_filename
         self._save_rules(sorted_rules, os.path.join(self.base_dir, new_filename))
         log(f"已写入合并规则到 {new_filename}")
-        # 备份
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        backup_file = os.path.join(self.merged_rules_dir, f'AdSuper_backup_{timestamp}.txt')
-        self._save_rules(sorted_rules, backup_file)
-        # 保留最新3个备份
-        backup_files = sorted(
-            [f for f in os.listdir(self.merged_rules_dir)
-             if f.startswith('AdSuper_backup_') and f.endswith('.txt')],
-            key=lambda x: os.path.getmtime(os.path.join(self.merged_rules_dir, x)),
-            reverse=True
-        )
-        for old_backup in backup_files[3:]:
-            try:
-                os.remove(os.path.join(self.merged_rules_dir, old_backup))
-            except Exception as e:
-                log(f"删除备份文件失败: {old_backup}, 错误: {e}")
+
+        # 备份仅在本地开发环境执行（CI 环境中 VM 每次重置，备份无意义且被 gitignore）
+        if os.environ.get('CI', '').lower() != 'true':
+            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+            backup_file = os.path.join(self.merged_rules_dir, f'AdSuper_backup_{timestamp}.txt')
+            self._save_rules(sorted_rules, backup_file)
+            # 保留最新3个备份
+            backup_files = sorted(
+                [f for f in os.listdir(self.merged_rules_dir)
+                 if f.startswith('AdSuper_backup_') and f.endswith('.txt')],
+                key=lambda x: os.path.getmtime(os.path.join(self.merged_rules_dir, x)),
+                reverse=True
+            )
+            for old_backup in backup_files[3:]:
+                try:
+                    os.remove(os.path.join(self.merged_rules_dir, old_backup))
+                except Exception as e:
+                    log(f"删除备份文件失败: {old_backup}, 错误: {e}")
+        else:
+            log("CI 环境检测到，跳过本地备份", "DEBUG")
         return new_filename
 
     def _save_rules(self, rules: List[Rule], filename: str):

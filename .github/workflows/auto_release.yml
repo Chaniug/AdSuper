@@ -15,6 +15,7 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # 防止挂死
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -54,6 +55,7 @@ jobs:
           echo "✅ AdSuper-Rules.zip created ($(du -h AdSuper-Rules.zip | cut -f1))"
 
       - name: Create Release
+        if: steps.stats.outputs.rules != '0'
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.set_version.outputs.version }}

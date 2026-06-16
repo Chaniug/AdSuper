@@ -10,6 +10,7 @@ from scripts.rule_extractor import extract_rules_from_issue
 REPO_OWNER = "Chaniug"
 REPO_NAME = "AdSuper"
 REQUIRED_LABELS = {"ad-rule", "completed"}  # 需要同时有这两个标签
+PROCESSED_LABEL = "processed"              # 标记已处理的 Issue（实现增量处理）
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 
 
@@ -29,18 +30,16 @@ def get_github_repo():
 @retry_on_exception(max_retries=3, exceptions=(Exception,), should_retry=is_github_api_error_retryable)
 def get_filtered_issues(repo, g, required_labels):
     """
-    使用 GitHub 搜索 API 获取带有指定标签的已关闭 issues
-    这比获取所有 issues 后在本地过滤更高效
+    使用 GitHub 搜索 API 获取带有指定标签的已关闭 issues。
+    排除已标记 processed 的 issue，实现增量处理。
     """
-    # 构建搜索查询
-    # 注意：GitHub API 的 label 查询是 AND 关系
     labels_query = ' '.join([f'label:{label}' for label in required_labels])
-    query = f"repo:{REPO_OWNER}/{REPO_NAME} is:issue is:closed {labels_query}"
-    
+    query = f"repo:{REPO_OWNER}/{REPO_NAME} is:issue is:closed {labels_query} -label:{PROCESSED_LABEL}"
+
     try:
         issues = g.search_issues(query)
-        log(f"搜索查询: {query}", "DEBUG")
-        log(f"找到 {issues.totalCount} 个匹配的 issues", "INFO")
+        log(f"搜索查询（排除已处理）: {query}", "DEBUG")
+        log(f"找到 {issues.totalCount} 个待处理的 issues", "INFO")
         return issues
     except Exception as e:
         log(f"搜索 issues 失败: {e}", "WARNING")
@@ -49,7 +48,10 @@ def get_filtered_issues(repo, g, required_labels):
         return repo.get_issues(state="closed")
 
 def issue_has_required_labels(issue, required_labels):
+    """检查 issue 是否有所需标签，且未被标记为已处理"""
     issue_labels = {label.name for label in issue.labels}
+    if PROCESSED_LABEL in issue_labels:
+        return False
     return required_labels.issubset(issue_labels)
 
 def main():
@@ -108,16 +110,22 @@ def main():
                             log(f"- {error}", "ERROR")
                 
                 all_new_rules.extend(valid_rules)
+            
+            # 标记 issue 已处理（无论是否有有效规则，避免重复处理）
+            try:
+                issue.add_to_labels(PROCESSED_LABEL)
+                log(f"Issue #{issue.number} 已标记为 {PROCESSED_LABEL}", "DEBUG")
+            except Exception as e:
+                log(f"标记 Issue #{issue.number} 失败: {e}", "WARNING")
         
         log(f"处理了 {processed_count} 个 Issues", "INFO")
         
         if not all_new_rules:
-            log("没有找到新的规则", "WARNING")
-            # 保证 adnew.txt 存在
+            log("没有新的待处理 Issue，adnew.txt 无需更新", "INFO")
+            # 首次运行时保证 adnew.txt 存在
             if not os.path.exists('adnew.txt'):
                 with open('adnew.txt', 'w', encoding='utf-8') as f:
                     f.write("! 自动生成的空 adnew.txt\n")
-                log("已创建空的 adnew.txt 文件", "INFO")
             return
         
         log(f"\n找到 {len(all_new_rules)} 条有效规则，开始合并...", "INFO")

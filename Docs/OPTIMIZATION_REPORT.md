@@ -109,23 +109,7 @@ log("这是一条错误日志", level="ERROR")
 
 ---
 
-### 6. ✅ 创建统一验证工具 (create-validation-tool)
-
-**文件**: `scripts/validation.py`
-
-**功能**:
-- 合并了一致性检查和完整性验证功能
-- 支持多种验证模式：`consistency`, `completeness`, `all`
-- 使用共享模块 `scripts/rule_extractor.py` 提取规则
-
-**验证模式**:
-1. **consistency** - 一致性检查：比较 `adnew.txt` 和 `AdSuper.txt`
-2. **completeness** - 完整性验证：检查 GitHub Issues 规则是否都在 `adnew.txt` 中
-3. **all** - 运行所有检查（默认）
-
----
-
-### 7. ✅ 固定依赖版本 (pin-dependencies)
+### 6. ✅ 固定依赖版本 (pin-dependencies)
 
 **文件**: `requirements.txt`
 
@@ -146,30 +130,9 @@ python-dateutil>=2.8.2
 
 ---
 
-### 8. ✅ 检查数据一致性 (check-data-consistency)
-
-**功能**:
-- 检查 `adnew.txt` 和 `AdSuper.txt` 的数据一致性
-- 识别缺失的规则和额外的规则
-- 提供诊断建议
-
-**使用统一验证工具**:
-```bash
-# 检查数据一致性（一致性检查模式）
-python scripts/validation.py --mode consistency
-
-# 重新生成 adnew.txt
-python sync_issues.py
-```
-
----
-
 ## 后续建议
 
-### 1. 数据一致性修复
-运行 `python scripts/validation.py --mode consistency` 检查数据一致性，如果发现不一致，运行 `python sync_issues.py` 重新生成 `adnew.txt`。
-
-### 2. 测试优化后的代码
+### 1. 测试优化后的代码
 建议对优化后的代码进行完整测试，包括：
 - 单元测试（如果有）
 - 集成测试：运行 `sync_issues.py` 完整流程
@@ -179,25 +142,18 @@ python sync_issues.py
 更新 `README.md` 和 `PROJECT_DOCUMENTATION.md`，包含：
 - 新的日志功能使用说明
 - API 认证配置说明
-- 数据一致性检查说明
 
-### 4. 持续集成
-考虑添加 CI/CD 流程，自动执行：
-- 代码 lint 检查
-- 数据一致性检查
-- 规则验证
 
 ---
 
 ## 总结
 
-通过本次代码审查和优化，成功修复了 **5 个 bug**，实施了 **8 项优化**，显著提升了代码质量和性能。主要成果包括：
+通过本次代码审查和优化，成功修复了 **5 个 bug**，实施了 **6 项优化**，显著提升了代码质量和性能。主要成果包括：
 
 - ✅ 修复了正则表达式模式，提高规则验证准确性
 - ✅ 优化了冲突检测算法，性能提升 O(n) 倍
 - ✅ 优化了 GitHub API 调用，减少不必要的数据传输
 - ✅ 修复了代码缺陷，增强代码健壮性
 - ✅ 增强了日志功能，提升可维护性
-- ✅ 添加了数据一致性检查工具
 
 所有修改都保持了向后兼容性，现有代码应该能够无缝工作。

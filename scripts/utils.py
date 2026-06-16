@@ -192,23 +192,35 @@ def is_github_api_error_retryable(error: Exception) -> bool:
 
 def handle_github_rate_limit(github_obj) -> None:
     """
-    处理 GitHub API 速率限制
-    
+    处理 GitHub API 速率限制（Core + Search）
+    Search API 限制更严格（30次/分钟），需优先检查
+
     Args:
         github_obj: PyGithub Github 对象
     """
     try:
         rate_limit = github_obj.get_rate_limit()
+
+        # 1) 优先检查 Search API（限制: 30次/分钟，最易耗尽）
+        search_limit = rate_limit.search
+        if search_limit.remaining < 5:
+            reset_time = search_limit.reset
+            wait_seconds = max(0, (reset_time - datetime.now(reset_time.tzinfo)).total_seconds())
+            log(f"⚠️  GitHub Search API 速率限制即将用尽，剩余: {search_limit.remaining}", "WARNING")
+            if wait_seconds < 120:
+                log(f"自动等待 {wait_seconds:.0f} 秒...", "INFO")
+                time.sleep(wait_seconds + 2)
+
+        # 2) 再检查 Core API（限制: 5000次/小时）
         core_limit = rate_limit.core
-        
         if core_limit.remaining < 10:
             reset_time = core_limit.reset
-            wait_seconds = (reset_time - datetime.now(reset_time.tzinfo)).total_seconds()
-            
+            wait_seconds = max(0, (reset_time - datetime.now(reset_time.tzinfo)).total_seconds())
+
             if wait_seconds > 0:
                 log(f"⚠️  GitHub API 速率限制即将用尽，剩余: {core_limit.remaining}", "WARNING")
                 log(f"将在 {wait_seconds:.0f} 秒后重置，建议等待...", "WARNING")
-                
+
                 # 如果等待时间不长，自动等待
                 if wait_seconds < 300:  # 小于5分钟
                     log(f"自动等待 {wait_seconds:.0f} 秒...", "INFO")

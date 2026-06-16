@@ -10,6 +10,7 @@ venv/
 # IDE
 .idea/
 .vscode/
+.codebuddy/
 
 # CI generated artifacts
 VALIDATION_REPORT.md
