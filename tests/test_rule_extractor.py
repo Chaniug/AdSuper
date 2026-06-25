@@ -13,6 +13,8 @@ from scripts.rule_extractor import (
     extract_code_blocks,
     extract_rules_from_text,
     extract_rules_from_issue,
+    extract_inline_backticks,
+    _strip_markdown_decoration,
 )
 
 
@@ -60,6 +62,66 @@ class TestIsLikelyRule:
     def test_plain_text_skipped(self):
         assert is_likely_rule("这是一段普通文本") is False
         assert is_likely_rule("hello world") is False
+
+    def test_markdown_image_skipped(self):
+        # Markdown 图片语法不应被误识别为规则
+        assert is_likely_rule("![screenshot](https://example.com/img.png)") is False
+
+    def test_markdown_link_skipped(self):
+        # 整行是 Markdown 链接时不应被误识别
+        assert is_likely_rule("[click here](https://example.com)") is False
+
+
+class TestStripMarkdownDecoration:
+    """测试 _strip_markdown_decoration 函数"""
+
+    def test_list_dash_prefix(self):
+        assert _strip_markdown_decoration("- ||example.com^") == "||example.com^"
+
+    def test_list_asterisk_prefix(self):
+        assert _strip_markdown_decoration("* ||example.com^") == "||example.com^"
+
+    def test_list_plus_prefix(self):
+        assert _strip_markdown_decoration("+ ||example.com^") == "||example.com^"
+
+    def test_list_numbered_dot_prefix(self):
+        assert _strip_markdown_decoration("1. ||example.com^") == "||example.com^"
+
+    def test_list_numbered_paren_prefix(self):
+        assert _strip_markdown_decoration("2) ||example.com^") == "||example.com^"
+
+    def test_blockquote_prefix(self):
+        assert _strip_markdown_decoration("> ||example.com^") == "||example.com^"
+
+    def test_inline_backticks_single(self):
+        assert _strip_markdown_decoration("`||example.com^`") == "||example.com^"
+
+    def test_inline_backticks_double(self):
+        assert _strip_markdown_decoration("``||example.com^``") == "||example.com^"
+
+    def test_no_decoration(self):
+        assert _strip_markdown_decoration("||example.com^") == "||example.com^"
+
+
+class TestExtractInlineBackticks:
+    """测试 extract_inline_backticks 函数"""
+
+    def test_single_inline(self):
+        result = extract_inline_backticks("规则是 `||example.com^` 请加上")
+        assert result == ["||example.com^"]
+
+    def test_multiple_inline(self):
+        text = "规则：`||a.com^` 和 `||b.com^`"
+        result = extract_inline_backticks(text)
+        assert result == ["||a.com^", "||b.com^"]
+
+    def test_no_inline(self):
+        assert extract_inline_backticks("普通文本无反引号") == []
+
+    def test_multiline_text(self):
+        text = "第一行\n`||a.com^`\n第三行"
+        result = extract_inline_backticks(text)
+        assert result == ["||a.com^"]
 
 
 class TestExtractCodeBlocks:
@@ -151,3 +213,76 @@ class TestExtractRulesFromIssue:
     def test_empty_body(self):
         rules = extract_rules_from_issue("||example.com^", body="")
         assert len(rules) == 1
+
+
+class TestNonCompliantSubmissions:
+    """测试非规范提交场景（用户不按表单要求）"""
+
+    def test_rules_with_list_dash_prefix(self):
+        """用户用 - 列表项包裹规则"""
+        body = "- ||example.com^\n- ||ads.com^$third-party\n- example.com##.ad"
+        rules = extract_rules_from_issue("规则", body=body)
+        assert len(rules) == 3
+        assert rules[0] == ("||example.com^", "body")
+        assert rules[1] == ("||ads.com^$third-party", "body")
+        assert rules[2] == ("example.com##.ad", "body")
+
+    def test_rules_with_numbered_list(self):
+        """用户用 1. 2. 3. 编号"""
+        body = "1. ||example.com^\n2. ||ads.com^$third-party\n3. example.com##.ad"
+        rules = extract_rules_from_issue("规则", body=body)
+        assert len(rules) == 3
+
+    def test_rules_with_inline_backticks(self):
+        """用户用内联反引号包裹规则"""
+        body = "我的规则是 `||example.com^` 请加上"
+        rules = extract_rules_from_issue("规则", body=body)
+        assert len(rules) == 1
+        assert rules[0] == ("||example.com^", "body")
+
+    def test_rules_with_multiple_inline_backticks(self):
+        """用户用多个内联反引号"""
+        body = "规则：`||a.com^` 和 `||b.com^`"
+        rules = extract_rules_from_issue("规则", body=body)
+        assert len(rules) == 2
+
+    def test_rules_with_blockquote_prefix(self):
+        """用户用 > 引用前缀"""
+        body = "> ||example.com^\n> ||ads.com^"
+        rules = extract_rules_from_issue("规则", body=body)
+        assert len(rules) == 2
+
+    def test_rules_mixed_with_text_no_codeblock(self):
+        """规则和说明文字混在一起，无代码块"""
+        body = "你好，我想拦截以下域名：\n||example.com^\n还有这个：\n||ads.com^\n谢谢！"
+        rules = extract_rules_from_issue("广告规则", body=body)
+        assert len(rules) == 2
+
+    def test_markdown_image_not_extracted(self):
+        """Markdown 图片语法不应被误识别为规则"""
+        body = "请看截图\n![screenshot](https://example.com/img.png)"
+        rules = extract_rules_from_issue("广告规则", body=body)
+        assert len(rules) == 0
+
+    def test_markdown_link_not_extracted(self):
+        """整行 Markdown 链接不应被误识别为规则"""
+        body = "[click here](https://example.com)"
+        rules = extract_rules_from_issue("广告规则", body=body)
+        assert len(rules) == 0
+
+    def test_rules_with_mixed_formats(self):
+        """混合格式：代码块 + 内联反引号 + 列表项"""
+        body = """代码块：
+```
+||block.com^
+```
+
+内联：`||inline.com^`
+
+列表：
+- ||list.com^"""
+        rules = extract_rules_from_issue("规则", body=body)
+        rule_strings = [r for r, _ in rules]
+        assert "||block.com^" in rule_strings
+        assert "||inline.com^" in rule_strings
+        assert "||list.com^" in rule_strings
