@@ -1,5 +1,5 @@
 name: 🚫 广告规则提交
-description: 提交一条新的广告拦截规则（请先用 AdGuard/uBlock 等工具测试通过后再提交）
+description: 提交一条广告拦截规则（不知道怎么写也没关系，把广告网址告诉我们就行）
 title: "[规则]: "
 labels: ["ad"]
 body:
@@ -8,8 +8,10 @@ body:
       value: |
         ## 感谢你提交广告规则！
 
-        请按以下表单填写，确保规则已经过测试验证。
-        提交后维护者会审核，通过的规则会被打上 `good` 标签并自动收录到 `adnew.txt`。
+        填写下方表单提交规则，维护者会审核后收录到规则库。
+
+        > 💡 **不会写规则？** 也可以在"规则说明"里描述你遇到的广告（网址、位置、截图），
+        > 维护者会帮你编写规则。但最好先试试下面的格式。
 
         > 📖 规则格式参考：[规则编写指南](https://github.com/Chaniug/AdSuper/blob/main/Docs/RULE_FORMATS.md)
 
@@ -17,13 +19,13 @@ body:
     id: rule_type
     attributes:
       label: 规则类型
-      description: 选择规则所属类型，方便审核员分类
+      description: 不确定选哪个？选"我不确定"即可，维护者会帮你判断。
       options:
-        - 网络请求拦截（如 ||example.com^）
-        - 元素隐藏（如 example.com##.ad-banner）
-        - 例外规则（如 @@||example.com^）
-        - 脚本/图片/弹窗拦截（如 ||example.com^$script）
-        - 其他
+        - 拦截某个网站的请求（如 ||example.com^）
+        - 隐藏网页上的广告元素（如 example.com##.ad-banner）
+        - 白名单/例外规则，不要拦截某网站（如 @@||example.com^）
+        - 拦截脚本、图片、弹窗等特定资源（如 ||example.com^$script）
+        - 我不确定，请维护者帮忙判断
     validations:
       required: true
 
@@ -32,7 +34,7 @@ body:
     attributes:
       label: 规则内容
       description: |
-        请将规则写在下方代码块内（两个 ``` 之间）。
+        请将规则写在下方代码块内（两个 <code>```</code> 之间）。
         每条规则**单独占一行**，不要把多条规则写在一行。
         提取器会自动从代码块中识别规则。
       placeholder: |
@@ -53,8 +55,11 @@ body:
     id: target
     attributes:
       label: 目标网站/应用
-      description: 这条规则用于拦截哪个网站或应用？（便于审核员复现测试）
-      placeholder: "例如：https://example.com 或 某 App 名称"
+      description: |
+        这条规则用于哪个网站或 App？便于审核员打开复现广告。
+        - 网站请填完整网址（如 https://example.com）
+        - App 请填 App 名称（如 某某视频 App）
+      placeholder: "例如：https://example.com 或 某某视频 App"
     validations:
       required: true
 
@@ -62,24 +67,30 @@ body:
     id: description
     attributes:
       label: 规则说明
-      description: 解释这条规则的作用、为什么要拦截、影响范围等
-      placeholder: "例如：example.com 首页顶部的横幅广告会遮挡内容，用元素隐藏规则移除"
+      description: |
+        简单说明：广告长什么样？在页面的哪个位置？为什么要拦截？
+        如果不会写规则，也可以在这里详细描述你遇到的广告。
+      placeholder: |
+        例如：
+        - 打开 example.com 首页，顶部有一个横幅广告
+        - 广告会自动弹出，影响正常浏览
+        - 用拦截规则把这个广告去掉
     validations:
       required: false
 
   - type: textarea
     id: test_result
     attributes:
-      label: 测试结果
+      label: 测试结果（可选）
       description: |
-        在 AdGuard / uBlock Origin / AdBlock 等工具中测试的结果。
-        可以贴截图、说明拦截前后对比、是否有副作用等。
+        如果你在广告拦截工具（uBlock Origin、AdGuard 等）里测试过这条规则，请说明效果。
+        没测试过也可以跳过，维护者会自己测试。
       placeholder: |
         例如：
-        - 测试环境：Chrome + uBlock Origin 1.62
-        - 拦截前：页面顶部显示广告横幅
-        - 拦截后：广告横幅消失，页面正常显示
-        - 副作用：无
+        - 在 uBlock Origin 里添加规则后，广告消失了
+        - 没有发现副作用，页面正常显示
+
+        （没测试过就留空，没关系）
     validations:
       required: false
 
@@ -89,11 +100,9 @@ body:
       label: 确认事项
       description: 请确认以下事项
       options:
-        - label: 我已使用广告拦截工具测试过这条规则，确认有效
+        - label: 我已检查过 [现有规则列表](https://github.com/Chaniug/AdSuper/blob/main/adnew.txt)，确认这不是已经存在的规则
           required: true
-        - label: 我已检查过 [现有 Issue](https://github.com/Chaniug/AdSuper/issues?q=is%3Aissue) 和 adnew.txt，确认这不是重复规则
-          required: true
-        - label: 我了解提交后规则会进入审核队列，审核通过才会被打上 `good` 标签并收录
+        - label: 我了解提交后会进入审核队列，维护者审核通过才会收录
           required: false
 
   - type: markdown
@@ -101,8 +110,10 @@ body:
       value: |
         ---
 
-        💡 **提交后流程**：
-        1. 自动获得 `ad` 标签进入审核队列
-        2. 维护者审核规则有效性，必要时要求补充信息
-        3. 审核通过 → 加 `good` 标签 → 关闭 Issue
-        4. 下次 GitHub Actions 运行时自动收录到 [`adnew.txt`](https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt)
+        💡 **提交后会怎样？**
+        1. 你的 Issue 会自动进入审核队列
+        2. 维护者会测试规则是否有效，必要时会回复询问更多细节
+        3. 审核通过 → 规则自动收录到规则库
+        4. 其他用户订阅 [adnew.txt](https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt) 后就能用上你贡献的规则
+
+        感谢你的贡献！🌟
