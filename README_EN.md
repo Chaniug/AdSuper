@@ -92,7 +92,7 @@ Sync to FilterFusion Main Project
 
 ### Method 1: Submit an Issue (Recommended)
 
-1. **Click to Submit**: [Submit New Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule&template=rule_report.yml)
+1. **Click to Submit**: [Submit New Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 
 2. **Fill in Details**:
    - Rule type (domain, element hiding, etc.)
@@ -101,7 +101,7 @@ Sync to FilterFusion Main Project
 
 3. **Wait for Review**:
    - Maintainers will review within 24-48 hours
-   - Approved rules marked ✅ `completed`
+   - Approved rules marked ✅ `good`
    - Rejected rules marked ❌ `not planned`
 
 4. **Auto-Inclusion**:
@@ -301,7 +301,7 @@ Maintainers will only approve rules they've verified.
 ### Q3: How long until a rule takes effect?
 
 **A**: Timeline:
-1. Rule approved - immediately marked ✅ `completed`
+1. Rule approved - immediately marked ✅ `good`
 2. Regular packaging - released every 5 days
 3. FilterFusion sync - main project pulls updates
 4. User update - automatic when users refresh rules
@@ -424,7 +424,7 @@ Users subscribe and use
 ### Ways to Contribute
 
 #### 1. Submit Rules (Most Direct)
-- [Submit Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule&template=rule_report.yml)
+- [Submit Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 - Fill in rule content and explanation
 - Wait for review
 
@@ -462,7 +462,7 @@ Users subscribe and use
 ### Quick Links
 
 - 🔗 [Main Project FilterFusion](https://github.com/Chaniug/FilterFusion)
-- 📝 [Submit Rule](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule)
+- 📝 [Submit Rule](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad)
 - 💬 [Discussions](https://github.com/Chaniug/AdSuper/discussions)
 - 🐛 [Report Issue](https://github.com/Chaniug/AdSuper/issues)
 - 📦 [View Releases](https://github.com/Chaniug/AdSuper/releases)

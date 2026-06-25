@@ -92,7 +92,7 @@
 
 ### 方式一：直接提交 Issue（推荐）
 
-1. **点击提交**：[提交新规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule&template=rule_report.yml)
+1. **点击提交**：[提交新规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 
 2. **填写内容**：
    - 规则类型（域名、元素隐藏等）
@@ -101,7 +101,7 @@
 
 3. **等待审核**：
    - 维护者会在 24-48 小时内审核
-   - 通过标记 ✅ `completed`
+   - 通过标记 ✅ `good`
    - 拒绝标记 ❌ `not planned`
 
 4. **自动收录**：
@@ -300,7 +300,7 @@ example.com##a[href*="ads"]       # 隐藏链接到广告的 a 标签
 ### Q3: 规则多久会生效？
 
 **A**: 
-1. 规则通过审核 - 立即标记为 ✅ `completed`
+1. 规则通过审核 - 立即标记为 ✅ `good`
 2. 定期打包发布 - 每 5 天发布一次 Release
 3. FilterFusion 同步 - 主项目定期拉取新规则
 4. 用户更新规则 - 用户订阅规则后自动获取
@@ -423,7 +423,7 @@ FilterFusion 自动拉取规则
 ### 贡献方式
 
 #### 1. 提交规则（最直接）
-- [点此提交规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule&template=rule_report.yml)
+- [点此提交规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 - 填写规则内容和说明
 - 等待审核
 
@@ -461,7 +461,7 @@ FilterFusion 自动拉取规则
 ### 快速链接
 
 - 🔗 [主项目 FilterFusion](https://github.com/Chaniug/FilterFusion)
-- 📝 [提交规则](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule)
+- 📝 [提交规则](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad)
 - 💬 [参与讨论](https://github.com/Chaniug/AdSuper/discussions)
 - 🐛 [报告问题](https://github.com/Chaniug/AdSuper/issues)
 - 📦 [查看发布](https://github.com/Chaniug/AdSuper/releases)

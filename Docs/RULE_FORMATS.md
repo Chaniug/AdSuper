@@ -137,7 +137,7 @@ example.com#$#window.adsEnabled = false;
 
 ### 从 GitHub Issues 提取规则
 
-AdSuper 从带有 `ad-rule` 和 `completed` 标签的已关闭 issues 中提取规则。
+AdSuper 从带有 `ad` 和 `good` 标签的已关闭 issues 中提取规则。
 
 **提取逻辑**：
 1. **优先从 Markdown 代码块提取**：规则应该放在 ` ```adblock ` 或 ` ~~~ ` 代码块中。

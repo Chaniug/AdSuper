@@ -9,7 +9,7 @@ from scripts.rule_extractor import extract_rules_from_issue
 
 REPO_OWNER = "Chaniug"
 REPO_NAME = "AdSuper"
-REQUIRED_LABELS = {"ad-rule", "completed"}  # 需要同时有这两个标签
+REQUIRED_LABELS = {"ad", "good"}  # 需要同时有这两个标签
 PROCESSED_LABEL = "processed"              # 标记已处理的 Issue（实现增量处理）
 GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
 
@@ -56,7 +56,7 @@ def issue_has_required_labels(issue, required_labels):
 
 def main():
     log(f"当前工作目录：{os.getcwd()}", "INFO")
-    log("开始同步带 ad-rule 和 completed 标签且已关闭（closed）的 issues...", "INFO")
+    log("开始同步带 ad 和 good 标签且已关闭（closed）的 issues...", "INFO")
     
     g = None  # 初始化 g 变量
     

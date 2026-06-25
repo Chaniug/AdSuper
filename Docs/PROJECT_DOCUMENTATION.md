@@ -59,7 +59,7 @@ AdSuper/
 
 - 用户提交 Issue（使用预设模板）
 - 维护者审核（24-48小时内）
-- 通过的规则自动标记 `completed`
+- 通过的规则自动标记 `good`
 - 拒绝的规则标记 `not planned` 并关闭
 
 ### 2. 规则验证
@@ -178,7 +178,7 @@ example.com##.ad-banner
 
 **工作流程**:
 1. 连接 GitHub API
-2. 获取所有已关闭且带有 `ad-rule` 和 `completed` 标签的 Issues
+2. 获取所有已关闭且带有 `ad` 和 `good` 标签的 Issues
 3. 从 Issue 标题和正文中提取规则
 4. 验证规则格式
 5. 合并到 `adnew.txt`
@@ -267,7 +267,7 @@ python sync_issues.py
 
 ### 提交规则（最直接）
 
-1. **点击提交**: [提交新规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule&template=rule_report.yml)
+1. **点击提交**: [提交新规则 Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 
 2. **填写内容**:
    - 规则类型（域名、元素隐藏等）
@@ -276,7 +276,7 @@ python sync_issues.py
 
 3. **等待审核**:
    - 维护者会在 24-48 小时内审核
-   - 通过标记 ✅ `completed`
+   - 通过标记 ✅ `good`
    - 拒绝标记 ❌ `not planned`
 
 ### 提交前检查清单
@@ -350,7 +350,7 @@ FilterFusion 自动拉取规则
 ### 快速链接
 
 - 🔗 [主项目 FilterFusion](https://github.com/Chaniug/FilterFusion)
-- 📝 [提交规则](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad-rule)
+- 📝 [提交规则](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad)
 - 💬 [参与讨论](https://github.com/Chaniug/AdSuper/discussions)
 - 🐛 [报告问题](https://github.com/Chaniug/AdSuper/issues)
 - 📦 [查看发布](https://github.com/Chaniug/AdSuper/releases)
