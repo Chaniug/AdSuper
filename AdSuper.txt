@@ -30,6 +30,3 @@ www.zhihu.com##.DownloadGuide.Card, .OpenGuide-wrapper, .AnswerItem.ContentItem 
 ||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 @@||renzhen8.cn^$domain=ikandy2.fun
 @@||shuyu2001.cn^$domain=ikandy2.fun
-555k26.com###c2f670cd2 > div > a > img
-555k26.com###c2f670cd > div > a > img
-555k26.com##div.page.player > div.main:nth-child(7) > div.content > div.module.module-player:first-child > div.module-main:last-child > div.module-player-side:nth-child(2) > div.small-icon-container.is_mb:nth-child(6)
