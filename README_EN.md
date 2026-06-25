@@ -63,7 +63,7 @@
 | 🤝 **Community Collaboration** | Anyone can submit rules - truly crowdsourced |
 | ⚡ **Efficient Sync** | Rules automatically sync to FilterFusion with real-time updates |
 | 📊 **Quality Assurance** | Strict review process ensures rule quality |
-| 🔄 **Regular Releases** | Automatic rule package releases every 5 days |
+| 🔄 **Regular Releases** | Automatic rule package release every Monday |
 | 📈 **Statistics Display** | Contributor stats, activity metrics, complete history |
 
 ---
@@ -77,11 +77,9 @@ User Submits Issue
      ↓
 ❌ Not Suitable → Mark "not planned" (Close)
      ↓ ✅ Suitable
-Automatically Added to adnew.txt
+Automatically Added to adnew.txt (synced every 3 days)
      ↓
-Regular Packaging (Every 5 Days)
-     ↓
-Release Published
+Weekly Release Package (every Monday)
      ↓
 Sync to FilterFusion Main Project
 ```
@@ -90,7 +88,15 @@ Sync to FilterFusion Main Project
 
 ## 🚀 Quick Start
 
-### Method 1: Submit an Issue (Recommended)
+### Method 1: Subscribe to Rules (Just Use)
+
+If you just want to use AdSuper rules, add the following URL to your ad blocker (uBlock Origin / AdGuard / AdBlock etc.):
+
+```
+https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt
+```
+
+### Method 2: Submit Rules (Contribute)
 
 1. **Click to Submit**: [Submit New Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 
@@ -105,10 +111,10 @@ Sync to FilterFusion Main Project
    - Rejected rules marked ❌ `not planned`
 
 4. **Auto-Inclusion**:
-   - Approved rules automatically added to the rule library
-   - Included in next release package
+   - Approved rules synced to `adnew.txt` every 3 days
+   - Released in weekly rule package (every Monday)
 
-### Method 2: Participate in Discussion
+### Method 3: Participate in Discussion
 
 - Visit [Discussions](https://github.com/Chaniug/AdSuper/discussions) to share ideas
 - Report issues on [Issues](https://github.com/Chaniug/AdSuper/issues)
@@ -126,23 +132,24 @@ Before submitting a rule, ensure:
 - [ ] Rule doesn't already exist in the library
 - [ ] Rule actually blocks the intended ads
 - [ ] Won't cause false positives
-- [ ] One Issue contains only one rule
+- [ ] Wrap rules in code blocks (```) for easier extraction
 
 ### Correct Submission Examples
 
-✅ **Good Example**:
+✅ **Good Example** (wrapped in code block):
 ```
 Issue Title: Block xxxxx ad domain
-Issue Content: ||ads.example.com^
+Issue Content:
+```
+||ads.example.com^
+```
 Explanation: This domain serves lots of pop-up ads
 ```
 
-❌ **Bad Example**:
+❌ **Bad Example** (rules mixed with text, recognizable but not recommended):
 ```
 Issue Title: New rules
-Issue Content: Multiple rules mixed together
-||ads1.com^
-||ads2.com^
+Issue Content: I found these rules ||ads1.com^ and ||ads2.com^ to block
 ```
 
 ### Rule Source Information
@@ -302,20 +309,23 @@ Maintainers will only approve rules they've verified.
 
 **A**: Timeline:
 1. Rule approved - immediately marked ✅ `good`
-2. Regular packaging - released every 5 days
-3. FilterFusion sync - main project pulls updates
-4. User update - automatic when users refresh rules
+2. Auto-sync - rules synced to `adnew.txt` every 3 days
+3. Regular packaging - release published every Monday
+4. FilterFusion sync - main project pulls updates
+5. User update - automatic when users refresh rules
 
-**Estimated time**: 5-7 days from submission to user effect
+**Estimated time**: 3-9 days from submission to user effect (median ~5 days)
 
 ### Q4: Can I submit multiple rules in one Issue?
 
-**A**: **Not recommended**. Reasons:
-- Hard to track individual rules
-- Lower review efficiency
-- If one rule has issues, entire Issue affected
+**A**: **Yes**. AdSuper's rule extractor supports multiple formats:
 
-**Recommendation**: One rule per Issue.
+- ✅ Code blocks (recommended, separate multiple rules with newlines)
+- ✅ List items (`- ||xxx^` or `1. ||xxx^`)
+- ✅ Inline backticks (`` `||xxx^` ``)
+- ✅ Rules directly in title or body
+
+**Recommendation**: Same-type rules can be in one Issue (use code blocks for easier review). Different-type rules (e.g., domain rules vs. element hiding) should be submitted separately for better tracking.
 
 ### Q5: How do I modify or delete an approved rule?
 
@@ -383,7 +393,7 @@ View [Contributors](https://github.com/Chaniug/AdSuper/graphs/contributors)
 ### Rule Statistics
 
 - 📝 **Total Rules** - Growing continuously
-- 🔄 **Auto-Updates** - Released every 5 days
+- 🔄 **Auto-Updates** - Synced every 3 days + released every Monday
 - 👥 **Contributors** - See above stats
 - ⭐ **Project Stars** - Thank you for support!
 
@@ -447,7 +457,7 @@ Users subscribe and use
 
 ✅ **Must**:
 - Correct rule syntax
-- One rule per Issue
+- Wrap rules in code blocks
 - Clear explanation
 
 ⚠️ **Recommended**:
