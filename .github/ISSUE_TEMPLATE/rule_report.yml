@@ -32,10 +32,11 @@ body:
     attributes:
       label: 规则内容
       description: |
-        请将规则用代码块（```）包裹，多条规则一行一条。
-        提取器会优先从代码块中识别规则。
+        请将规则写在下方代码块内（两个 ``` 之间）。
+        每条规则**单独占一行**，不要把多条规则写在一行。
+        提取器会自动从代码块中识别规则。
       placeholder: |
-        例如：
+        示例：
         ```
         ||example.com^
         ||ads.example.com^$third-party
