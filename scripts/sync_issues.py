@@ -61,21 +61,24 @@ def get_github_repo():
     should_retry=is_github_api_error_retryable,
 )
 def get_filtered_issues(repo, g, required_labels):
-    """使用 GitHub 搜索 API 获取待处理的 Issues。
+    """使用 GitHub 搜索 API 获取候选 Issues。
 
-    搜索条件: 已关闭 + 必需标签 - 已处理标记
+    注意：不使用 -label:processed 预过滤，因为 GitHub 搜索 API 对
+    "曾经有过 processed 标签、后被删除"的 Issue 索引更新不及时，会导致
+    误排除。改为只搜必需标签，由 issue_has_required_labels() 在本地
+    二次校验 processed 标记。
     失败时降级为获取所有已关闭 Issue 并本地过滤。
     """
     labels_query = " ".join([f"label:{label}" for label in required_labels])
     query = (
         f"repo:{config.REPO_OWNER}/{config.REPO_NAME} is:issue is:closed "
-        f"{labels_query} -label:{config.PROCESSED_LABEL}"
+        f"{labels_query}"
     )
 
     try:
         issues = g.search_issues(query)
-        log(f"搜索查询（排除已处理）: {query}", "DEBUG")
-        log(f"找到 {issues.totalCount} 个待处理的 issues", "INFO")
+        log(f"搜索查询: {query}", "DEBUG")
+        log(f"找到 {issues.totalCount} 个候选 issues（含已处理，将在本地过滤）", "INFO")
         return issues
     except Exception as e:
         log(f"搜索 issues 失败: {e}", "WARNING")
@@ -84,10 +87,12 @@ def get_filtered_issues(repo, g, required_labels):
 
 
 def issue_has_required_labels(issue, required_labels):
-    """检查 issue 是否有所需标签，且未被标记为已处理。"""
+    """检查 issue 是否有所需标签。
+
+    注意：不再检查 processed 标签（已废弃增量机制）。
+    现在每次运行都会重新处理所有带必需标签的已关闭 Issue。
+    """
     issue_labels = {label.name for label in issue.labels}
-    if config.PROCESSED_LABEL in issue_labels:
-        return False
     return required_labels.issubset(issue_labels)
 
 
@@ -149,12 +154,9 @@ def main():
 
                 all_new_rules.extend(valid_rules)
 
-            # 标记 issue 已处理（无论是否有有效规则，避免重复处理）
-            try:
-                issue.add_to_labels(config.PROCESSED_LABEL)
-                log(f"Issue #{issue.number} 已标记为 {config.PROCESSED_LABEL}", "DEBUG")
-            except Exception as e:
-                log(f"标记 Issue #{issue.number} 失败: {e}", "WARNING")
+            # 注意：已废弃 processed 增量标记机制。
+            # 现在每次运行都会重新处理所有带必需标签的已关闭 Issue，
+            # 这样修改规则后可以立即生效，无需手动移除标签。
 
         log(f"处理了 {processed_count} 个 Issues", "INFO")
 
