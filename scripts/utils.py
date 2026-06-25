@@ -75,12 +75,19 @@ def log(message: str, level: str = "INFO"):
     
     # 如果日志系统未配置，使用简单的打印输出（保持向后兼容）
     if not _logging_configured:
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{level}] {message}")
+        try:
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{level}] {message}")
+        except Exception:
+            # 降级 print 也失败时，静默处理避免日志本身导致崩溃
+            pass
         return
     
     # 使用 logging 模块
-    log_level = getattr(logging, level.upper(), logging.INFO)
-    _logger.log(log_level, message)
+    try:
+        log_level = getattr(logging, level.upper(), logging.INFO)
+        _logger.log(log_level, message)
+    except Exception:
+        pass
 
 def set_log_level(level: str):
     """

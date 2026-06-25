@@ -25,7 +25,7 @@ jobs:
     - name: 设置 Python 环境
       uses: actions/setup-python@v6
       with:
-        python-version: '3.12'
+        python-version: '3.11'
         cache: 'pip'
         cache-dependency-path: 'requirements.txt'
 
@@ -35,7 +35,7 @@ jobs:
     - name: 运行规则同步脚本
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python sync_issues.py
+      run: python -m scripts.sync_issues
     
     - name: 检查是否有更改
       id: check_changes

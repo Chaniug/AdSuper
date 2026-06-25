@@ -32,13 +32,20 @@ AdSuper/
 ├── README.md                 # 中文说明文档
 ├── README_EN.md              # 英文说明文档
 ├── requirements.txt          # Python 依赖清单
-├── sync_issues.py            # 主脚本：同步 GitHub Issues 中的规则
-└── scripts/                  # Python 脚本模块
-    ├── __init__.py           # 包初始化文件
-    ├── rule_extractor.py    # 规则提取模块
-    ├── rule_validator.py     # 规则验证器
-    ├── rule_manager.py       # 规则管理器
-    └── utils.py              # 工具函数
+├── requirements-dev.txt      # 开发/测试依赖
+├── sync_issues.py            # 入口脚本（thin wrapper，调用 scripts.sync_issues）
+├── scripts/                  # Python 脚本模块
+│   ├── __init__.py           # 包初始化文件
+│   ├── config.py             # 配置中心（仓库/标签/文件路径）
+│   ├── sync_issues.py        # 主模块：同步 GitHub Issues 中的规则
+│   ├── rule_extractor.py     # 规则提取模块
+│   ├── rule_validator.py     # 规则验证器
+│   ├── rule_manager.py       # 规则管理器
+│   └── utils.py              # 工具函数
+└── tests/                    # 单元测试
+    ├── test_rule_extractor.py
+    ├── test_rule_validator.py
+    └── test_rule_manager.py
 ```
 
 ### 技术栈
@@ -174,7 +181,16 @@ example.com##.ad-banner
 
 ### sync_issues.py
 
-**功能**: 主脚本，从 GitHub Issues 中同步已审核通过的规则
+**功能**: 主模块，从 GitHub Issues 中同步已审核通过的规则
+
+**运行方式**:
+```bash
+# 推荐：以模块方式运行
+python -m scripts.sync_issues
+
+# 兼容：根目录入口（thin wrapper）
+python sync_issues.py
+```
 
 **工作流程**:
 1. 连接 GitHub API
@@ -258,7 +274,7 @@ $env:GITHUB_TOKEN="your_github_token"
 同步 GitHub Issues 中的规则：
 
 ```bash
-python sync_issues.py
+python -m scripts.sync_issues
 ```
 
 ---

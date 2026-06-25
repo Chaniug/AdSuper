@@ -7,7 +7,7 @@
   <a href="https://github.com/Chaniug/AdSuper/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/Chaniug/AdSuper?style=for-the-badge&color=orange" />
   </a>
-  <a href="https://github.com/Chaniug/AdSuper/commits/main">
+  <a href="https://github.com/Chaniug/AdSuper/commits/master">
     <img src="https://img.shields.io/github/commit-activity/m/Chaniug/AdSuper?style=for-the-badge&color=success" />
   </a>
   <a href="https://github.com/Chaniug/AdSuper/issues">
