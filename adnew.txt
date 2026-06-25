@@ -1,6 +1,6 @@
 ! AdSuper 规则文件
-! 生成时间: 2026-06-25 05:43:58
-! 规则总数: 35
+! 生成时间: 2026-06-25 06:00:01
+! 规则总数: 38
 
 
 ! EXCEPTION 规则 (13条)
@@ -18,8 +18,10 @@
 @@||www.btbdys.com^$important,document
 @@||www.volcengine.com^$important,document
 
-! DOMAIN 规则 (10条)
+! DOMAIN 规则 (12条)
 ||21888cdnyun2023.cyou^$important
+||beijing2.xstore.qihu.com/aiwork-feedback-meida/586_3721_960200_sport-ezgif-7927a14e-d712-4a3f-9c18-88ab5a83c81f.com-resize.gif$image
+||beijing2.xstore.qihu.com/aiwork-feedback-meida/960x200-413ce11e-51de-4e2c-b31c-c753f87aaff0.gif$image
 ||cdn208888888.20288888yuncdn66668888.com/20240205.gif$image
 ||g.fp.ps.netease.com^$app=com.lemurbrowser.exts
 ||i0.hdslb.com/bfs/album/*.jpg$image
@@ -30,7 +32,7 @@
 ||qwcwnjk.com^
 ||tutu.facaiimage.com/*960-*.gif$image
 
-! ELEMENT 规则 (12条)
+! ELEMENT 规则 (13条)
 555k26.com###c2f670cd > div > a > img
 555k26.com###c2f670cd2 > div > a > img
 555k26.com##div.page.player > div.main:nth-child(7) > div.content > div.module.module-player:first-child > div.module-main:last-child > div.module-player-side:nth-child(2) > div.small-icon-container.is_mb:nth-child(6)
@@ -41,5 +43,6 @@ bilibili.com##div.desktop-download-tip:nth-child(17)
 hanime1.me###content-div > div.row.no-gutter.video-show-width:first-child > div.col-md-3.single-show-list:last-child > div.hidden-xs.hidden-sm:first-child
 m.2biqu.com###show_img-8225462100335650212-855, ###855
 vidhub.tv###main > div.content > div.adwap:nth-child(5)
+www.555k26.com##.is_mb.small-icon-container
 www.baidu.com###foot > div, .blank-frame, .ball-close__GWg4b > .c-icon, .news-list-wrapper, .square-banner-bgicon.index-banner
 www.zhihu.com##.DownloadGuide.Card, .OpenGuide-wrapper, .AnswerItem.ContentItem > .is-collapsed.RichContent > .RichContent-inner > .Button--plain.ContentItem-more.Button
