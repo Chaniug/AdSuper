@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 规则编写指南
+    url: https://github.com/Chaniug/AdSuper/blob/main/Docs/RULE_FORMATS.md
+    about: 不确定怎么写规则？先看看规则格式说明
+  - name: 💬 问题反馈与讨论
+    url: https://github.com/Chaniug/AdSuper/discussions
+    about: 有疑问或想讨论规则？请到 Discussions 区
+  - name: 🐛 项目 Bug 反馈
+    url: https://github.com/Chaniug/AdSuper/issues/new
+    about: 项目本身的 Bug（非规则提交），请直接创建空白 Issue 并描述问题

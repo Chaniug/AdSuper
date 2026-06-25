@@ -34,8 +34,9 @@ def is_likely_rule(line: str) -> bool:
     if line.startswith('!'):
         return True
 
-    # 元素隐藏规则（包含 ##, #@#, 或 #$#）
-    if '##' in line or '#@#' in line or '#$#' in line:
+    # 元素隐藏规则（domain##selector / domain#@#selector / domain#$#selector）
+    # 注意: ## 前面必须是域名，避免 ### xxx 这种 Markdown 标题被误判
+    if re.search(r'^[\w.-]+(##|#@#|#\$#).+', line):
         return True
 
     # 网络请求规则和例外规则（以 || 或 @@ 开头）

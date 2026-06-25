@@ -1,0 +1,107 @@
+name: 🚫 广告规则提交
+description: 提交一条新的广告拦截规则（请先用 AdGuard/uBlock 等工具测试通过后再提交）
+title: "[规则]: "
+labels: ["ad"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 感谢你提交广告规则！
+
+        请按以下表单填写，确保规则已经过测试验证。
+        提交后维护者会审核，通过的规则会被打上 `good` 标签并自动收录到 `adnew.txt`。
+
+        > 📖 规则格式参考：[规则编写指南](https://github.com/Chaniug/AdSuper/blob/main/Docs/RULE_FORMATS.md)
+
+  - type: dropdown
+    id: rule_type
+    attributes:
+      label: 规则类型
+      description: 选择规则所属类型，方便审核员分类
+      options:
+        - 网络请求拦截（如 ||example.com^）
+        - 元素隐藏（如 example.com##.ad-banner）
+        - 例外规则（如 @@||example.com^）
+        - 脚本/图片/弹窗拦截（如 ||example.com^$script）
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: 规则内容
+      description: |
+        请将规则用代码块（```）包裹，多条规则一行一条。
+        提取器会优先从代码块中识别规则。
+      placeholder: |
+        例如：
+        ```
+        ||example.com^
+        ||ads.example.com^$third-party
+        example.com##.ad-banner
+        ```
+      value: |
+        ```
+        
+        ```
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: 目标网站/应用
+      description: 这条规则用于拦截哪个网站或应用？（便于审核员复现测试）
+      placeholder: "例如：https://example.com 或 某 App 名称"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 规则说明
+      description: 解释这条规则的作用、为什么要拦截、影响范围等
+      placeholder: "例如：example.com 首页顶部的横幅广告会遮挡内容，用元素隐藏规则移除"
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_result
+    attributes:
+      label: 测试结果
+      description: |
+        在 AdGuard / uBlock Origin / AdBlock 等工具中测试的结果。
+        可以贴截图、说明拦截前后对比、是否有副作用等。
+      placeholder: |
+        例如：
+        - 测试环境：Chrome + uBlock Origin 1.62
+        - 拦截前：页面顶部显示广告横幅
+        - 拦截后：广告横幅消失，页面正常显示
+        - 副作用：无
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: 确认事项
+      description: 请确认以下事项
+      options:
+        - label: 我已使用广告拦截工具测试过这条规则，确认有效
+          required: true
+        - label: 我已检查过 [现有 Issue](https://github.com/Chaniug/AdSuper/issues?q=is%3Aissue) 和 adnew.txt，确认这不是重复规则
+          required: true
+        - label: 我了解提交后规则会进入审核队列，审核通过才会被打上 `good` 标签并收录
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        💡 **提交后流程**：
+        1. 自动获得 `ad` 标签进入审核队列
+        2. 维护者审核规则有效性，必要时要求补充信息
+        3. 审核通过 → 加 `good` 标签 → 关闭 Issue
+        4. 下次 GitHub Actions 运行时自动收录到 [`adnew.txt`](https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt)
