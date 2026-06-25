@@ -14,9 +14,28 @@
     <img src="https://img.shields.io/github/issues/Chaniug/AdSuper?style=for-the-badge&color=yellow" />
   </a>
   <a href="https://github.com/Chaniug/AdSuper/stargazers">
-    <img src="https://img.shields.io/github/stars/Chaniug/AdSuper?style=social" />
+    <img src="https://img.shields.io/github/stars/Chaniug/AdSuper?style=for-the-badge&color=blue" />
   </a>
 </p>
+
+<p align="center">
+  <b>📦 Community-driven ad rule collection platform</b><br>
+  <sub>Submit · Review · Auto-publish · Share worldwide</sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml">
+    <img src="https://img.shields.io/badge/📝_Submit_Rule-Issue-success?style=for-the-badge" />
+  </a>
+  <a href="https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt">
+    <img src="https://img.shields.io/badge/📥_Subscribe-adnew.txt-blue?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Chaniug/AdSuper/releases">
+    <img src="https://img.shields.io/badge/📦_Releases-View-orange?style=for-the-badge" />
+  </a>
+</p>
+
+---
 
 **[中文](./README.md)** | **English**
 
@@ -24,81 +43,142 @@
 
 ## 📖 Table of Contents
 
-- [About AdSuper](#-about-adsuper)
-- [Key Features](#-key-features)
-- [Workflow](#-workflow)
-- [Quick Start](#-quick-start)
-- [Submission Guide](#-submission-guide)
-- [Rule Format Guide](#-rule-format-guide)
-- [FAQ](#-faq)
-- [Project Statistics](#-project-statistics)
-- [Relationship with FilterFusion](#-relationship-with-filterfusion)
-- [Contributing Guidelines](#-contributing-guidelines)
+- [🎯 About AdSuper](#-about-adsuper)
+- [✨ Key Features](#-key-features)
+- [🔄 Workflow](#-workflow)
+- [🚀 Quick Start](#-quick-start)
+- [📝 Submission Guide](#-submission-guide)
+- [🧩 Rule Format Guide](#-rule-format-guide)
+- [❓ FAQ](#-faq)
+- [📊 Project Statistics](#-project-statistics)
+- [🔗 Relationship with FilterFusion](#-relationship-with-filterfusion)
+- [🤝 Contributing Guidelines](#-contributing-guidelines)
 
 ---
 
-## 😎 About AdSuper
+## 🎯 About AdSuper
 
-**AdSuper** is a community-driven **ad filter rule collection and management platform** dedicated to aggregating high-quality ad-filtering rules from around the web.
+> **AdSuper** is a community-driven **ad filter rule collection and management platform** dedicated to aggregating high-quality ad-filtering rules from around the web.
 
-🎯 **Project Goals**:
-- Establish a community-driven rule review system
-- Enable anyone to easily submit and maintain ad-filtering rules
-- Automate rule syncing, review, and packaging to ensure quality and timeliness
-- Provide continuous rule updates to the FilterFusion main project
+<table>
+<tr>
+<td width="50%" valign="top">
 
-📌 **Who Should Use This**:
-- Ad-filtering rule enthusiasts
-- Volunteers who want to help improve rules
-- Users encountering missed or false-positive blocks
-- Developers who want to maintain their own rule libraries
+### 🎯 Project Goals
+
+- 🏗️ Establish a community-driven rule review system
+- 🤗 Enable anyone to easily submit rules
+- ⚙️ Automate syncing, review, and packaging
+- 🔄 Provide continuous updates to FilterFusion
+
+</td>
+<td width="50%" valign="top">
+
+### 📌 Who Should Use This
+
+- 🎯 Ad-filtering rule enthusiasts
+- 🤝 Volunteers wanting to help
+- 😤 Users with missed/false blocks
+- 💻 Developers maintaining rule libraries
+
+</td>
+</tr>
+</table>
 
 ---
 
-## ⚡ Key Features
+## ✨ Key Features
 
-| Feature | Description |
-|---------|-------------|
-| 🛡️ **Automated Review** | Automatically collect, review, and package rules via GitHub Issues |
-| 🤝 **Community Collaboration** | Anyone can submit rules - truly crowdsourced |
-| ⚡ **Efficient Sync** | Rules automatically sync to FilterFusion with real-time updates |
-| 📊 **Quality Assurance** | Strict review process ensures rule quality |
-| 🔄 **Regular Releases** | Automatic rule package release every Monday |
-| 📈 **Statistics Display** | Contributor stats, activity metrics, complete history |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🛡️ Automated Review
+Collect, review, and package rules automatically via GitHub Issues
+
+### 🤝 Community Collaboration
+Anyone can submit rules - truly crowdsourced
+
+### ⚡ Efficient Sync
+Rules automatically sync to FilterFusion with real-time updates
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Quality Assurance
+Strict review process ensures rule quality
+
+### 🔄 Regular Releases
+Automatic rule package release every Monday
+
+### 📈 Statistics Display
+Contributor stats, activity metrics, complete history
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🔄 Workflow
 
 ```
-User Submits Issue
-     ↓
-[Issue Template] Rule Review
-     ↓
-❌ Not Suitable → Mark "not planned" (Close)
-     ↓ ✅ Suitable
-Automatically Added to adnew.txt (synced every 3 days)
-     ↓
-Weekly Release Package (every Monday)
-     ↓
-Sync to FilterFusion Main Project
+┌─────────────────┐
+│  User Submits   │
+│     Issue       │
+└────────┬────────┘
+         ↓
+┌─────────────────┐
+│  Rule Review    │
+└────────┬────────┘
+         ↓
+    ┌────┴────┐
+    ↓         ↓
+ ❌ Reject  ✅ Approve
+ (Close)      ↓
+       ┌─────────────────────┐
+       │ Added to adnew.txt  │
+       │ (synced every 3d)   │
+       └──────────┬──────────┘
+                  ↓
+       ┌─────────────────────┐
+       │ Weekly Release (Mon)│
+       └──────────┬──────────┘
+                  ↓
+       ┌─────────────────────┐
+       │ Sync to FilterFusion│
+       └─────────────────────┘
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### Method 1: Subscribe to Rules (Just Use)
+### 📥 Method 1: Subscribe to Rules (Just Use)
 
-If you just want to use AdSuper rules, add the following URL to your ad blocker (uBlock Origin / AdGuard / AdBlock etc.):
+> Just want to use the rules? Add the URL below to your ad blocker
+
+Add the following URL to your ad blocker (uBlock Origin / AdGuard / AdBlock etc.):
 
 ```
 https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt
 ```
 
-### Method 2: Submit Rules (Contribute)
+<details>
+<summary>📋 How to add subscription URL?</summary>
 
-1. **Click to Submit**: [Submit New Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
+| Blocker | Steps |
+|---------|-------|
+| **uBlock Origin** | Settings → Filter lists → Custom → Import → Paste URL |
+| **AdGuard** | Settings → Filters → Add subscription → Paste URL |
+| **AdBlock Plus** | Settings → Advanced → Add filter subscription → Paste URL |
+| **Brave Browser** | Settings → Shields → Filter lists → Custom → Paste URL |
+
+</details>
+
+### 📝 Method 2: Submit Rules (Contribute)
+
+1. **Click to Submit** → [Submit New Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
 
 2. **Fill in Details**:
    - Rule type (domain, element hiding, etc.)
@@ -106,25 +186,24 @@ https://raw.githubusercontent.com/Chaniug/AdSuper/main/adnew.txt
    - Explanation of why this rule is needed
 
 3. **Wait for Review**:
-   - Maintainers will review within 24-48 hours
-   - Approved rules marked ✅ `good`
-   - Rejected rules marked ❌ `not planned`
+   - ✅ Maintainers will review within 24-48 hours
+   - Approved → marked `good`
+   - Rejected → marked `not planned`
 
 4. **Auto-Inclusion**:
    - Approved rules synced to `adnew.txt` every 3 days
    - Released in weekly rule package (every Monday)
 
-### Method 3: Participate in Discussion
+### 💬 Method 3: Participate in Discussion
 
 - Visit [Discussions](https://github.com/Chaniug/AdSuper/discussions) to share ideas
 - Report issues on [Issues](https://github.com/Chaniug/AdSuper/issues)
-- Join the community
 
 ---
 
 ## 📝 Submission Guide
 
-### Pre-Submission Checklist
+### ✅ Pre-Submission Checklist
 
 Before submitting a rule, ensure:
 
@@ -134,9 +213,16 @@ Before submitting a rule, ensure:
 - [ ] Won't cause false positives
 - [ ] Wrap rules in code blocks (```) for easier extraction
 
-### Correct Submission Examples
+### 📋 Correct Submission Examples
 
-✅ **Good Example** (wrapped in code block):
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ✅ Good Example
+
+Rules wrapped in code block:
+
 ```
 Issue Title: Block xxxxx ad domain
 Issue Content:
@@ -146,25 +232,41 @@ Issue Content:
 Explanation: This domain serves lots of pop-up ads
 ```
 
-❌ **Bad Example** (rules mixed with text, recognizable but not recommended):
+</td>
+<td width="50%" valign="top">
+
+#### ❌ Bad Example
+
+Rules mixed with text:
 ```
 Issue Title: New rules
-Issue Content: I found these rules ||ads1.com^ and ||ads2.com^ to block
+Issue Content: I found these rules
+||ads1.com^ and ||ads2.com^ to block
 ```
 
-### Rule Source Information
+Recognizable but harder to review.
+
+</td>
+</tr>
+</table>
+
+### 📌 Rule Source Information
 
 When submitting, it's helpful to mention the rule source:
-- Ads you discovered yourself
-- Rules migrated from other lists
-- Common ads reported by users
-- Other sources (please specify)
+
+| Source | Description |
+|--------|-------------|
+| 🔍 Self-discovered | Ads you discovered yourself |
+| 📚 Migrated | Rules migrated from other lists |
+| 👥 User-reported | Common ads reported by users |
+| 🔗 Other | Other sources (please specify) |
 
 ---
 
 ## 🧩 Rule Format Guide
 
-### 1. Domain Matching Rules (Most Common)
+<details>
+<summary><b>1️⃣ Domain Matching Rules (Most Common)</b></summary>
 
 ```
 ||example.com^
@@ -183,7 +285,10 @@ When submitting, it's helpful to mention the rule source:
 ||analytics.google.com^     # Block Google Analytics (optional)
 ```
 
-### 2. Rules with Parameters
+</details>
+
+<details>
+<summary><b>2️⃣ Rules with Parameters</b></summary>
 
 ```
 ||ads.example.com^$script,image
@@ -203,7 +308,10 @@ When submitting, it's helpful to mention the rule source:
 ||ads.cdn.com^$image,script        # Block images and scripts
 ```
 
-### 3. Paths and Wildcards
+</details>
+
+<details>
+<summary><b>3️⃣ Paths and Wildcards</b></summary>
 
 ```
 ||example.com/ads/*^
@@ -220,7 +328,10 @@ example.com/banner*
 example.com/banner-*-ad            # Block banner-XXX-ad pattern resources
 ```
 
-### 4. Element Hiding Rules
+</details>
+
+<details>
+<summary><b>4️⃣ Element Hiding Rules</b></summary>
 
 ```
 example.com##.ad-banner
@@ -238,7 +349,10 @@ example.com##div[id*="ad"]        # Hide divs with "ad" in id
 example.com##a[href*="ads"]       # Hide links to ads
 ```
 
-### 5. Whitelist Rules
+</details>
+
+<details>
+<summary><b>5️⃣ Whitelist Rules</b></summary>
 
 ```
 @@||example.com^$document
@@ -255,7 +369,10 @@ example.com##a[href*="ads"]       # Hide links to ads
 @@||trusted-cdn.com^$script        # Whitelist trusted scripts
 ```
 
-### 6. Regular Expression Rules (Advanced)
+</details>
+
+<details>
+<summary><b>6️⃣ Regular Expression Rules (Advanced)</b></summary>
 
 ```
 /banner.*\.jpg$/
@@ -271,29 +388,38 @@ example.com##a[href*="ads"]       # Hide links to ads
 /(ads|banner|promo)\.(jpg|png|gif)$/  # Match multiple filenames and extensions
 ```
 
-### 7. Comments
+</details>
+
+<details>
+<summary><b>7️⃣ Comments</b></summary>
 
 ```
 ! This is a comment
 # This is also a comment
 ```
 
+</details>
+
 ---
 
 ## ❓ FAQ
 
-### Q1: How do I know if my rule is effective?
+<details>
+<summary><b>Q1: How do I know if my rule is effective?</b></summary>
 
-**A**: When submitting, please explain:
+When submitting, please explain:
 - Which website has this ad
 - How to reproduce the ad
 - Whether you've tested the rule
 
 Maintainers will only approve rules they've verified.
 
-### Q2: Why was my rule rejected?
+</details>
 
-**A**: Common reasons:
+<details>
+<summary><b>Q2: Why was my rule rejected?</b></summary>
+
+Common reasons:
 1. **Incorrect syntax** - Check rule syntax
 2. **Too broad** - Might block legitimate content
 3. **Duplicate** - Similar rule already exists
@@ -305,9 +431,11 @@ Maintainers will only approve rules they've verified.
 - Explain in comments
 - Ask maintainers for guidance
 
-### Q3: How long until a rule takes effect?
+</details>
 
-**A**: Timeline:
+<details>
+<summary><b>Q3: How long until a rule takes effect?</b></summary>
+
 1. Rule approved - immediately marked ✅ `good`
 2. Auto-sync - rules synced to `adnew.txt` every 3 days
 3. Regular packaging - release published every Monday
@@ -316,9 +444,12 @@ Maintainers will only approve rules they've verified.
 
 **Estimated time**: 3-9 days from submission to user effect (median ~5 days)
 
-### Q4: Can I submit multiple rules in one Issue?
+</details>
 
-**A**: **Yes**. AdSuper's rule extractor supports multiple formats:
+<details>
+<summary><b>Q4: Can I submit multiple rules in one Issue?</b></summary>
+
+**Yes**. AdSuper's rule extractor supports multiple formats:
 
 - ✅ Code blocks (recommended, separate multiple rules with newlines)
 - ✅ List items (`- ||xxx^` or `1. ||xxx^`)
@@ -327,84 +458,128 @@ Maintainers will only approve rules they've verified.
 
 **Recommendation**: Same-type rules can be in one Issue (use code blocks for easier review). Different-type rules (e.g., domain rules vs. element hiding) should be submitted separately for better tracking.
 
-### Q5: How do I modify or delete an approved rule?
+</details>
 
-**A**: 
+<details>
+<summary><b>Q5: How do I modify or delete an approved rule?</b></summary>
+
 - **Modify**: Create new Issue with corrected rule
 - **Delete**: Comment on completed Issue explaining reason, maintainer will handle
 
-### Q6: What rule formats are supported?
+</details>
 
-**A**: AdSuper supports **Adblock Plus (ABP) standard format**:
-- ✅ Domain matching rules
-- ✅ Element hiding rules
-- ✅ Paths and wildcards
-- ✅ Regular expressions
-- ✅ Whitelist rules
-- ⚠️ uBlock Origin-specific syntax (partial support)
-- ❌ DNS-level rules (not supported)
+<details>
+<summary><b>Q6: What rule formats are supported?</b></summary>
 
-### Q7: Where will my submitted rule be used?
+AdSuper supports **Adblock Plus (ABP) standard format**:
 
-**A**: Your rule will be used in:
+| Format | Support |
+|--------|---------|
+| Domain matching rules | ✅ Full |
+| Element hiding rules | ✅ Full |
+| Paths and wildcards | ✅ Full |
+| Regular expressions | ✅ Full |
+| Whitelist rules | ✅ Full |
+| uBlock Origin-specific | ⚠️ Partial |
+| DNS-level rules | ❌ Not supported |
+
+</details>
+
+<details>
+<summary><b>Q7: Where will my submitted rule be used?</b></summary>
+
+Your rule will be used in:
 1. **AdSuper itself** - `adnew.txt` rule file
 2. **FilterFusion** - Aggregated in main project rules
 3. **Worldwide users** - Anyone subscribing to these rules
 
-### Q8: I have questions about a rule, how do I discuss?
+</details>
 
-**A**: You can:
+<details>
+<summary><b>Q8: I have questions about a rule, how do I discuss?</b></summary>
+
+You can:
 1. Comment on the related Issue
 2. Ask in [Discussions](https://github.com/Chaniug/AdSuper/discussions)
 3. Submit new Issue explaining the problem
 
-### Q9: How do I become a contributor?
+</details>
 
-**A**: 
+<details>
+<summary><b>Q9: How do I become a contributor?</b></summary>
+
 - Submit approved rules automatically makes you a contributor
 - Active rule submissions earn special badges
 - Code and discussion contributions also count
 
 View [Contributors](https://github.com/Chaniug/AdSuper/graphs/contributors)
 
-### Q10: Can I use this commercially?
+</details>
 
-**A**: **Yes**. AdSuper rules and code follow:
-- **Rule content** - Community rules, free to use
-- **Project code** - MIT License (commercial use allowed)
-- **Only requirement** - Keep original license and copyright notice
+<details>
+<summary><b>Q10: Can I use this commercially?</b></summary>
+
+**Yes**. AdSuper rules and code follow:
+
+| Content | License |
+|---------|---------|
+| Rule content | Community rules, free to use |
+| Project code | MIT License (commercial use allowed) |
+| Only requirement | Keep original license and copyright notice |
+
+</details>
 
 ---
 
 ## 📊 Project Statistics
 
-### Contributors
+### 👥 Contributors
 
 <p align="center">
   <img src="https://contrib.rocks/image?repo=Chaniug/AdSuper" alt="Contributors" />
 </p>
 
-### Activity
+### 📈 Activity
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Chaniug&repo=AdSuper&theme=github-compact" alt="Activity Graph" />
 </p>
 
-### Rule Statistics
+### 📋 Rule Statistics
 
-- 📝 **Total Rules** - Growing continuously
-- 🔄 **Auto-Updates** - Synced every 3 days + released every Monday
-- 👥 **Contributors** - See above stats
-- ⭐ **Project Stars** - Thank you for support!
+| Metric | Description |
+|--------|-------------|
+| 📝 Total Rules | Growing continuously |
+| 🔄 Auto-Updates | Synced every 3 days + released every Monday |
+| 👥 Contributors | See above stats |
+| ⭐ Project Stars | Thank you for support! |
 
 ---
 
 ## 🔗 Relationship with FilterFusion
 
-| Project | Description |
-|---------|------------|
-| **FilterFusion** | 🎯 Main project - Aggregates multiple rule sources, generates final ad-filtering list |
-| **AdSuper** | 🤝 Sub-project - Community rule collection platform, provides rule source for main project |
+<table>
+<tr>
+<td width="50%" align="center">
+
+### 🎯 FilterFusion
+
+**Main Project**
+
+Aggregates multiple rule sources, generates final ad-filtering list
+
+</td>
+<td width="50%" align="center">
+
+### 🤝 AdSuper
+
+**Sub-Project**
+
+Community rule collection platform, provides rule source for main project
+
+</td>
+</tr>
+</table>
 
 ### Architecture
 
@@ -433,65 +608,96 @@ Users subscribe and use
 
 ### Ways to Contribute
 
-#### 1. Submit Rules (Most Direct)
-- [Submit Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 1️⃣ Submit Rules (Most Direct)
+
+[📝 Submit Rule Issue](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad&template=rule_report.yml)
+
 - Fill in rule content and explanation
 - Wait for review
 
-#### 2. Participate in Discussion
-- Visit [Discussions](https://github.com/Chaniug/AdSuper/discussions)
+</td>
+<td width="50%" valign="top">
+
+#### 2️⃣ Participate in Discussion
+
+[💬 Join Discussions](https://github.com/Chaniug/AdSuper/discussions)
+
 - Help other users
 - Suggest improvements
 
-#### 3. Report Issues
-- Found a bug? [Submit Issue](https://github.com/Chaniug/AdSuper/issues)
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 3️⃣ Report Issues
+
+[🐛 Submit Issue](https://github.com/Chaniug/AdSuper/issues)
+
+- Found a bug? Report it
 - Suggest improvements
 - Report new ad sources
 
-#### 4. Code Contribution
+</td>
+<td width="50%" valign="top">
+
+#### 4️⃣ Code Contribution
+
 - Fork the project
 - Improve scripts and automation
 - Submit Pull Request
 
+</td>
+</tr>
+</table>
+
 ### Contribution Requirements
 
-✅ **Must**:
-- Correct rule syntax
-- Wrap rules in code blocks
-- Clear explanation
-
-⚠️ **Recommended**:
-- Test rule effectiveness
-- Check for false positives
-- Follow existing rule style
+| Type | Requirements |
+|------|--------------|
+| ✅ **Must** | Correct rule syntax · Wrap rules in code blocks · Clear explanation |
+| ⚠️ **Recommended** | Test rule effectiveness · Check for false positives · Follow existing rule style |
 
 ---
 
 ## 📬 Contact & Support
 
-### Quick Links
+### 🔗 Quick Links
 
-- 🔗 [Main Project FilterFusion](https://github.com/Chaniug/FilterFusion)
-- 📝 [Submit Rule](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad)
-- 💬 [Discussions](https://github.com/Chaniug/AdSuper/discussions)
-- 🐛 [Report Issue](https://github.com/Chaniug/AdSuper/issues)
-- 📦 [View Releases](https://github.com/Chaniug/AdSuper/releases)
+| Link | Description |
+|------|-------------|
+| [FilterFusion](https://github.com/Chaniug/FilterFusion) | 🎯 Main project |
+| [Submit Rule](https://github.com/Chaniug/AdSuper/issues/new?assignees=&labels=ad) | 📝 Submit new rule |
+| [Discussions](https://github.com/Chaniug/AdSuper/discussions) | 💬 Join discussion |
+| [Issues](https://github.com/Chaniug/AdSuper/issues) | 🐛 Report issue |
+| [Releases](https://github.com/Chaniug/AdSuper/releases) | 📦 View releases |
 
-### Social Media
+### 📱 Social Media
 
-- 🌐 [Personal Website](https://my.valk.ccwu.cc/)
-- 🐦 [X (Twitter)](https://x.com/valkjin)
-- ✈️ [Telegram](https://t.me/valkjin)
-- 📧 [Email](mailto:cheniug99@gmail.com)
+| Platform | Link |
+|----------|------|
+| 🌐 Website | [my.valk.ccwu.cc](https://my.valk.ccwu.cc/) |
+| 🐦 X (Twitter) | [@valkjin](https://x.com/valkjin) |
+| ✈️ Telegram | [@valkjin](https://t.me/valkjin) |
+| 📧 Email | [cheniug99@gmail.com](mailto:cheniug99@gmail.com) |
 
 ---
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Chaniug&repo=AdSuper&label=Views&color=0e75b6&style=flat" alt="Views" />
   <img src="https://img.shields.io/github/last-commit/Chaniug/AdSuper?style=flat&color=blue" alt="Last Commit" />
+  <img src="https://img.shields.io/github/license/Chaniug/AdSuper?style=flat&color=green" alt="License" />
 </p>
 
 <p align="center">
   <b>🙏 Thank you to every contributor and user for your support!</b><br>
-  💡 Got ideas? 💪 Want to participate? 👋 Welcome to join us!
+  <sub>💡 Got ideas? 💪 Want to participate? 👋 Welcome to join us!</sub>
+</p>
+
+<p align="center">
+  <sub>Made with ❤️ by the AdSuper community</sub>
 </p>
